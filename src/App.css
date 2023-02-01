@@ -11,11 +11,9 @@ body {
 }
 
 :root {
-  --yellow: #f5c32c;
-  --orange: #fca61f;
-  --dorange: #e18e0c;
-  --gray: rgb(17 24 39);
-  --dgray: rgb(27 32 45);
+  --bright-cyan: #36c8f6;
+  --blue: #0000ff;
+  --black: #000000;
 }
 
 ul {
@@ -29,8 +27,8 @@ a {
 
 button {
   border-radius: 15px;
-  background-color: var(--orange);
-  border: 2px solid var(--orange);
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
   padding: 6px 0;
   text-shadow: #6c4911 0px 0px 10px;
   transition: all 0.3s ease 0s;

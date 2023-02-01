@@ -4,7 +4,7 @@ import hero from "../../assets/Hero.png";
 
 const Intro = () => {
   return (
-    <div className="intro" id="Intro">
+    <div className="hero" id="Hero">
       <div className="i-left">
         <div className="i-name">
           <p className="name">
@@ -23,7 +23,7 @@ const Intro = () => {
       <div className="i-right">
         <div className="i-box">
           <div>
-            <img src={hero} alt="hero" height={594} width={524.49} />
+            <img src={hero} alt="hero" height={510} width={560} />
           </div>
         </div>
       </div>
