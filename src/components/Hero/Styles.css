@@ -2,17 +2,18 @@
   margin: 0 5.5rem 8rem;
   padding-top: 8rem;
   display: flex;
+  font-family: "DM Sans", sans-serif;
 }
 
 .name {
   margin-top: 9rem;
   color: var(--black);
-  font-weight: bolder;
+  font-weight: bold;
   font-size: 3rem;
 }
 
 .i-info {
-  font-size: 1.5rem;
+  font-size: 18px;
   margin: 0.5rem 0 2rem;
   color: var(--black);
 }
@@ -39,6 +40,31 @@
 
 .i-right {
   flex: 1;
+}
+
+.btn-primary {
+  margin-right: 1.3rem;
+  border-radius: 6px;
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+  padding: 6px 0;
+  transition: all 0.3s ease 0s;
+  width: 173px;
+  font-size: 16px;
+  font-weight: bold;
+  height: 48px;
+}
+
+.btn-details {
+  border-radius: 6px;
+  background-color: var(--white);
+  border: 2px solid var(--bright-cyan);
+  padding: 6px 0;
+  transition: all 0.3s ease 0s;
+  width: 173px;
+  font-size: 16px;
+  height: 48px;
+  color: var(--bright-cyan);
 }
 
 @media (max-width: 481px) {

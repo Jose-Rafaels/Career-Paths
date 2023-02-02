@@ -1,6 +1,6 @@
 import React from "react";
 import "./Styles.css";
-import hero from "../../assets/Hero.png";
+import hero from "../../assets/Images/Hero.png";
 
 const Intro = () => {
   return (
@@ -10,14 +10,17 @@ const Intro = () => {
           <p className="name">
             Find the Path to Reach
             <br />
-            Your Dream Jobs
+            Your <span style={{ color: "#0000ff" }}>Dream Jobs</span>
           </p>
           <p className="i-info">
             Yuk kenali potensi diri kamu yang harus kamu kembangkan
             <br />
             demi mencapai pekerjaan impian kamu.
           </p>
-          <button>Get Started</button>
+        </div>
+        <div className="buttton">
+          <button className="btn-primary">Get Started</button>
+          <button className="btn-details">Learn More</button>
         </div>
       </div>
       <div className="i-right">

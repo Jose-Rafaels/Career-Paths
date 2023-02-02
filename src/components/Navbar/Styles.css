@@ -1,22 +1,24 @@
 .navbar {
-  height: 25px;
+  height: 40px;
   width: 100%;
   display: flex;
   position: fixed;
   align-items: center;
   padding: 1rem 0;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.1rem;
   box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
-  z-index: 6;
+  z-index: 1000;
 }
 
 .n-left {
   display: flex;
   justify-content: left;
-  flex: 1;
+  margin-right: 4rem;
+  font-size: 24px;
   font-weight: bold;
   margin-left: 5.8rem;
-  color: var(--black);
+  color: var(--blue);
 }
 
 .n-right {
@@ -35,6 +37,31 @@
 .navbar ul li {
   cursor: pointer;
   color: var(--black);
+}
+.btn-login {
+  border-radius: 6px;
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+  padding: 6px 0;
+  transition: all 0.3s ease 0s;
+  width: 111px;
+  font-size: 14px;
+  font-weight: bold;
+  height: 41px;
+}
+
+.btn-register {
+  margin-right: 1.3rem;
+  border-radius: 6px;
+  background-color: var(--white);
+  border: 2px solid var(--blue);
+  padding: 6px 0;
+  transition: all 0.3s ease 0s;
+  width: 111px;
+  font-size: 14px;
+  height: 41px;
+  font-weight: bold;
+  color: var(--blue);
 }
 
 @media (max-width: 715px) {
