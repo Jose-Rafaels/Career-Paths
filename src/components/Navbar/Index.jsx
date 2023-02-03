@@ -10,8 +10,11 @@ const Navbar = () => {
         <Link to="Intro" smooth={true} activeClass="activeClass">
           <li>Home</li>
         </Link>
-        <Link to="About" smooth={true}>
-          <li>About</li>
+        <Link to="Layanan" smooth={true}>
+          <li>Layanan</li>
+        </Link>
+        <Link to="Tentang Kami" smooth={true}>
+          <li>Tentang Kami</li>
         </Link>
         <Link to="Contact" offset={-60} smooth={true}>
           <li>Contact</li>

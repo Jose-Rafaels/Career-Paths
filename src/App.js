@@ -1,12 +1,14 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Index";
-import Intro from "./components/Hero/Index";
+import Hero from "./components/Hero/Index";
+import JobSection from "./components/Job Section/Index";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Intro />
+      <Hero />
+      <JobSection />
     </div>
   );
 }

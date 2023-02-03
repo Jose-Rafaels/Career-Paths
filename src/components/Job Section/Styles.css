@@ -1,0 +1,25 @@
+.job-section {
+  padding-top: 8rem;
+  display: flex;
+  font-family: "DM Sans", sans-serif;
+  background-color: rgba(230, 230, 250, 0.37);
+  filter: blur(10px);
+  position: absolute;
+  width: 100%;
+  height: 1125px;
+  left: 0px;
+  z-index: -1;
+}
+
+.title {
+  position: absolute;
+  width: 50%;
+  height: 88px;
+  left: 26%;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+}

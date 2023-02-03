@@ -8,6 +8,7 @@
   font-family: "DM Sans", sans-serif;
   font-size: 1.1rem;
   box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
+  background-color: var(--white);
   z-index: 1000;
 }
 
@@ -54,7 +55,7 @@
   margin-right: 1.3rem;
   border-radius: 6px;
   background-color: var(--white);
-  border: 2px solid var(--blue);
+  border: 1px solid var(--blue);
   padding: 6px 0;
   transition: all 0.3s ease 0s;
   width: 111px;

@@ -4,7 +4,7 @@ import hero from "../../assets/Images/Hero.png";
 
 const Intro = () => {
   return (
-    <div className="hero" id="Hero">
+    <div className="hero">
       <div className="i-left">
         <div className="i-name">
           <p className="name">
