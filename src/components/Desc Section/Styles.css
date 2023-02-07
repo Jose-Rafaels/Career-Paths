@@ -28,7 +28,7 @@
 
 .website-description {
   position: absolute;
-  width: 730px;
+  width: 650px;
   height: 426px;
   left: 564px;
   margin-top: 10rem;
@@ -41,7 +41,7 @@
 }
 
 .desc-point {
-  width: 730px;
+  width: 630px;
   margin-left: 10px;
   font-weight: 550;
   font-size: 18px;

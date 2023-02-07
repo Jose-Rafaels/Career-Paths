@@ -1,0 +1,60 @@
+.main-footer {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 2799px;
+  font-family: "DM Sans", sans-serif;
+  background-color: rgba(230, 230, 250, 0.37);
+}
+
+.logo-footer {
+  margin: 4rem;
+  width: 238px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: var(--blue);
+}
+
+.col-1 {
+  position: absolute;
+  top: 2rem;
+  height: 24px;
+  left: 420px;
+  width: 178px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.col-2 {
+  position: absolute;
+  top: 2rem;
+  height: 24px;
+  left: 710px;
+  width: 117px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.col-3 {
+  position: absolute;
+  top: 2rem;
+  height: 24px;
+  left: 1002px;
+  width: 156px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.copyrights {
+  text-align: center;
+  margin: 1rem;
+  height: 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--black);
+}

@@ -17,6 +17,10 @@ ul {
   margin: 0;
 }
 
+li {
+  color: var(--black);
+}
+
 a {
   text-decoration: none;
 }

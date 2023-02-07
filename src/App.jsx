@@ -1,8 +1,9 @@
 import "./App.css";
-import Navbar from "./components/Navbar/Index";
+import Navbar from "./components/Navbar Section/Index";
 import Hero from "./components/Hero Section/Index";
 import JobSection from "./components/Job Section/Index";
 import DescSection from "./components/Desc Section/Index";
+import Footer from "./components/Footer Section/Index";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <JobSection />
       <DescSection />
+      <Footer />
     </div>
   );
 }
