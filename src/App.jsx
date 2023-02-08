@@ -1,18 +1,15 @@
 import "./App.css";
-import Navbar from "./components/Navbar Section/Index";
-import Hero from "./components/Hero Section/Index";
-import JobSection from "./components/Job Section/Index";
-import DescSection from "./components/Desc Section/Index";
-import Footer from "./components/Footer Section/Index";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "../src/pages/Home/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
-      <JobSection />
-      <DescSection />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
