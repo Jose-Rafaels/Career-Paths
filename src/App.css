@@ -10,6 +10,7 @@
   --blue: #0000ff;
   --black: #000000;
   --white: #ffffff;
+  --lavender: #e8f0fe;
 }
 
 ul {
@@ -23,6 +24,13 @@ li {
 
 a {
   text-decoration: none;
+}
+
+hr {
+  border: 2px;
+  color: black;
+  border-top: 1px solid;
+  opacity: 0.1;
 }
 
 button:hover {

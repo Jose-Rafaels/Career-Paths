@@ -1,5 +1,4 @@
 .navbar {
-  height: 40px;
   width: 100%;
   display: flex;
   position: fixed;
@@ -20,6 +19,14 @@
   font-weight: bold;
   margin-left: 5.8rem;
   color: var(--blue);
+}
+
+.navbar-ul {
+  font-size: 1.1rem;
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  margin: 2px;
 }
 
 .n-right {

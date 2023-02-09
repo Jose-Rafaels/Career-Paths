@@ -8,47 +8,17 @@
 }
 
 .logo-footer {
-  margin: 4rem;
-  width: 238px;
+  margin: 4rem 1rem;
+  width: 300px;
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
   color: var(--blue);
 }
 
-.col-1 {
-  position: absolute;
-  top: 2rem;
-  height: 24px;
-  left: 420px;
-  width: 178px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
+.col {
+  margin-top: 2rem;
 }
-
-.col-2 {
-  position: absolute;
-  top: 2rem;
-  height: 24px;
-  left: 710px;
-  width: 117px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
-}
-
-.col-3 {
-  position: absolute;
-  top: 2rem;
-  height: 24px;
-  left: 1002px;
-  width: 156px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
-}
-
 .copyrights {
   text-align: center;
   margin: 1rem;

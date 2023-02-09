@@ -4,9 +4,9 @@ import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
-    <div className="navbar" id="Navbar">
+    <div className="navbar">
       <div className="n-left">Career Paths</div>
-      <ul>
+      <ul className="navbar-ul">
         <Link to="Intro" smooth={true} activeClass="activeClass">
           <li>Home</li>
         </Link>
