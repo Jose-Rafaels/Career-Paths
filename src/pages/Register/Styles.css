@@ -1,4 +1,4 @@
-.login {
+.register {
   margin: 0 5.5rem 8rem;
   padding-top: 8rem;
   justify-content: center;
@@ -7,7 +7,7 @@
   font-family: "DM Sans", sans-serif;
 }
 
-.login-logo {
+.register-logo {
   position: relative;
   width: 570px;
   height: 440px;
@@ -15,11 +15,11 @@
   top: 60px;
 }
 
-.login-box {
+.register-box {
   position: relative;
   margin-left: 5rem;
   width: 500px;
-  height: 665px;
+  height: 700px;
   background: #ffffff;
   box-shadow: 5px 5px 20px rgb(0 0 0 / 25%);
   border-radius: 10px;
@@ -45,29 +45,17 @@
 }
 
 .form-icon {
-  margin: 18px;
+  margin: 10px;
 }
 
 .show-pwd {
   margin-right: 1rem;
 }
 
-.email-form {
-  width: 395px;
-  height: 60px;
-  margin: 3rem 3rem 1rem;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 19px;
-  color: #d9b9c2;
-  border: 1px solid #36c8f6;
-  border-radius: 10px;
-}
-
-.login-input {
+.register-input {
   height: 55px;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 19px;
   color: #d9b9c2;
   border: 0px none;
@@ -76,54 +64,91 @@
   box-shadow: none !important;
 }
 
-.password-form {
-  width: 395px;
+.name-register-form {
+  width: 188px;
   height: 60px;
-  margin: 1rem 3rem;
+  margin: 3rem 3rem 1rem;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 19px;
   color: #d9b9c2;
   border: 1px solid #36c8f6;
   border-radius: 10px;
 }
 
-.form-check {
-  position: absolute;
-  width: 110px;
-  left: 72px;
-  top: 305px;
-}
-
-.form-check-label {
+.name2-register-form {
+  width: 188px;
+  height: 60px;
+  left: 255px;
+  top: -76px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 17px;
-  text-align: center;
-  color: #000000;
+  line-height: 19px;
+  color: #d9b9c2;
+  border: 1px solid #36c8f6;
+  border-radius: 10px;
 }
 
-.forgot {
-  position: absolute;
-  width: 120px;
-  height: 17px;
-  left: 310px;
-  top: 305px;
-  font-weight: 550;
+.email-register-form {
+  width: 395px;
+  height: 60px;
+  margin: 1rem 3rem;
+  top: -5rem;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 17px;
-  text-align: center;
-  color: #000000;
+  line-height: 19px;
+  color: #d9b9c2;
+  border: 1px solid #36c8f6;
+  border-radius: 10px;
 }
 
-.btn-masuk {
+.password-register-form {
+  width: 395px;
+  height: 60px;
+  margin: 1rem 3rem;
+  top: -5rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #d9b9c2;
+  border: 1px solid #36c8f6;
+  border-radius: 10px;
+}
+
+.password-register-form {
+  width: 188px;
+  height: 60px;
+  margin: 1rem 3rem;
+  top: -5rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #d9b9c2;
+  border: 1px solid #36c8f6;
+  border-radius: 10px;
+}
+
+.password-confirm-register-form {
+  width: 188px;
+  height: 60px;
+  left: 255px;
+  top: -156px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #d9b9c2;
+  border: 1px solid #36c8f6;
+  border-radius: 10px;
+}
+
+.btn-daftar {
   box-sizing: border-box;
   position: absolute;
   width: 396px;
   height: 60px;
+  top: -8.7rem;
   position: relative;
   margin-left: 3rem;
-  margin-top: 2rem;
   background: #36c8f6;
   border: 1px solid #36c8f6;
   border-radius: 10px;
@@ -131,9 +156,9 @@
   font-size: 20px;
 }
 
-.socmed-login {
+.socmed-register {
+  margin-top: -6rem;
   justify-content: center;
-  margin: 2rem;
   font-weight: 500;
   font-size: 16px;
   text-align: center;

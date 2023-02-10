@@ -10,6 +10,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Fb from "../../assets/Images/fb-ic.png";
 import Google from "../../assets/Images/google-ic.png";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   return (
@@ -42,7 +43,7 @@ const LoginPage = () => {
               <Form.Control
                 className="login-input"
                 type="password"
-                placeholder="Username"
+                placeholder="Password"
               />
               <img className="show-pwd" src={Eye} alt={Eye} />
             </InputGroup>
@@ -72,12 +73,18 @@ const LoginPage = () => {
           <p className="create-account">
             Belum Punya Akun?
             <span style={{ fontWeight: "bold", color: "#000000" }}>
-              Daftar Sekarang
+              <Link
+                to="/register"
+                style={{ textDecoration: "none" }}
+                activeClass="activeClass"
+              >
+                Daftar Sekarang
+              </Link>
             </span>
           </p>
         </div>
       </div>
-      <Footer />
+      <Footer className="login-footer" />
     </>
   );
 };

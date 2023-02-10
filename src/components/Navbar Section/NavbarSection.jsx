@@ -1,29 +1,49 @@
 import React from "react";
 import "./Styles.css";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="n-left">Career Paths</div>
+      <div className="n-left">
+        <Link to="/" style={{ textDecoration: "none" }}>
+          Career Paths
+        </Link>
+      </div>
       <ul className="navbar-ul">
-        <Link to="Intro" smooth={true} activeClass="activeClass">
+        <Link
+          to="/"
+          style={{ textDecoration: "none" }}
+          activeClass="activeClass"
+        >
           <li>Home</li>
         </Link>
-        <Link to="Layanan" smooth={true}>
+
+        <Link to="Layanan" style={{ textDecoration: "none" }}>
           <li>Layanan</li>
         </Link>
-        <Link to="Tentang Kami" smooth={true}>
+        <Link to="Tentang Kami" style={{ textDecoration: "none" }}>
           <li>Tentang Kami</li>
         </Link>
-        <Link to="Contact" offset={-60} smooth={true}>
+        <Link to="Contact" offset={-60} style={{ textDecoration: "none" }}>
           <li>Contact</li>
         </Link>
       </ul>
       <div className="n-right">
         <div className="buttton">
-          <button className="btn-register">REGISTER</button>
-          <button className="btn-login">LOGIN</button>
+          <button className="btn-register">
+            <Link to="/register" style={{ textDecoration: "none" }}>
+              REGISTER
+            </Link>
+          </button>
+          <button className="btn-login">
+            <Link
+              to="/login"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              LOGIN
+            </Link>
+          </button>
         </div>
       </div>
     </div>
