@@ -1,41 +1,61 @@
 import React from "react";
 import "./Styles.css";
+import { Link } from "react-router-dom";
+import { Nav, Navbar } from "react-bootstrap";
 
 const Footer = () => {
   return (
     <div className="main-footer">
       <div className="container">
         <div className="row">
-          <div className="logo-footer">Career Paths</div>
+          <div className="col">
+            <Navbar.Brand href="/">
+              <div className="logo-footer">Career Paths</div>
+            </Navbar.Brand>
+          </div>
 
           <div className="col">
             <h5 style={{ color: "#000000" }}>Account</h5>
             <ul className="list-unstyled">
-              <li>Registrasi</li>
-              <li>Login</li>
-              <li>Lupa Password</li>
+              <Nav.Link as={Link} to="/">
+                Registrasi
+              </Nav.Link>
+              <Nav.Link as={Link} to="/">
+                Login
+              </Nav.Link>
+              <Nav.Link as={Link} to="/">
+                Lupa Password
+              </Nav.Link>
             </ul>
           </div>
 
           <div className="col">
             <h5 style={{ color: "#000000" }}>Company</h5>
             <ul className="list-unstyled">
-              <li>Tentang Kami</li>
-              <li>Help Center</li>
-              <li>Media</li>
+              <Nav.Link as={Link} to="/">
+                Tentang Kami
+              </Nav.Link>
+              <Nav.Link as={Link} to="/">
+                Help Center
+              </Nav.Link>
+              <Nav.Link as={Link} to="/">
+                Media
+              </Nav.Link>
             </ul>
           </div>
 
           <div className="col">
             <h5 style={{ color: "#000000" }}>Get Connected</h5>
             <ul className="list-unstyled">
-              <li>Jakarta Barat</li>
-              <li type="link" href="tel:0234567890">
+              <Nav.Link href="https://www.google.co.id/maps/place/Institut+Teknologi+PLN/@-6.1682458,106.724257,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f788f60e492d:0x8b5ed89a85136510!8m2!3d-6.1682511!4d106.7264457">
+                Jakarta Barat
+              </Nav.Link>
+              <Nav.Link type="link" href="tel:0234567890">
                 02345-567-890
-              </li>
-              <li type="link" href="mailto:support@gmail.com">
+              </Nav.Link>
+              <Nav.Link type="link" href="mailto:support@gmail.com">
                 support@gmail.com
-              </li>
+              </Nav.Link>
             </ul>
           </div>
         </div>
