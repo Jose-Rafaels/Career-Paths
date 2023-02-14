@@ -1,5 +1,6 @@
 import React from "react";
 import "./Styles.css";
+import Fade from "react-reveal/Fade";
 import sec from "../../assets/Images/sec-ic.png";
 
 const DescSection = () => {
@@ -37,24 +38,26 @@ const DescSection = () => {
             Cook Briggs dan putrinya. Carl Gustav Jung menjelaskan bahwa
             kepribadian ini dibagi melalui empat dimensi sifat dasar manusia,
             yaitu :
-            <ul className="desc-point">
-              <li className="desc-point">
-                dimensi pemusatan perhatian yang terdiri dari Extrovert (E) vs
-                Introvert (I).
-              </li>
-              <li className="desc-point">
-                dimensi memahami informasi dari luar yang terdiri dari Sensing
-                (S) vs Intuition (N).
-              </li>
-              <li className="desc-point">
-                dimensi menarik kesimpulan dan keputusan yang terdiri dari
-                Thinking (T) vs Feeling (F).
-              </li>
-              <li className="desc-point">
-                dimensi pola hidup yang terdiri dari Judging (J) vs Perceiving
-                (P).
-              </li>
-            </ul>
+            <Fade top cascade>
+              <ul className="desc-point">
+                <li className="desc-point">
+                  dimensi pemusatan perhatian yang terdiri dari Extrovert (E) vs
+                  Introvert (I).
+                </li>
+                <li className="desc-point">
+                  dimensi memahami informasi dari luar yang terdiri dari Sensing
+                  (S) vs Intuition (N).
+                </li>
+                <li className="desc-point">
+                  dimensi menarik kesimpulan dan keputusan yang terdiri dari
+                  Thinking (T) vs Feeling (F).
+                </li>
+                <li className="desc-point">
+                  dimensi pola hidup yang terdiri dari Judging (J) vs Perceiving
+                  (P).
+                </li>
+              </ul>
+            </Fade>
           </p>
         </div>
       </div>

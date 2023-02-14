@@ -1,5 +1,6 @@
 import React from "react";
 import "./Styles.css";
+import Fade from "react-reveal/Fade";
 import Navbar from "../../components/Navbar Section/NavbarSection";
 import Footer from "../../components/Footer Section/FooterSection";
 import LoginIc from "../../assets/Images/loginreg.png";
@@ -16,74 +17,76 @@ const LoginPage = () => {
   return (
     <>
       <Navbar />
-      <div className="login">
-        <div className="login-ic">
-          <img className="login-logo" src={LoginIc} alt={LoginIc} />
-        </div>
-        <div className="login-box">
-          <h3 className="loginreg-title">Selamat Datang Kembali</h3>
-          <p className="loginreg-sub-title">
-            Silahkan masuk dengan akun yang sudah terdaftar
-          </p>
-
-          <InputGroup className="email-form">
-            <InputGroup className="form-ic">
-              <img className="form-icon" src={EmailIc} alt={EmailIc} />
-              <Form.Control
-                className="login-input"
-                type="email"
-                placeholder="Email"
-              />
-            </InputGroup>
-          </InputGroup>
-
-          <InputGroup className="password-form">
-            <InputGroup className="form-ic">
-              <img className="form-icon" src={PwdIc} alt={PwdIc} />
-              <Form.Control
-                className="login-input"
-                type="password"
-                placeholder="Password"
-              />
-              <img className="show-pwd" src={Eye} alt={Eye} />
-            </InputGroup>
-          </InputGroup>
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckChecked"
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-              Ingat saya
-            </label>
+      <Fade top cascade>
+        <div className="login">
+          <div className="login-ic">
+            <img className="login-logo" src={LoginIc} alt={LoginIc} />
           </div>
+          <div className="login-box">
+            <h3 className="loginreg-title">Selamat Datang Kembali</h3>
+            <p className="loginreg-sub-title">
+              Silahkan masuk dengan akun yang sudah terdaftar
+            </p>
 
-          <p className="forgot">Lupa Password?</p>
+            <InputGroup className="email-form">
+              <InputGroup className="form-ic">
+                <img className="form-icon" src={EmailIc} alt={EmailIc} />
+                <Form.Control
+                  className="login-input"
+                  type="email"
+                  placeholder="Email"
+                />
+              </InputGroup>
+            </InputGroup>
 
-          <button className="btn-masuk">Masuk</button>
-          <p className="socmed-login">Atau masuk menggunakan sosial media?</p>
+            <InputGroup className="password-form">
+              <InputGroup className="form-ic">
+                <img className="form-icon" src={PwdIc} alt={PwdIc} />
+                <Form.Control
+                  className="login-input"
+                  type="password"
+                  placeholder="Password"
+                />
+                <img className="show-pwd" src={Eye} alt={Eye} />
+              </InputGroup>
+            </InputGroup>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                Ingat saya
+              </label>
+            </div>
 
-          <div className="socmed">
-            <img src={Fb} alt={Fb} width={66} height={66} />
-            <img src={Google} alt={Google} width={66} height={66} />
+            <p className="forgot">Lupa Password?</p>
+
+            <button className="btn-masuk">Masuk</button>
+            <p className="socmed-login">Atau masuk menggunakan sosial media?</p>
+
+            <div className="socmed">
+              <img src={Fb} alt={Fb} width={66} height={66} />
+              <img src={Google} alt={Google} width={66} height={66} />
+            </div>
+
+            <p className="create-account">
+              Belum Punya Akun?
+              <span style={{ fontWeight: "bold", color: "#000000" }}>
+                <Link
+                  to="/register"
+                  style={{ textDecoration: "none" }}
+                  activeClass="activeClass"
+                >
+                  Daftar Sekarang
+                </Link>
+              </span>
+            </p>
           </div>
-
-          <p className="create-account">
-            Belum Punya Akun?
-            <span style={{ fontWeight: "bold", color: "#000000" }}>
-              <Link
-                to="/register"
-                style={{ textDecoration: "none" }}
-                activeClass="activeClass"
-              >
-                Daftar Sekarang
-              </Link>
-            </span>
-          </p>
         </div>
-      </div>
+      </Fade>
       <Footer className="login-footer" />
     </>
   );
