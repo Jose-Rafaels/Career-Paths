@@ -2,6 +2,7 @@ import React from "react";
 import "./Styles.css";
 import Fade from "react-reveal/Fade";
 import hero from "../../assets/Images/Hero.png";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
   return (
@@ -21,7 +22,14 @@ const Intro = () => {
             </p>
           </div>
           <div className="buttton">
-            <button className="btn-primary">Get Started</button>
+            <button className="btn-primary">
+              <Link
+                to="/intro-test"
+                style={{ textDecoration: "none", color: "#ffffff" }}
+              >
+                Get Started
+              </Link>
+            </button>
             <button className="btn-details" as="a" href="#description">
               Learn More
             </button>
