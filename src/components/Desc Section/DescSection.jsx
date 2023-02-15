@@ -26,22 +26,27 @@ const DescSection = () => {
             </div>
 
             <div className="d-desc">
-              <p className="website-description">
-                Website ini merupakan platform untuk mengetahui jenis pekerjaan
-                yang sesuai dengan minat bakat yang Anda miliki. Untuk
-                mengetahuinya, Anda diharuskan terlebih dahulu untuk mengerjakan
-                kuisioner. Kuisioner ini nanti akan menggunakan metode MBTI.
-                <br />
-                Apa itu MBTI? The Myers Briggs Type Indicator atau biasa
-                disingkat menjadi MBTI merupakan metode pengukuran yang
-                digunakan untuk membaca kepribadian seseorang, khususnya untuk
-                memahami bagaimana seseorang menilai sesuatu dan membuat
-                keputusan.
-                <br />
-                The Myers-Briggs Type Indicator lahir dan dikembangkan oleh
-                Kathrine Cook Briggs dan putrinya. Carl Gustav Jung menjelaskan
-                bahwa kepribadian ini dibagi melalui empat dimensi sifat dasar
-                manusia, yaitu :
+              <div>
+                <p className="website-description">
+                  Website ini merupakan platform untuk mengetahui jenis
+                  pekerjaan yang sesuai dengan minat bakat yang Anda miliki.
+                  Untuk mengetahuinya, Anda diharuskan terlebih dahulu untuk
+                  mengerjakan kuisioner. Kuisioner ini nanti akan menggunakan
+                  metode MBTI.
+                  <br />
+                  Apa itu MBTI? The Myers Briggs Type Indicator atau biasa
+                  disingkat menjadi MBTI merupakan metode pengukuran yang
+                  digunakan untuk membaca kepribadian seseorang, khususnya untuk
+                  memahami bagaimana seseorang menilai sesuatu dan membuat
+                  keputusan.
+                  <br />
+                  The Myers-Briggs Type Indicator lahir dan dikembangkan oleh
+                  Kathrine Cook Briggs dan putrinya. Carl Gustav Jung
+                  menjelaskan bahwa kepribadian ini dibagi melalui empat dimensi
+                  sifat dasar manusia, yaitu :
+                </p>
+              </div>
+              <div>
                 <ul className="desc-point">
                   <li className="desc-point">
                     dimensi pemusatan perhatian yang terdiri dari Extrovert (E)
@@ -60,7 +65,7 @@ const DescSection = () => {
                     Perceiving (P).
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
         </Fade>

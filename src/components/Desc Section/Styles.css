@@ -25,9 +25,8 @@
 }
 
 .website-description {
-  position: absolute;
-  width: 627px;
-  height: 426px;
+  padding-right: 8rem;
+  margin-left: 4rem;
   left: 80px;
   margin-top: 5rem;
   font-weight: 550;
@@ -39,6 +38,7 @@
 }
 
 .desc-point {
+  margin: 0em 2rem;
   font-weight: 550;
   font-size: 18px;
   line-height: 22px;
@@ -46,4 +46,5 @@
   text-indent: 2px;
   color: #000000;
   list-style-type: disc;
+  padding-right: 2rem;
 }

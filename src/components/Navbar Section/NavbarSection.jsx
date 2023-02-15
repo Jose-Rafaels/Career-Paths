@@ -11,11 +11,7 @@ const Navbar = () => {
         </Link>
       </div>
       <ul className="navbar-ul">
-        <Link
-          to="/"
-          style={{ textDecoration: "none" }}
-          activeClass="activeClass"
-        >
+        <Link to="/" style={{ textDecoration: "none" }}>
           <li>Home</li>
         </Link>
 

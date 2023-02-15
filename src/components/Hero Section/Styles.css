@@ -6,6 +6,7 @@
 }
 
 .name {
+  width: 32rem;
   margin-top: 9rem;
   color: var(--black);
   font-weight: bold;
@@ -44,7 +45,7 @@
 }
 
 .i-right {
-  margin-left: 8rem;
+  margin-left: 1rem;
 }
 
 @media (max-width: 481px) {
