@@ -1,6 +1,7 @@
 .hero {
   margin: 0 5.5rem 8rem;
   padding-top: 8rem;
+  justify-content: center;
   display: flex;
 }
 
@@ -15,32 +16,6 @@
   font-size: 18px;
   margin: 0.5rem 0 2rem;
   color: var(--black);
-}
-
-@keyframes slideFromUp {
-  0% {
-    -webkit-transform: translateY(-50px);
-    -ms-transform: translateY(-50px);
-    transform: translateY(-50px);
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-.i-left {
-  flex: 1.5;
-  animation: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1 normal forwards
-    running slideFromUp;
-}
-
-.i-right {
-  flex: 1;
-  animation: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1 normal forwards
-    running slideFromUp;
 }
 
 .btn-primary {
@@ -66,6 +41,10 @@
   font-size: 16px;
   height: 48px;
   color: var(--bright-cyan);
+}
+
+.i-right {
+  margin-left: 8rem;
 }
 
 @media (max-width: 481px) {
