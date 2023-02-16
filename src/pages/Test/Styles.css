@@ -1,0 +1,14 @@
+.intro {
+  margin: 0 5.5rem 8rem;
+  padding-top: 8rem;
+  height: 775px;
+}
+
+.intro-subtitle {
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}

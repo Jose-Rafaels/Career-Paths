@@ -1,6 +1,7 @@
 import React from "react";
 import "./Styles.css";
-import Fade from "react-reveal/Fade";
+
+import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar Section/NavbarSection";
 import Footer from "../../components/Footer Section/FooterSection";
 import intro from "../../assets/Images/intro-ic.png";
@@ -22,41 +23,48 @@ const Intro = () => {
           <br />
           serta mata apa yang harus diambil.
         </p>
-        <Fade top cascade>
-          <div className="intro-content">
-            <div className="intro-left">
-              <div className="into-ic">
-                <img src={intro} alt="intro" height={367} width={375} />
-              </div>
+
+        <div className="intro-content">
+          <div className="intro-left">
+            <div className="into-ic">
+              <img src={intro} alt="intro" height={367} width={375} />
             </div>
-            <div className="intro-right">
-              <div className="time-ic">
-                <img src={time} alt="time" height={66} width={66} />
-                <p className="time-desc">
-                  Tes ini terdiri dari 52 pertanyaan, dan tidak ada batasan
-                  waktu pengerjaan. Akan tetapi umumnya tes ini akan memakan
-                  waktu selama 15 menit.
-                </p>
-              </div>
-              <div className="check-ic">
-                <img src={check} alt="check" height={66} width={66} />
-                <p className="check-desc">
-                  Seluruh soal harus dijawab. Pilih opsi "A" atau "B" yang
-                  sesuai dengan diri kamu. Setelah klik Selanjutnya kamu tidak
-                  bisa mengganti jawaban.
-                </p>
-              </div>
-              <div className="true-ic">
-                <img src={True} alt="True" height={66} width={66} />
-                <p className="true-desc">
-                  Dalam tes ini tidak ada jawaban benar maupun salah. Pilihlah
-                  jawaban yang sesuai dengan diri kamu.
-                </p>
-              </div>
-            </div>
-            <button className="button-start">Mulai Tes Sekarang</button>
           </div>
-        </Fade>
+          <div className="intro-right">
+            <div className="time-ic">
+              <img src={time} alt="time" height={66} width={66} />
+              <p className="time-desc">
+                Tes ini terdiri dari 52 pertanyaan, dan tidak ada batasan waktu
+                pengerjaan. Akan tetapi umumnya tes ini akan memakan waktu
+                selama 15 menit.
+              </p>
+            </div>
+            <div className="check-ic">
+              <img src={check} alt="check" height={66} width={66} />
+              <p className="check-desc">
+                Seluruh soal harus dijawab. Pilih opsi "A" atau "B" yang sesuai
+                dengan diri kamu. Setelah klik Selanjutnya kamu tidak bisa
+                mengganti jawaban.
+              </p>
+            </div>
+            <div className="true-ic">
+              <img src={True} alt="True" height={66} width={66} />
+              <p className="true-desc">
+                Dalam tes ini tidak ada jawaban benar maupun salah. Pilihlah
+                jawaban yang sesuai dengan diri kamu.
+              </p>
+            </div>
+          </div>
+          <button className="button-start">
+            {" "}
+            <Link
+              to="/test-page-1"
+              style={{ textDecoration: "none", color: "#ffffff" }}
+            >
+              Mulai Tes Sekarang
+            </Link>
+          </button>
+        </div>
       </div>
       <Footer />
     </>
