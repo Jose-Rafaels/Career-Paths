@@ -17,10 +17,10 @@ const Intro = () => {
         </p>
 
         <div className="intro-content">
-          <div className="intro-left">
-            <div className="into-ic"></div>
+          <div className="box-left">
+            <p className="progress">Progress 8/10</p>
           </div>
-          <div className="intro-right"></div>
+          <div className="box-right"></div>
           <button className="button-start">
             <Link
               to="/intro-test"
