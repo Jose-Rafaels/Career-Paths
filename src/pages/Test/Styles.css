@@ -39,7 +39,7 @@
 .box-right {
   position: relative;
   width: 730px;
-  height: 1271px;
+  height: 1314px;
   left: 51px;
   top: 80px;
   background: #ffffff;
@@ -63,4 +63,25 @@
 ProgressBar {
   width: 85%;
   height: 1rem;
+}
+
+.soal {
+  position: relative;
+  width: 600px;
+  height: 42px;
+  left: 53px;
+  top: 45px;
+  font-weight: 550;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.option {
+  position: relative;
+  width: 600px;
+  left: 72px;
+  top: 30px;
+  font-size: 18px;
+  padding-bottom: 4px;
 }
