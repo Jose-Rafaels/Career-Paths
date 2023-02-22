@@ -4,6 +4,13 @@
   height: 1768px;
 }
 
+.bg {
+  position: absolute;
+  left: -2px;
+  top: 1px;
+  z-index: -1;
+}
+
 .intro-subtitle {
   justify-content: center;
   font-weight: 500;
@@ -14,7 +21,7 @@
   margin-bottom: 3rem;
 }
 
-.box-left {
+.box-progress {
   position: sticky;
   width: 1148px;
   height: 120px;
@@ -39,7 +46,7 @@
   background: #ffffff;
 }
 
-.box-right {
+.box-question {
   position: absolute;
   width: 1148px;
   height: 1298px;
@@ -63,9 +70,8 @@
   font-size: 18px;
 }
 
-ProgressBar {
-  width: 85%;
-  height: 1rem;
+.progress-bar {
+  height: 1rem !important;
 }
 
 .soal {

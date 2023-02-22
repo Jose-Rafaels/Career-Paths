@@ -3,23 +3,27 @@ import "./Styles.css";
 import { Link } from "react-router-dom";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import { Form } from "react-bootstrap";
+import BG from "../../assets/Images/bg-test.png";
 
 const Intro = () => {
   return (
     <>
       <div className="test">
+        <div className="bg">
+          <img src={BG} alt="bg" width={"1444"} height={"1100"} />
+        </div>
         <p className="title">Jawab Sesuai Dengan Diri Anda!</p>
         <p className="intro-subtitle">
           Silahkan pilih salah satu yang sesuai dengan diri Anda dari setiap
           pertanyaan.
         </p>
 
-        <div className="box-left">
+        <div className="box-progress">
           <p className="progress">Progress 8/10</p>
-          <ProgressBar animated now={10} />
+          <ProgressBar animated now={50} />
         </div>
 
-        <div className="box-right">
+        <div className="box-question">
           <p className="soal">
             1. Ketika masuk ke dalam lingkungan yang baru saya cenderung
           </p>

@@ -27,7 +27,7 @@ const Intro = () => {
         <div className="intro-content">
           <div className="intro-left">
             <div className="into-ic">
-              <img src={intro} alt="intro" height={367} width={375} />
+              <img src={intro} alt="intro" height={289} width={405.67} />
             </div>
           </div>
           <div className="intro-right">
