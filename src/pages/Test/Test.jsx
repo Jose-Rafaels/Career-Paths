@@ -3,12 +3,10 @@ import "./Styles.css";
 import { Link } from "react-router-dom";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import { Form } from "react-bootstrap";
-import Navbar from "../../components/Navbar Section/NavbarSection";
 
 const Intro = () => {
   return (
     <>
-      <Navbar />
       <div className="test">
         <p className="title">Jawab Sesuai Dengan Diri Anda!</p>
         <p className="intro-subtitle">
@@ -16,205 +14,252 @@ const Intro = () => {
           pertanyaan.
         </p>
 
-        <div className="intro-content">
-          <div className="box-left">
-            <p className="progress">Progress 8/10</p>
-            <ProgressBar animated now={10} />
-          </div>
-          <div className="box-right">
-            <p className="soal">
-              1. Ketika masuk ke dalam lingkungan yang baru saya cenderung
-            </p>
-            <Form.Group controlId="kindOfStand">
-              <Form.Check
-                className="option"
-                value="design"
-                type="radio"
-                aria-label="radio 1"
-                label="A. Lebih banyak mengamati"
-              />
-              <Form.Check
-                className="option"
-                value="food"
-                type="radio"
-                aria-label="radio 2"
-                label="B. Berkenalan dengan orang lain"
-              />
-            </Form.Group>
-            <p className="soal">
-              2. Saya lebih suka membuat tujuan yang bersifat
-            </p>
-            <Form.Group controlId="kindOfStand">
-              <Form.Check
-                className="option"
-                value="design"
-                type="radio"
-                aria-label="radio 1"
-                label="A. Jangka panjang"
-              />
-              <Form.Check
-                className="option"
-                value="food"
-                type="radio"
-                aria-label="radio 2"
-                label="B. Jangka pendek"
-              />
-            </Form.Group>
-            <p className="soal">
-              3. Jika menghadapi dua pendapat yang berbeda, saya akan mengambil
-              keputusan setelah...
-            </p>
-            <Form.Group controlId="kindOfStand">
-              <Form.Check
-                className="option"
-                value="design"
-                type="radio"
-                aria-label="radio 1"
-                label="A. Mengetahui sebab dan akibat dari suatu permasalahan"
-              />
-              <Form.Check
-                className="option"
-                value="food"
-                type="radio"
-                aria-label="radio 2"
-                label="B. Memahami cara pandang kedua pihak yang berbeda pendapat"
-              />
-            </Form.Group>
-            <p className="soal">4. Saya lebih memilih untuk menjalani</p>
-            <Form.Group controlId="kindOfStand">
-              <Form.Check
-                className="option"
-                value="design"
-                type="radio"
-                aria-label="radio 1"
-                label="A. Kehidupan yang punya tujuan"
-              />
-              <Form.Check
-                className="option"
-                value="food"
-                type="radio"
-                aria-label="radio 2"
-                label="B. Kehidupan yang bebas"
-              />
-            </Form.Group>
-            <p className="soal">
-              5. Dalam kondisi santai, saya lebih tertarik memperhatikan
-            </p>
-            <Form.Group controlId="kindOfStand">
-              <Form.Check
-                className="option"
-                value="design"
-                type="radio"
-                aria-label="radio 1"
-                label="A. Gambaran yang muncul di benak saya"
-              />
-              <Form.Check
-                className="option"
-                value="food"
-                type="radio"
-                aria-label="radio 2"
-                label="B. Apa yang terjadi di sekitar saya"
-              />
-            </Form.Group>
-            <p className="soal">6. Saya lebih suka memikirkan</p>
-            <Form.Group controlId="kindOfStand">
-              <Form.Check
-                className="option"
-                value="design"
-                type="radio"
-                aria-label="radio 1"
-                label="A. Kemungkinan yang akan terjadi di masa depan"
-              />
-              <Form.Check
-                className="option"
-                value="food"
-                type="radio"
-                aria-label="radio 2"
-                label="B. Apa yang sedang terjadi saat ini"
-              />
-            </Form.Group>
-            <p className="soal">
-              7. Saya akan lebih berpihak kepada orang yang
-            </p>
-            <Form.Group controlId="kindOfStand">
-              <Form.Check
-                className="option"
-                value="design"
-                type="radio"
-                aria-label="radio 1"
-                label="A. Dapat memberikan alasan yang masuk akal"
-              />
-              <Form.Check
-                className="option"
-                value="food"
-                type="radio"
-                aria-label="radio 2"
-                label="B. Dapat memberikan alasan yang menyentuh perasaan"
-              />
-            </Form.Group>
-            <p className="soal">
-              8. Ketika masuk ke dalam lingkungan yang baru saya cenderung
-            </p>
-            <Form.Group controlId="kindOfStand">
-              <Form.Check
-                className="option"
-                value="design"
-                type="radio"
-                aria-label="radio 1"
-                label="A. Yang menegakkan aturan"
-              />
-              <Form.Check
-                className="option"
-                value="food"
-                type="radio"
-                aria-label="radio 2"
-                label="B. Yang memberi kebebasan"
-              />
-            </Form.Group>
-            <p className="soal">9. Saya lebih bersemangat untuk</p>
-            <Form.Group controlId="kindOfStand">
-              <Form.Check
-                className="option"
-                value="design"
-                type="radio"
-                aria-label="radio 1"
-                label="A. Membayangkan sesuatu yang menyenangkan"
-              />
-              <Form.Check
-                className="option"
-                value="food"
-                type="radio"
-                aria-label="radio 2"
-                label="B. Bertemu dengan orang baru"
-              />
-            </Form.Group>
-            <p className="soal">10. Saya lebih bersemangat jika berbicara</p>
-            <Form.Group controlId="kindOfStand">
-              <Form.Check
-                className="option"
-                value="design"
-                type="radio"
-                aria-label="radio 1"
-                label="A. Tentang kemungkinan di masa depan"
-              />
-              <Form.Check
-                className="option"
-                value="food"
-                type="radio"
-                aria-label="radio 2"
-                label="B. Tentang kejadian yang sedang berlangsung"
-              />
-            </Form.Group>
-          </div>
-          <button className="button-next">
-            <Link
-              to="/intro-test"
-              style={{ textDecoration: "none", color: "#ffffff" }}
-            >
-              Selanjutnya
-            </Link>
-          </button>
+        <div className="box-left">
+          <p className="progress">Progress 8/10</p>
+          <ProgressBar animated now={10} />
         </div>
+
+        <div className="box-right">
+          <p className="soal">
+            1. Ketika masuk ke dalam lingkungan yang baru saya cenderung
+          </p>
+          <Form>
+            {["radio"].map((type) => (
+              <div key={`inline-${type}`} className="mb-3">
+                <Form.Check
+                  className="option"
+                  label="A. Lebih banyak mengamati"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-1`}
+                />
+                <Form.Check
+                  className="option"
+                  inline
+                  label="B. Berkenalan dengan orang lain"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-2`}
+                />
+              </div>
+            ))}
+          </Form>
+          <p className="soal">
+            2. Saya lebih suka membuat tujuan yang bersifat
+          </p>
+          <Form>
+            {["radio"].map((type) => (
+              <div key={`inline-${type}`} className="mb-3">
+                <Form.Check
+                  className="option"
+                  label="A. Jangka panjang"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-1`}
+                />
+                <Form.Check
+                  className="option"
+                  inline
+                  label="B. Jangka pendek"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-2`}
+                />
+              </div>
+            ))}
+          </Form>
+          <p className="soal">
+            3. Jika menghadapi dua pendapat yang berbeda, saya akan mengambil
+            keputusan setelah...
+          </p>
+          <Form>
+            {["radio"].map((type) => (
+              <div key={`inline-${type}`} className="mb-3">
+                <Form.Check
+                  className="option"
+                  label="A. Mengetahui sebab dan akibat dari suatu permasalahan"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-1`}
+                />
+                <Form.Check
+                  className="option"
+                  inline
+                  label="B. Memahami cara pandang kedua pihak yang berbeda pendapat"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-2`}
+                />
+              </div>
+            ))}
+          </Form>
+          <p className="soal">4. Saya lebih memilih untuk menjalani</p>
+          <Form>
+            {["radio"].map((type) => (
+              <div key={`inline-${type}`} className="mb-3">
+                <Form.Check
+                  className="option"
+                  label="A. Kehidupan yang punya tujuan"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-1`}
+                />
+                <Form.Check
+                  className="option"
+                  inline
+                  label="B. Kehidupan yang bebas"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-2`}
+                />
+              </div>
+            ))}
+          </Form>
+          <p className="soal">
+            5. Dalam kondisi santai, saya lebih tertarik memperhatikan
+          </p>
+          <Form>
+            {["radio"].map((type) => (
+              <div key={`inline-${type}`} className="mb-3">
+                <Form.Check
+                  className="option"
+                  label="A. Gambaran yang muncul di benak saya"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-1`}
+                />
+                <Form.Check
+                  className="option"
+                  inline
+                  label="B. Apa yang terjadi di sekitar saya"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-2`}
+                />
+              </div>
+            ))}
+          </Form>
+          <p className="soal">6. Saya lebih suka memikirkan</p>
+          <Form>
+            {["radio"].map((type) => (
+              <div key={`inline-${type}`} className="mb-3">
+                <Form.Check
+                  className="option"
+                  label="A. Kemungkinan yang akan terjadi di masa depan"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-1`}
+                />
+                <Form.Check
+                  className="option"
+                  inline
+                  label="B. Apa yang sedang terjadi saat ini"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-2`}
+                />
+              </div>
+            ))}
+          </Form>
+          <p className="soal">7. Saya akan lebih berpihak kepada orang yang</p>
+          <Form>
+            {["radio"].map((type) => (
+              <div key={`inline-${type}`} className="mb-3">
+                <Form.Check
+                  className="option"
+                  label="A. Dapat memberikan alasan yang masuk akal"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-1`}
+                />
+                <Form.Check
+                  className="option"
+                  inline
+                  label="B. Dapat memberikan alasan yang menyentuh perasaan"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-2`}
+                />
+              </div>
+            ))}
+          </Form>
+          <p className="soal">
+            8. Ketika masuk ke dalam lingkungan yang baru saya cenderung
+          </p>
+          <Form>
+            {["radio"].map((type) => (
+              <div key={`inline-${type}`} className="mb-3">
+                <Form.Check
+                  className="option"
+                  label="A. Yang menegakkan aturan"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-1`}
+                />
+                <Form.Check
+                  className="option"
+                  inline
+                  label="B. Yang memberi kebebasan"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-2`}
+                />
+              </div>
+            ))}
+          </Form>
+          <p className="soal">9. Saya lebih bersemangat untuk</p>
+          <Form>
+            {["radio"].map((type) => (
+              <div key={`inline-${type}`} className="mb-3">
+                <Form.Check
+                  className="option"
+                  label="A. Membayangkan sesuatu yang menyenangkan"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-1`}
+                />
+                <Form.Check
+                  className="option"
+                  inline
+                  label="B. Bertemu dengan orang baru"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-2`}
+                />
+              </div>
+            ))}
+          </Form>
+          <p className="soal">10. Saya lebih bersemangat jika berbicara</p>
+          <Form>
+            {["radio"].map((type) => (
+              <div key={`inline-${type}`} className="mb-3">
+                <Form.Check
+                  className="option"
+                  label="A. Tentang kemungkinan di masa depan"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-1`}
+                />
+                <Form.Check
+                  className="option"
+                  inline
+                  label="B. Tentang kejadian yang sedang berlangsung"
+                  name="group1"
+                  type={type}
+                  id={`inline-${type}-2`}
+                />
+              </div>
+            ))}
+          </Form>
+        </div>
+        <button className="button-next">
+          <Link
+            to="/intro-test"
+            style={{ textDecoration: "none", color: "#ffffff" }}
+          >
+            Selanjutnya
+          </Link>
+        </button>
       </div>
     </>
   );
