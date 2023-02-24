@@ -5,7 +5,7 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import { Form } from "react-bootstrap";
 import BG from "../../assets/Images/bg-test.png";
 
-const Intro = () => {
+const TestPage = () => {
   return (
     <>
       <div className="test">
@@ -258,7 +258,7 @@ const Intro = () => {
         </div>
         <button className="button-next">
           <Link
-            to="/intro-test"
+            to="/intro-result"
             style={{ textDecoration: "none", color: "#ffffff" }}
           >
             Selanjutnya
@@ -269,4 +269,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default TestPage;
