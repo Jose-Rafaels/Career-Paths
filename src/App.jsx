@@ -8,12 +8,14 @@ import RegisterPage from "../src/pages/Register/RegisterPage";
 import IntroPage from "../src/pages/Intro Test/Intro";
 import TestPage1 from "../src/pages/Test/Test";
 import IntroResultPage from "../src/pages/Intro Result/IntroResult";
+import ErrorPage from "../src/pages/Not Found/Error";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
+          <Route path="*" element={<ErrorPage />} />
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
