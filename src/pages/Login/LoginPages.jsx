@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Styles.css";
 
 import Navbar from "../../components/Navbar Section/NavbarSection";
@@ -14,11 +16,14 @@ import Google from "../../assets/Images/google-ic.png";
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
       <Navbar />
 
-      <div className="login">
+      <div className="login" data-aos="fade-down">
         <div className="login-ic">
           <img className="login-logo" src={LoginIc} alt={LoginIc} />
         </div>

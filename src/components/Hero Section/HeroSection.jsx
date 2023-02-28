@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Styles.css";
-
 import hero from "../../assets/Images/Hero.png";
 import { Link } from "react-router-dom";
 
 const Intro = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
-    <div className="hero">
+    <div className="hero" data-aos="fade-down">
       <div className="i-left">
         <div className="i-name">
           <p className="name">

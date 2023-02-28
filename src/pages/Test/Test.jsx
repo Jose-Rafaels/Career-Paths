@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Styles.css";
 import { Link } from "react-router-dom";
 import ProgressBar from "react-bootstrap/ProgressBar";
@@ -6,6 +8,9 @@ import { Form } from "react-bootstrap";
 import BG from "../../assets/Images/bg-test.png";
 
 const TestPage = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
       <div className="test">
@@ -18,12 +23,12 @@ const TestPage = () => {
           pertanyaan.
         </p>
 
-        <div className="box-progress">
+        <div className="box-progress" data-aos="fade-up">
           <p className="progress">Progress 8/10</p>
           <ProgressBar animated now={50} />
         </div>
 
-        <div className="box-question">
+        <div className="box-question" data-aos="fade-up">
           <p className="soal">
             1. Ketika masuk ke dalam lingkungan yang baru saya cenderung
           </p>

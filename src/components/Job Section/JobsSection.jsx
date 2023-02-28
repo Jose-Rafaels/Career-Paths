@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Styles.css";
-
 import webdev from "../../assets/Images/webdev.png";
 import compsyst from "../../assets/Images/compsyst.png";
 import sofdev from "../../assets/Images/softdev.png";
@@ -13,6 +14,9 @@ import compnet from "../../assets/Images/compnet.png";
 import netcomp from "../../assets/Images/netcomp.png";
 
 const JobSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <section className="jobs-section">
       <div className="job-section">
@@ -22,7 +26,7 @@ const JobSection = () => {
           Computing Curriculla 2020
         </p>
 
-        <div className="job-category1">
+        <div className="job-category1" data-aos="fade-up">
           <div className="job-category-card">
             <div className="job-icon">
               <img className="job-icon" src={webdev} alt={webdev} />
@@ -79,7 +83,7 @@ const JobSection = () => {
           </div>
         </div>
 
-        <div className="job-category2">
+        <div className="job-category2" data-aos="fade-up">
           <div className="job-category-card">
             <div className="job-icon">
               <img className="job-icon" src={systsoft} alt={systsoft} />
@@ -136,7 +140,7 @@ const JobSection = () => {
           </div>
         </div>
 
-        <div className="job-category3">
+        <div className="job-category3" data-aos="fade-up">
           <div className="job-category-card">
             <div className="job-icon">
               <img className="job-icon" src={compnet} alt={compnet} />

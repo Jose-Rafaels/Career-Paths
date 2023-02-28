@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Styles.css";
 
 import Navbar from "../../components/Navbar Section/NavbarSection";
@@ -15,10 +17,13 @@ import Google from "../../assets/Images/google-ic.png";
 import { Link } from "react-router-dom";
 
 const RegisterPage = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
       <Navbar />
-      <div className="register">
+      <div className="register" data-aos="fade-down">
         <div className="register-ic">
           <img className="register-logo" src={RegsiterIc} alt={RegsiterIc} />
         </div>

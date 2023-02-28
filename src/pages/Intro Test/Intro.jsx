@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Styles.css";
-
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar Section/NavbarSection";
 import Footer from "../../components/Footer Section/FooterSection";
@@ -10,10 +11,13 @@ import check from "../../assets/Images/check-ic.png";
 import True from "../../assets/Images/true-ic.png";
 
 const Intro = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
       <Navbar />
-      <div className="intro">
+      <div className="intro" data-aos="zoom-in">
         <p className="title">Tata Cara Menjawab Pertanyaan</p>
         <p className="intro-subtitle">
           Tes ini digunakan untuk mengetahui minat dan bakat Anda.
