@@ -43,6 +43,12 @@
   border-radius: 10px;
 }
 
+.job-category-card:hover {
+  box-shadow: 0px 4px 10px 0px rgba(40, 40, 124, 0.7);
+  transition: all 0.2s ease 0s;
+  transform: scale(1.05);
+}
+
 .job-icon {
   width: 52px;
   height: 51px;
@@ -69,7 +75,7 @@
 
 .more {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 15px;
   line-height: 18px;
   color: var(--blue);

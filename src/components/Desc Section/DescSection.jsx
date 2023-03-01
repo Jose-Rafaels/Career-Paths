@@ -32,37 +32,83 @@ const DescSection = () => {
                 mengetahuinya, Anda diharuskan terlebih dahulu untuk mengerjakan
                 kuisioner. Kuisioner ini nanti akan menggunakan metode MBTI.
                 <br />
-                Apa itu MBTI? The Myers Briggs Type Indicator atau biasa
-                disingkat menjadi MBTI merupakan metode pengukuran yang
-                digunakan untuk membaca kepribadian seseorang, khususnya untuk
-                memahami bagaimana seseorang menilai sesuatu dan membuat
-                keputusan.
                 <br />
-                The Myers-Briggs Type Indicator lahir dan dikembangkan oleh
-                Kathrine Cook Briggs dan putrinya. Carl Gustav Jung menjelaskan
-                bahwa kepribadian ini dibagi melalui empat dimensi sifat dasar
-                manusia, yaitu :
+                Apa itu MBTI? MBTI adalah singkatan dari The Myers-Briggs Type
+                Indicator. MBTI merupakan sebuah instrumen untuk melakukan
+                assesment atau tes kepribadian mandiri dan sederhana. Assesment
+                ini dilakukan untuk mengetahui cara seseorang saat mengolah
+                informasi, mengambil keputusan, atau memandang sebuah masalah
+                yang ada. Menurut Carl Jung, manusia memiliki 4 fungsi pokok
+                yaitu:{" "}
+                <span style={{ color: "#000000", fontWeight: "bold" }}>
+                  intuisi
+                </span>
+                ,{" "}
+                <span style={{ color: "#000000", fontWeight: "bold" }}>
+                  pengindra
+                </span>
+                ,{" "}
+                <span style={{ color: "#000000", fontWeight: "bold" }}>
+                  perasa
+                </span>
+                , dan{" "}
+                <span style={{ color: "#000000", fontWeight: "bold" }}>
+                  berpikir
+                </span>
+                . Yang kemudian akan dicabangkan lagi menjadi 4 rentang:
               </p>
             </div>
             <div>
               <ul className="desc-point">
                 <li className="desc-point">
-                  dimensi pemusatan perhatian yang terdiri dari Extrovert (E) vs
-                  Introvert (I).
+                  <span style={{ color: "#000000", fontWeight: "bold" }}>
+                    Introvert (I)
+                  </span>{" "}
+                  vs.{" "}
+                  <span style={{ color: "#000000", fontWeight: "bold" }}>
+                    Esktrovert (E)
+                  </span>{" "}
+                  – Cara seseorang memusatkan perhatiannya.
                 </li>
                 <li className="desc-point">
-                  dimensi memahami informasi dari luar yang terdiri dari Sensing
-                  (S) vs Intuition (N).
+                  <span style={{ color: "#000000", fontWeight: "bold" }}>
+                    Sensing (S)
+                  </span>{" "}
+                  vs.{" "}
+                  <span style={{ color: "#000000", fontWeight: "bold" }}>
+                    Intuition (N)
+                  </span>{" "}
+                  – Cara seseorang memahami sebuah informasi.
                 </li>
                 <li className="desc-point">
-                  dimensi menarik kesimpulan dan keputusan yang terdiri dari
-                  Thinking (T) vs Feeling (F).
+                  <span style={{ color: "#000000", fontWeight: "bold" }}>
+                    Thinking (T)
+                  </span>{" "}
+                  vs.{" "}
+                  <span style={{ color: "#000000", fontWeight: "bold" }}>
+                    Feeling (F)
+                  </span>{" "}
+                  – Cara seseorang mengambil keputusan.
                 </li>
                 <li className="desc-point">
-                  dimensi pola hidup yang terdiri dari Judging (J) vs Perceiving
-                  (P).
+                  <span style={{ color: "#000000", fontWeight: "bold" }}>
+                    Judging (J)
+                  </span>{" "}
+                  vs.{" "}
+                  <span style={{ color: "#000000", fontWeight: "bold" }}>
+                    Perceiving (P)
+                  </span>{" "}
+                  – Cara seseorang merespon dunia sekitar.
                 </li>
               </ul>
+            </div>
+            <div>
+              <p className="website-descriptions">
+                Tes psikologi gratis ini akan membantu kamu untuk lebih mengenal
+                diri sendiri. Kamu dapat lebih memahami kekuatan dan kelemahan
+                yang ada dalam diri. Selain itu kamu dapat mengetahui tipe
+                pasangan yang ideal dan tipe pekerjaan yang cocok.
+              </p>
             </div>
           </div>
         </div>

@@ -99,7 +99,7 @@ const RegisterPage = () => {
           </div>
 
           <p className="create-account">
-            Sudah Punya Akun?
+            Sudah Punya Akun?{" "}
             <span style={{ fontWeight: "bold", color: "#000000" }}>
               <Link to="/login" style={{ textDecoration: "none" }}>
                 Masuk Sekarang

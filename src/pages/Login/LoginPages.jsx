@@ -78,7 +78,7 @@ const LoginPage = () => {
           </div>
 
           <p className="create-account">
-            Belum Punya Akun?
+            Belum Punya Akun?{" "}
             <span style={{ fontWeight: "bold", color: "#000000" }}>
               <Link to="/register" style={{ textDecoration: "none" }}>
                 Daftar Sekarang
