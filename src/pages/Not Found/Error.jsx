@@ -12,7 +12,7 @@ const Error = () => {
         Maaf, halaman <code>{location.pathname}</code> tidak ditemukan.
       </p>
       <img className="error-ic" src={FinalIC} alt="final-ic" />
-      <button className="button-final">
+      <button className="button-back">
         <Link to="/" style={{ textDecoration: "none", color: "#ffffff" }}>
           Back Home
         </Link>
