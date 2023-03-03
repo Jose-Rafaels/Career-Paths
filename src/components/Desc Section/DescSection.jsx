@@ -31,8 +31,8 @@ const DescSection = () => {
                 yang sesuai dengan minat bakat yang Anda miliki. Untuk
                 mengetahuinya, Anda diharuskan terlebih dahulu untuk mengerjakan
                 kuisioner. Kuisioner ini nanti akan menggunakan metode MBTI.
-                <br />
-                <br />
+              </p>
+              <p className="website-descriptions">
                 Apa itu MBTI? MBTI adalah singkatan dari The Myers-Briggs Type
                 Indicator. MBTI merupakan sebuah instrumen untuk melakukan
                 assesment atau tes kepribadian mandiri dan sederhana. Assesment

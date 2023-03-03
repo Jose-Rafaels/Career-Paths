@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
 import Modal from "react-bootstrap/Modal";
-import { Link } from "react-router-dom";
 import webdev from "../../assets/Images/webdev.png";
 import compsyst from "../../assets/Images/compsyst.png";
 import sofdev from "../../assets/Images/softdev.png";
@@ -38,31 +37,14 @@ const JobSection = () => {
             Web Developer <br />& Digital Designer
           </p>
           <p className="job-description">
-            Merancang website, pengembangan website, memelihara, mengamankan
-            website.
+            Web developers membuat dan memelihara situs web. Desainer digital
+            mengembangkan, membuat, dan menguji tata letak situs web...
           </p>
           <button className="btn-more" onClick={() => setShow(true)}>
-            <p className="more">Selengkapnya</p>
+            Selengkapnya
           </button>
         </div>
-        <Modal show={show} onHide={() => setShow(false)}>
-          <Modal.Header closeButton>
-            <Modal.Title id="example-custom-modal-styling-title">
-              Custom Modal Styling
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <p>
-              Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae
-              unde commodi aspernatur enim, consectetur. Cumque deleniti
-              temporibus ipsam atque a dolores quisquam quisquam adipisci
-              possimus laboriosam. Quibusdam facilis doloribus debitis! Sit
-              quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem!
-              Mollitia reiciendis porro quo magni incidunt dolore amet atque
-              facilis ipsum deleniti rem!
-            </p>
-          </Modal.Body>
-        </Modal>
+
         <div className="job-category-card">
           <div className="job-icon">
             <img className="job-icon" src={compsyst} alt={compsyst} />
@@ -72,27 +54,27 @@ const JobSection = () => {
             Analysts
           </p>
           <p className="job-description">
-            Mendesign sistem, pelayanan kepada klien/manajemen/perusahaan,
-            analisa sistem.
+            Mempelajari sistem prosedur komputer organisasi dan merancang
+            peningkatannya. membantu organisasi beroperasi...
           </p>
-          <Link to="Layanan" style={{ textDecoration: "none" }}>
-            <p className="more">Selengkapnya</p>
-          </Link>
+          <button className="btn-more" onClick={() => setShow(true)}>
+            Selengkapnya
+          </button>
         </div>
         <div className="job-category-card">
           <div className="job-icon">
             <img className="job-icon" src={sofdev} alt={sofdev} />
           </div>
           <p className="job-title">
-            Software Developers, <br />
-            Applications
+            Software Developer, Quality Assurance Analyst & Testers
           </p>
           <p className="job-description">
-            Pengembangan, pemeliharaan dan implementasi mobile apk.
+            Membuat aplikasi komputer yang memungkinkan pengguna melakukan tugas
+            tertentu dan sistem yang mendasari berjalanny...
           </p>
-          <Link to="Layanan" style={{ textDecoration: "none" }}>
-            <p className="more">Selengkapnya</p>
-          </Link>
+          <button className="btn-more" onClick={() => setShow(true)}>
+            Selengkapnya
+          </button>
         </div>
         <div className="job-category-card">
           <div className="job-icon">
@@ -103,12 +85,12 @@ const JobSection = () => {
             Analysts
           </p>
           <p className="job-description">
-            Memelihara software, memeriksa kerentanan dalam sistem komputer dan
-            jaringan.
+            Merencanakan dan melaksanakan langkah-langkah keamanan untuk
+            melindungi jaringan, sistem komputer organisasi dan...
           </p>
-          <Link to="Layanan" style={{ textDecoration: "none" }}>
-            <p className="more">Selengkapnya</p>
-          </Link>
+          <button className="btn-more" onClick={() => setShow(true)}>
+            Selengkapnya
+          </button>
         </div>
       </div>
 
@@ -118,16 +100,16 @@ const JobSection = () => {
             <img className="job-icon" src={systsoft} alt={systsoft} />
           </div>
           <p className="job-title">
-            Software Developers, <br />
-            Systems Software
+            Computer <br />
+            Programmers
           </p>
           <p className="job-description">
-            Merancang software/apk, Pengembangan software/apk, serta memelihara
-            software/apk.
+            Computer programmer menulis, memodifikasi, dan menguji kode dan
+            skrip yang memungkinkan perangkat lunak dan aplikasi...
           </p>
-          <Link to="Layanan" style={{ textDecoration: "none" }}>
-            <p className="more">Selengkapnya</p>
-          </Link>
+          <button className="btn-more" onClick={() => setShow(true)}>
+            Selengkapnya
+          </button>
         </div>
         <div className="job-category-card">
           <div className="job-icon">
@@ -138,27 +120,27 @@ const JobSection = () => {
             Specialists
           </p>
           <p className="job-description">
-            Testing dan evaluasi sistem jaringan yang digunakan, memastikan
-            jaringan komputer bekerja dengan baik, trouble...
+            Membantu pengguna komputer, organisasi, memelihara jaringan komputer
+            atau memberikan bantuan teknis secara langsung...
           </p>
-          <Link to="Layanan" style={{ textDecoration: "none" }}>
-            <p className="more">Selengkapnya</p>
-          </Link>
+          <button className="btn-more" onClick={() => setShow(true)}>
+            Selengkapnya
+          </button>
         </div>
         <div className="job-category-card">
           <div className="job-icon">
             <img className="job-icon" src={dba} alt={dba} />
           </div>
           <p className="job-title">
-            Database <br />
-            Administrators
+            Database Administrators <br /> and Architects
           </p>
           <p className="job-description">
-            Mengelola, mengamankan serta perawatan.
+            Membuat atau mengatur sistem untuk menyimpan dan mengamankan
+            berbagai data, seperti informasi keuangan dan...
           </p>
-          <Link to="Layanan" style={{ textDecoration: "none" }}>
-            <p className="more">Selengkapnya</p>
-          </Link>
+          <button className="btn-more" onClick={() => setShow(true)}>
+            Selengkapnya
+          </button>
         </div>
         <div className="job-category-card">
           <div className="job-icon">
@@ -169,11 +151,12 @@ const JobSection = () => {
             Research Scientists
           </p>
           <p className="job-description">
-            Menganalisa, eksperimen, implementasi Model.
+            Merancang penggunaan inovatif untuk teknologi baru dan yang sudah
+            ada, mempelajari dan memecahkan masalah kompleks...
           </p>
-          <Link to="Layanan" style={{ textDecoration: "none" }}>
-            <p className="more">Selengkapnya</p>
-          </Link>
+          <button className="btn-more" onClick={() => setShow(true)}>
+            Selengkapnya
+          </button>
         </div>
       </div>
 
@@ -187,12 +170,12 @@ const JobSection = () => {
             Architects
           </p>
           <p className="job-description">
-            Merancang konfigurasi system, dokumentasi, mengelola instalasi
-            jaringan, pemeliharaan jaringan.
+            Merancang dan membangun jaringan komunikasi data, termasuk jaringan
+            area lokal (LAN), jaringan area luas (WAN), dan Intranet haru...
           </p>
-          <Link to="Layanan" style={{ textDecoration: "none" }}>
-            <p className="more">Selengkapnya</p>
-          </Link>
+          <button className="btn-more" onClick={() => setShow(true)}>
+            Selengkapnya
+          </button>
         </div>
         <div className="job-category-card">
           <div className="job-icon">
@@ -203,14 +186,67 @@ const JobSection = () => {
             Systems Administrators
           </p>
           <p className="job-description">
-            mendefinisikan kebutuhan organisasi, memastikan system untuk di
-            update, mengoptimasi jaringan dan sistem jaringan...
+            Bertanggung jawab atas pengoperasian jaringan sehari-hari. Mengatur,
+            memasang, dan mendukung sistem komputer...
           </p>
-          <Link to="Layanan" style={{ textDecoration: "none" }}>
-            <p className="more">Selengkapnya</p>
-          </Link>
+          <button className="btn-more" onClick={() => setShow(true)}>
+            Selengkapnya
+          </button>
         </div>
       </div>
+
+      <Modal show={show} onHide={() => setShow(false)} size="lg">
+        <Modal.Header closeButton>
+          <Modal.Title
+            className="job-title"
+            id="example-custom-modal-styling-title"
+          >
+            Web Developer & Digital Designer
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p className="description">
+            Web developers membuat dan memelihara situs web. Desainer digital
+            mengembangkan, membuat, dan menguji tata letak situs web atau
+            antarmuka, fungsi, dan navigasi untuk kegunaannya.
+            <br />
+            <br />
+            <span style={{ color: "#000000", fontWeight: "bold" }}>
+              Tugas & Tanggung Jawab :
+            </span>
+          </p>
+          <div>
+            <ul className="description-point">
+              <li className="description-point">
+                Bertemu dengan klien atau manajemen untuk mendiskusikan
+                kebutuhan, desain, dan fungsionalitas situs web atau antarmuka.
+              </li>
+              <li className="description-point">
+                Membuat dan menguji aplikasi, antarmuka, dan menu navigasi untuk
+                situs web.
+              </li>
+              <li className="description-point">
+                Bekerja dengan desainer grafis dan desainer lain untuk
+                menentukan tata letak situs web.
+              </li>
+              <li className="description-point">
+                Merancang dan mengembangkan grafis dan memelihara situs web.
+                Desainer digital mengembangkan, membuat, dan menguji tata letak
+                situs web atau antarmuka, fungsi, dan navigasi untuk
+                kegunaannya.
+              </li>
+            </ul>
+          </div>
+          <p className="description">
+            <span style={{ color: "#000000", fontWeight: "bold" }}>
+              Keterampilan yang dibutuhkan :
+            </span>
+            <br />
+            HTML CSS, Javascript Framework, Rest Apis, Sql Server, UI/UX, PHP
+            Laravel, Node.
+          </p>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };
