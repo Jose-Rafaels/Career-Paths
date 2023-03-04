@@ -8,7 +8,7 @@ import RegisterPage from "../src/pages/Register/RegisterPage";
 import IntroPage from "../src/pages/Intro Test/Intro";
 import TestPage1 from "../src/pages/Test/Test";
 import IntroResultPage from "../src/pages/Intro Result/IntroResult";
-import ErrorPage from "../src/pages/Not Found/Error";
+import ErrorPage from "../src/pages/Error/Error";
 
 function App() {
   return (
