@@ -15,10 +15,9 @@ Untuk menggunakan website Career Paths, langkah pertama yang harus dilakukan ada
     npm install
    ```
 3. Jalankan website
-
-```sh
- npm start
-```
+   ```sh
+    npm start
+   ```
 
 ## UI Design
 
