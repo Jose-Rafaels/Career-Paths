@@ -1,7 +1,7 @@
 import React from "react";
 import "./Styles.css";
 
-import sec from "../../assets/Images/sec-ic.png";
+import mbti from "../../assets/Images/mbti-ic.png";
 
 const DescSection = () => {
   return (
@@ -17,10 +17,10 @@ const DescSection = () => {
           <div className="sec-logo">
             <img
               className="sec-ic"
-              src={sec}
-              alt={sec}
-              height={524}
-              width={364}
+              src={mbti}
+              alt={mbti}
+              height={263}
+              width={309}
             />
           </div>
 
