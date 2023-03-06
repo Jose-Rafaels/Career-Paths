@@ -26,7 +26,7 @@ const IntroResult = () => {
         <img className="final-ic" src={FinalIC} alt="final-ic" />
         <button className="button-final">
           <Link
-            to="/intro-test"
+            to="/result"
             style={{ textDecoration: "none", color: "#ffffff" }}
           >
             Lihat Hasil

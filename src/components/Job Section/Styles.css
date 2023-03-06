@@ -91,7 +91,7 @@
   line-height: 22px;
   font-size: 18px;
   color: #000000;
-  padding: 0rem 1rem;
+  padding: 2rem 2rem 0rem 2rem;
 }
 
 .description-point {
@@ -102,5 +102,5 @@
   text-indent: 2px;
   color: #000000;
   list-style-type: disc;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }

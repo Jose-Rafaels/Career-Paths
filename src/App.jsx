@@ -8,6 +8,7 @@ import RegisterPage from "../src/pages/Register/RegisterPage";
 import IntroPage from "../src/pages/Intro Test/Intro";
 import TestPage1 from "../src/pages/Test/Test";
 import IntroResultPage from "../src/pages/Intro Result/IntroResult";
+import ResultPage from "../src/pages/Result/Result";
 import ErrorPage from "../src/pages/Error/Error";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/intro-test" element={<IntroPage />} />
           <Route path="/test-page-1" element={<TestPage1 />} />
           <Route path="/intro-result" element={<IntroResultPage />} />
+          <Route path="/result" element={<ResultPage />} />
         </Routes>
       </Router>
     </div>

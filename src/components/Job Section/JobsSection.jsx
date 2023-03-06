@@ -216,7 +216,7 @@ const JobSection = () => {
             </span>
           </p>
           <div>
-            <ul className="description-point">
+            <ul className="description-points">
               <li className="description-point">
                 Bertemu dengan klien atau manajemen untuk mendiskusikan
                 kebutuhan, desain, dan fungsionalitas situs web atau antarmuka.
