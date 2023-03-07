@@ -5,6 +5,7 @@ import "./Styles.css";
 import Navbar from "../../components/Navbar Section/NavbarSection";
 import Footer from "../../components/Footer Section/FooterSection";
 import webDev from "../../assets/Images/webdev.png";
+import BG from "../../assets/Images/bg-test.png";
 
 const ResultPage = () => {
   useEffect(() => {
@@ -15,6 +16,49 @@ const ResultPage = () => {
     <>
       <Navbar />
       <div className="resultPage">
+        <div className="bg">
+          <img src={BG} alt="bg" width={"1444"} height={"1100"} />
+        </div>
+        <div className="resultSection">
+          <p className="hi-user">Halo John Doe</p>
+          <p className="intro-user-result">
+            Berdasarkan tes yang sudah kamu lakukan, tipe kepribadian kamu
+            adalah
+          </p>
+          <p className="user-result">
+            ISTJ (Introved, Sensing, Thingking, Judging)
+          </p>
+          <p className="characteristic-desc">Karakteristik ISTJ adalah :</p>
+          <div>
+            <ul className="characteristic-points">
+              <li className="characteristic-point">
+                ISTJ adalah sosok yang penuh tanggung jawab dan realistis.
+                Mereka mengambil pendekatam logis untuk mencapai sebuah tujuan.
+                Mereka mampu mengabaikan gangguan untuk fokus pada tugas yang
+                dihadapi dan sering digambarkan sebagai orang yang dapat
+                diandalkan dan dapat dipercaya.
+              </li>
+              <li className="characteristic-point">
+                Mereka adalah perencana sejati, ISTJ suka merencanakan sesuatu
+                dengan matang sebelum melakukannya. Jika terjadi kekacauan di
+                tengah jalan, mereka tidak akan beristirahat sampai solusi untuk
+                masalah itu ditemukan dan semuanya berjalan lurus.
+              </li>
+              <li className="characteristic-point">
+                Mereka sangat menekankan tradisi dan hukum. Mereka lebih suka
+                mengikuti aturan dan prosedur yang sudah ada sebelumnya. Dalam
+                beberapa kasus, ISTJ dianggap sebagai pribadi yang kaku dan
+                keras dalam mempertahankan struktur.
+              </li>
+              <li className="characteristic-point">
+                Merancang dan mengembangkan grafis dan memelihara situs web.
+                Desainer digital mengembangkan, membuat, dan menguji tata letak
+                situs web atau antarmuka, fungsi, dan navigasi untuk
+                kegunaannya.
+              </li>
+            </ul>
+          </div>
+        </div>
         <div className="matkulSection">
           <p className="title">Berikut mata kuliah yang harus kamu ambil</p>
 

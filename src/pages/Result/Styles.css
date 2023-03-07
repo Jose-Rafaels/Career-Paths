@@ -4,6 +4,69 @@
   height: 110rem;
 }
 
+.hi-user {
+  position: absolute;
+  width: 250px;
+  height: 31px;
+  left: 655px;
+  top: 160px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  color: #000000;
+}
+
+.intro-user-result {
+  position: absolute;
+  width: 615px;
+  height: 53px;
+  left: 438px;
+  top: 213px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}
+.user-result {
+  position: absolute;
+  width: 615px;
+  height: 53px;
+  left: 438px;
+  top: 245px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}
+
+.characteristic-desc {
+  position: absolute;
+  width: 400px;
+  height: 31px;
+  left: 146px;
+  top: 322px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  color: #000000;
+}
+
+.characteristic-points {
+  position: absolute;
+  width: 1148px;
+  height: 227px;
+  left: 146px;
+  top: 375px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: justify;
+  color: #000000;
+  list-style-type: disc;
+}
+
 .matkulSection {
   position: relative;
   height: 31px;

@@ -66,7 +66,7 @@ const DescSection = () => {
                   </span>{" "}
                   vs.{" "}
                   <span style={{ color: "#000000", fontWeight: "bold" }}>
-                    Esktrovert (E)
+                    Ekstrovert (E)
                   </span>{" "}
                   – Cara seseorang memusatkan perhatiannya.
                 </li>
