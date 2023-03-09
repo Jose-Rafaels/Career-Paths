@@ -1,15 +1,32 @@
 .error-page {
   margin: 0 5.5rem 8rem;
-  padding-top: 8rem;
-  height: 775px;
+  padding-top: 3rem;
+  height: 480px;
+}
+
+.error-title {
+  justify-content: center;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  padding: 0rem 14rem;
+}
+
+.intro-error-subtitle {
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
 }
 
 .error-ic {
-  position: absolute;
-  width: 383px;
   height: 351px;
-  left: 528px;
-  top: 260px;
+  margin: 3rem 4rem;
 }
 
 .button-back {
@@ -17,7 +34,7 @@
   width: 183.11px;
   height: 48px;
   left: 628.99px;
-  top: 612px;
+  top: 530px;
   background: #36c8f6;
   border: 1px solid #36c8f6;
   border-radius: 10px;

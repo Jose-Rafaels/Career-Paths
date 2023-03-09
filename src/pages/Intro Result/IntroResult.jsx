@@ -22,8 +22,9 @@ const IntroResult = () => {
           Selamat Anda telah menyelesaikan seluruh pertanyaan. Silahkan lihat
           hasil rekomendasi jenis pekerjaan serta mata kuliah yang harus Anda
           ambil berdasarkan minat bakat yang Anda miliki.
+          <img className="final-ic" src={FinalIC} alt="final-ic" />
         </p>
-        <img className="final-ic" src={FinalIC} alt="final-ic" />
+
         <button className="button-final">
           <Link
             to="/result"

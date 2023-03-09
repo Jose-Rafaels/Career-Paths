@@ -7,11 +7,12 @@ const Error = () => {
   let location = useLocation();
   return (
     <div className="error-page">
-      <p className="title">404 | Not Found</p>
+      <p className="error-title">404 | Not Found</p>
       <p className="intro-subtitle">
         Maaf, halaman <code>{location.pathname}</code> tidak ditemukan.
+        <img className="error-ic" src={FinalIC} alt="final-ic" />
       </p>
-      <img className="error-ic" src={FinalIC} alt="final-ic" />
+
       <button className="button-back">
         <Link to="/" style={{ textDecoration: "none", color: "#ffffff" }}>
           Back Home
