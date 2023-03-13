@@ -1,6 +1,8 @@
 # Career Paths
 
+<p align="justify">
 Career Paths merupakan website rekomendasi karir di bidang IT yang menggunakan framework tes tipe kepribadian MBTI. Website ini dikembangkan karena mahasiswa di Institut teknologi PLN khususnya pada prodi Teknik Informatika dibingungkan dengan pilihan mata kuliah peminatan yang akan diambil di semester 5. Selain untuk rekomendasi karir pekerjaan di bidang IT, pada website ini juga akan direkomendasikan mata kuliah yang harus diambil untuk mencapai pekerjaan yang diimpikan berdasarkan tipe kepribadian.
+<p>
 
 ## Getting Started
 
