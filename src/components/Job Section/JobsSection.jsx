@@ -23,9 +23,8 @@ const JobSection = () => {
   return (
     <div className="job-section">
       <p className="title">
-        10 Kategori Pekerjaan Berdasarkan
-        <br />
-        Computing Curriculla 2020
+        Computer and Information <br />
+        Technology Occupations
       </p>
 
       <div className="job-category1" data-aos="fade-up">

@@ -8,9 +8,9 @@ const DescSection = () => {
     <section id="description">
       <div className="desc-section">
         <p className="title">
-          Mengapa Harus Tes
+          Myers-Briggs Type Indicator
           <br />
-          Menggunakan Website Ini?
+          Untuk Tes Kepribadian
         </p>
 
         <div className="desc">
@@ -27,8 +27,8 @@ const DescSection = () => {
           <div className="d-desc">
             <div>
               <p className="website-description">
-                Website ini merupakan platform untuk mengetahui jenis pekerjaan
-                yang sesuai dengan minat bakat yang Anda miliki. Untuk
+                Website ini merupakan platform MBTI untuk mengetahui jenis
+                pekerjaan yang sesuai dengan minat bakat yang Anda miliki. Untuk
                 mengetahuinya, Anda diharuskan terlebih dahulu untuk mengerjakan
                 kuisioner. Kuisioner ini nanti akan menggunakan metode MBTI.
               </p>

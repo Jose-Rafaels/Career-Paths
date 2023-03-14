@@ -22,12 +22,11 @@ const Intro = () => {
         <div className="intro" data-aos="zoom-in">
           <p className="title">Tata Cara Menjawab Pertanyaan</p>
           <p className="intro-subtitle">
-            Tes ini digunakan untuk mengetahui minat dan bakat Anda.
+            Tes ini digunakan untuk mengetahui tipe kepribadian Anda.
             <br />
             Selain itu, melalui tes ini Anda juga akan mendapatkan saran jenis
-            pekerjaan
-            <br />
-            serta mata apa yang harus diambil.
+            pekerjaan serta mata kuliah peminatan apa yang harus diambil untuk
+            menggapai jenis pekerjaan yang sesuai dengan tipe kepribadian Anda.
           </p>
 
           <div className="intro-content">
