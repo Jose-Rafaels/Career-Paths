@@ -1,5 +1,3 @@
-import { createStore } from "redux";
-
 const questions = [
   {
     id: 1,
@@ -426,49 +424,4 @@ const questions = [
   },
 ];
 
-const initialState = {
-  responses: [],
-  result: "",
-};
-
-function reducer(state = initialState, action) {
-  switch (action.type) {
-    case "ADD_RESPONSE":
-      const newResponses = [...state.responses];
-      newResponses[action.payload.questionId - 1] = action.payload.optionId;
-      return { ...state, responses: newResponses };
-    case "CALCULATE_RESULT":
-      const score = calculateScore(state.responses);
-      const type = calculateType(score);
-      return { ...state, result: type };
-    default:
-      return state;
-  }
-}
-
-function calculateScore(responses) {
-  const score = [0, 0, 0, 0];
-  for (let i = 0; i < responses.length; i++) {
-    const optionId = responses[i];
-    const dimension = i % 4;
-    if (optionId === 1) {
-      score[dimension]++;
-    } else {
-      score[dimension]--;
-    }
-  }
-  return score;
-}
-
-function calculateType(score) {
-  let type = "";
-  type += score[0] > 0 ? "I" : "E";
-  type += score[1] > 0 ? "S" : "N";
-  type += score[2] > 0 ? "T" : "F";
-  type += score[3] > 0 ? "J" : "P";
-  return type;
-}
-
-const store = createStore(reducer);
-
-export default store;
+export default questions;

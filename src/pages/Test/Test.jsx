@@ -1,24 +1,91 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
-import { Link } from "react-router-dom";
 import ProgressBar from "react-bootstrap/ProgressBar";
-import { Form } from "react-bootstrap";
-import BG from "../../assets/Images/bg-test.png";
 import Title from "../../components/Layout/Title";
+import questions from "../../components/Questions/Questions";
 
 const TestPage = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [result, setResult] = useState(null);
+
+  const handleAnswerSelect = (questionId, answerId) => {
+    setSelectedAnswers({ ...selectedAnswers, [questionId]: answerId });
+  };
+
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      calculateMBTI();
+    }
+  };
+
+  const calculateMBTI = () => {
+    const score = {
+      I: 0,
+      E: 0,
+      S: 0,
+      N: 0,
+      T: 0,
+      F: 0,
+      J: 0,
+      P: 0,
+    };
+
+    // Calculate the score for each letter based on the selected answers
+    for (const question of questions) {
+      const answerId = selectedAnswers[question.id];
+      const option = question.options.find((option) => option.id === answerId);
+      switch (question.id) {
+        case 1:
+          score[option.text === "Alone" ? "I" : "E"]++;
+          break;
+        case 2:
+          score[option.text === "Present" ? "S" : "N"]++;
+          break;
+        case 3:
+          score[option.text === "Logic and reason" ? "T" : "F"]++;
+          break;
+        case 4:
+          score[option.text === "Multiple tasks at once" ? "P" : "J"]++;
+          break;
+        case 5:
+          score[option.text === "Plan and organize" ? "J" : "P"]++;
+          break;
+        case 6:
+          score[option.text === "Objective" ? "T" : "F"]++;
+          break;
+        case 7:
+          score[option.text === "Stick to the rules" ? "J" : "P"]++;
+          break;
+        case 8:
+          score[option.text === "Spontaneous" ? "P" : "J"]++;
+          break;
+        default:
+          break;
+      }
+    }
+
+    // Determine the MBTI personality type based on the score
+    let mbti = "";
+    mbti += score["I"] > score["E"] ? "I" : "E";
+    mbti += score["S"] > score["N"] ? "S" : "N";
+    mbti += score["T"] > score["F"] ? "T" : "F";
+    mbti += score["J"] > score["P"] ? "J" : "P";
+
+    setResult(mbti);
+  };
   return (
     <Title title="Test">
       <>
         <div className="test">
-          <div className="bg">
-            <img src={BG} alt="bg" width={"1444"} height={"1100"} />
-          </div>
           <p className="title">Jawab Sesuai Dengan Diri Anda!</p>
           <p className="intro-subtitle">
             Silahkan pilih salah satu yang sesuai dengan diri Anda dari setiap
@@ -30,249 +97,34 @@ const TestPage = () => {
             <ProgressBar animated now={50} />
           </div>
 
-          <div className="box-question" data-aos="fade-up">
-            <p className="soal">
-              1. Ketika masuk ke dalam lingkungan yang baru saya cenderung
-            </p>
-            <Form>
-              {["radio"].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
-                  <Form.Check
-                    className="option"
-                    label="A. Lebih banyak mengamati"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-1`}
-                  />
-                  <Form.Check
-                    className="option"
-                    inline
-                    label="B. Berkenalan dengan orang lain"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-2`}
-                  />
-                </div>
-              ))}
-            </Form>
-            <p className="soal">
-              2. Saya lebih suka membuat tujuan yang bersifat
-            </p>
-            <Form>
-              {["radio"].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
-                  <Form.Check
-                    className="option"
-                    label="A. Jangka panjang"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-1`}
-                  />
-                  <Form.Check
-                    className="option"
-                    inline
-                    label="B. Jangka pendek"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-2`}
-                  />
-                </div>
-              ))}
-            </Form>
-            <p className="soal">
-              3. Jika menghadapi dua pendapat yang berbeda, saya akan mengambil
-              keputusan setelah...
-            </p>
-            <Form>
-              {["radio"].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
-                  <Form.Check
-                    className="option"
-                    label="A. Mengetahui sebab dan akibat dari suatu permasalahan"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-1`}
-                  />
-                  <Form.Check
-                    className="option"
-                    inline
-                    label="B. Memahami cara pandang kedua pihak yang berbeda pendapat"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-2`}
-                  />
-                </div>
-              ))}
-            </Form>
-            <p className="soal">4. Saya lebih memilih untuk menjalani</p>
-            <Form>
-              {["radio"].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
-                  <Form.Check
-                    className="option"
-                    label="A. Kehidupan yang punya tujuan"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-1`}
-                  />
-                  <Form.Check
-                    className="option"
-                    inline
-                    label="B. Kehidupan yang bebas"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-2`}
-                  />
-                </div>
-              ))}
-            </Form>
-            <p className="soal">
-              5. Dalam kondisi santai, saya lebih tertarik memperhatikan
-            </p>
-            <Form>
-              {["radio"].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
-                  <Form.Check
-                    className="option"
-                    label="A. Gambaran yang muncul di benak saya"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-1`}
-                  />
-                  <Form.Check
-                    className="option"
-                    inline
-                    label="B. Apa yang terjadi di sekitar saya"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-2`}
-                  />
-                </div>
-              ))}
-            </Form>
-            <p className="soal">6. Saya lebih suka memikirkan</p>
-            <Form>
-              {["radio"].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
-                  <Form.Check
-                    className="option"
-                    label="A. Kemungkinan yang akan terjadi di masa depan"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-1`}
-                  />
-                  <Form.Check
-                    className="option"
-                    inline
-                    label="B. Apa yang sedang terjadi saat ini"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-2`}
-                  />
-                </div>
-              ))}
-            </Form>
-            <p className="soal">
-              7. Saya akan lebih berpihak kepada orang yang
-            </p>
-            <Form>
-              {["radio"].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
-                  <Form.Check
-                    className="option"
-                    label="A. Dapat memberikan alasan yang masuk akal"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-1`}
-                  />
-                  <Form.Check
-                    className="option"
-                    inline
-                    label="B. Dapat memberikan alasan yang menyentuh perasaan"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-2`}
-                  />
-                </div>
-              ))}
-            </Form>
-            <p className="soal">
-              8. Ketika masuk ke dalam lingkungan yang baru saya cenderung
-            </p>
-            <Form>
-              {["radio"].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
-                  <Form.Check
-                    className="option"
-                    label="A. Yang menegakkan aturan"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-1`}
-                  />
-                  <Form.Check
-                    className="option"
-                    inline
-                    label="B. Yang memberi kebebasan"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-2`}
-                  />
-                </div>
-              ))}
-            </Form>
-            <p className="soal">9. Saya lebih bersemangat untuk</p>
-            <Form>
-              {["radio"].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
-                  <Form.Check
-                    className="option"
-                    label="A. Membayangkan sesuatu yang menyenangkan"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-1`}
-                  />
-                  <Form.Check
-                    className="option"
-                    inline
-                    label="B. Bertemu dengan orang baru"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-2`}
-                  />
-                </div>
-              ))}
-            </Form>
-            <p className="soal">10. Saya lebih bersemangat jika berbicara</p>
-            <Form>
-              {["radio"].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
-                  <Form.Check
-                    className="option"
-                    label="A. Tentang kemungkinan di masa depan"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-1`}
-                  />
-                  <Form.Check
-                    className="option"
-                    inline
-                    label="B. Tentang kejadian yang sedang berlangsung"
-                    name="group1"
-                    type={type}
-                    id={`inline-${type}-2`}
-                  />
-                </div>
-              ))}
-            </Form>
+          <div className="box-question">
+            {result ? (
+              <p>Your MBTI personality type is: {result}</p>
+            ) : (
+              <>
+                <p className="soal">{questions[currentQuestionIndex].text}</p>
+                {questions[currentQuestionIndex].options.map((option) => (
+                  <div>
+                    <button
+                      className="option"
+                      key={option.id}
+                      onClick={() =>
+                        handleAnswerSelect(
+                          questions[currentQuestionIndex].id,
+                          option.id
+                        )
+                      }
+                    >
+                      <p className="opsi">{option.text}</p>
+                    </button>
+                  </div>
+                ))}
+                <button className="button-next" onClick={handleNextQuestion}>
+                  Next
+                </button>
+              </>
+            )}
           </div>
-          <button className="button-next">
-            <Link
-              to="/intro-result"
-              style={{ textDecoration: "none", color: "#ffffff" }}
-            >
-              Selanjutnya
-            </Link>
-          </button>
         </div>
       </>
     </Title>
