@@ -1,7 +1,7 @@
 .test {
   margin: 0 5.5rem 8rem;
   padding-top: 3rem;
-  height: 670px;
+  height: 640px;
 }
 
 .bg {
@@ -50,22 +50,22 @@
 .box-question {
   position: absolute;
   width: 1148px;
-  height: 301px;
+  height: 275px;
   left: 146px;
   top: 270px;
   background: #ffffff;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   margin: 4rem 0rem;
+  display: flex;
+  justify-content: center;
 }
 
 .button-next {
   position: absolute;
   width: 156px;
   height: 48px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 375px;
+  top: 330px;
   background: #36c8f6;
   border: 1px solid #36c8f6;
   border-radius: 10px;
@@ -78,7 +78,7 @@
 }
 
 .soal {
-  position: relative;
+  position: absolute;
   height: 22px;
   font-weight: 500;
   font-size: 18px;
@@ -89,6 +89,8 @@
 }
 
 .option {
+  margin-top: 7rem;
+  margin-right: 1rem;
   position: relative;
   width: 358px;
   height: 101px;
@@ -97,14 +99,11 @@
 }
 
 .opsi {
-  margin-top: 38px;
-  justify-content: center;
-  width: 320px;
-  height: 47px;
+  padding: 0rem 2rem;
+  margin-top: 22px;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  align-items: center;
   text-align: center;
   color: #000000;
 }

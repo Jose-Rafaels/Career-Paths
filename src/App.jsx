@@ -6,7 +6,7 @@ import Home from "../src/pages/Home/HomePage";
 import LoginPage from "../src/pages/Login/LoginPages";
 import RegisterPage from "../src/pages/Register/RegisterPage";
 import IntroPage from "../src/pages/Intro Test/Intro";
-import TestPage1 from "../src/pages/Test/Test";
+import TestPage from "../src/pages/Test/Test";
 import IntroResultPage from "../src/pages/Intro Result/IntroResult";
 import ResultPage from "../src/pages/Result/Result";
 import ErrorPage from "../src/pages/Error/Error";
@@ -21,7 +21,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/intro-test" element={<IntroPage />} />
-          <Route path="/test-page" element={<TestPage1 />} />
+          <Route path="/test-page" element={<TestPage />} />
           <Route path="/intro-result" element={<IntroResultPage />} />
           <Route path="/result" element={<ResultPage />} />
         </Routes>

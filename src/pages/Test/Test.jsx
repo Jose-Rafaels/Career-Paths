@@ -97,7 +97,7 @@ const TestPage = () => {
             <ProgressBar animated now={50} />
           </div>
 
-          <div className="box-question">
+          <div className="box-question" data-aos="fade-up">
             {result ? (
               <p>Your MBTI personality type is: {result}</p>
             ) : (

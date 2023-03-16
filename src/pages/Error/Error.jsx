@@ -10,7 +10,7 @@ const Error = () => {
     <Title title="Not Found">
       <div className="error-page">
         <p className="error-title">404 | Not Found</p>
-        <p className="intro-subtitle">
+        <p className="intro-error-subtitle">
           Maaf, halaman <code>{location.pathname}</code> tidak ditemukan.
           <img className="error-ic" src={FinalIC} alt="final-ic" />
         </p>

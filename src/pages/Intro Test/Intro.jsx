@@ -63,7 +63,7 @@ const Intro = () => {
             <button className="button-start">
               {" "}
               <Link
-                to="/test-page-1"
+                to="/test-page"
                 style={{ textDecoration: "none", color: "#ffffff" }}
               >
                 Mulai Tes Sekarang
