@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import "./Styles.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import Title from "../../components/Layout/Title";
-import questions from "../../components/Questions/Questions";
+import questions from "../../data/Questions/Questions";
 
 const TestPage = () => {
   useEffect(() => {
