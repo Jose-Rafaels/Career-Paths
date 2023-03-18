@@ -7,8 +7,9 @@ import Footer from "../../components/Footer Section/FooterSection";
 import webDev from "../../assets/Images/webdev.png";
 import BG from "../../assets/Images/bg-test.png";
 import Title from "../../components/Layout/Title";
+import descriptions from "../../data/Personality Types Desc/PersonalityTypes";
 
-const ResultPage = () => {
+const ResultPage = ({ result }) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -28,7 +29,7 @@ const ResultPage = () => {
               adalah
             </p>
             <p className="user-result">
-              ISTJ (Introved, Sensing, Thingking, Judging)
+              {result} {descriptions[result]}
             </p>
             <p className="characteristic-desc">Karakteristik ISTJ adalah :</p>
             <div>
