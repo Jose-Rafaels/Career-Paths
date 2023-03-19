@@ -8,6 +8,7 @@ import webDev from "../../assets/Images/webdev.png";
 import BG from "../../assets/Images/bg-test.png";
 import Title from "../../components/Layout/Title";
 import descriptions from "../../data/Personality Types Desc/PersonalityTypes";
+import descTypes from "../../data/Descriptions/DescType";
 
 const ResultPage = ({ result }) => {
   useEffect(() => {
@@ -31,36 +32,10 @@ const ResultPage = ({ result }) => {
             <p className="user-result">
               {result} {descriptions[result]}
             </p>
-            <p className="characteristic-desc">Karakteristik ISTJ adalah :</p>
-            <div>
-              <ul className="characteristic-points">
-                <li className="characteristic-point">
-                  ISTJ adalah sosok yang penuh tanggung jawab dan realistis.
-                  Mereka mengambil pendekatam logis untuk mencapai sebuah
-                  tujuan. Mereka mampu mengabaikan gangguan untuk fokus pada
-                  tugas yang dihadapi dan sering digambarkan sebagai orang yang
-                  dapat diandalkan dan dapat dipercaya.
-                </li>
-                <li className="characteristic-point">
-                  Mereka adalah perencana sejati, ISTJ suka merencanakan sesuatu
-                  dengan matang sebelum melakukannya. Jika terjadi kekacauan di
-                  tengah jalan, mereka tidak akan beristirahat sampai solusi
-                  untuk masalah itu ditemukan dan semuanya berjalan lurus.
-                </li>
-                <li className="characteristic-point">
-                  Mereka sangat menekankan tradisi dan hukum. Mereka lebih suka
-                  mengikuti aturan dan prosedur yang sudah ada sebelumnya. Dalam
-                  beberapa kasus, ISTJ dianggap sebagai pribadi yang kaku dan
-                  keras dalam mempertahankan struktur.
-                </li>
-                <li className="characteristic-point">
-                  Merancang dan mengembangkan grafis dan memelihara situs web.
-                  Desainer digital mengembangkan, membuat, dan menguji tata
-                  letak situs web atau antarmuka, fungsi, dan navigasi untuk
-                  kegunaannya.
-                </li>
-              </ul>
-            </div>
+            <p className="characteristic-desc">
+              Karakteristik {result} adalah :
+            </p>
+            <div>{descTypes[result]}</div>
           </div>
           <div className="matkulSection">
             <p className="title">Berikut mata kuliah yang harus kamu ambil</p>
