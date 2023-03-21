@@ -36,10 +36,14 @@ const MBTIQuestion = ({
           </p>
 
           <div className="box-progress" data-aos="fade-up">
-            <p className="progress">
-              Progress {currentQuestion}/{52}
-            </p>
-            <ProgressBar animated now={progress} label={`${progress}%`} />
+            <div>
+              <p className="progress-test">
+                Progress Soal: {currentQuestion} soal, dari {52} soal
+              </p>
+            </div>
+            <div className="progress-bar">
+              <ProgressBar animated now={progress} label={`${progress}%`} />
+            </div>
           </div>
 
           <div className="box-question" data-aos="fade-up">
