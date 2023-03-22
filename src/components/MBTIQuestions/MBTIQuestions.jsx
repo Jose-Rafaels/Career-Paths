@@ -5,12 +5,7 @@ import "./Styles.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import Title from "../Layout/Title";
 
-const MBTIQuestion = ({
-  question,
-  onAnswerSelect,
-  onNextQuestion,
-  totalQuestions,
-}) => {
+const MBTIQuestion = ({ question, onAnswerSelect, onNextQuestion }) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -38,7 +33,7 @@ const MBTIQuestion = ({
           <div className="box-progress" data-aos="fade-up">
             <div>
               <p className="progress-test">
-                Progress Soal: {currentQuestion} soal, dari {52} soal
+                Progress : {currentQuestion} soal, dari {52} soal
               </p>
             </div>
             <div className="progress-bar">

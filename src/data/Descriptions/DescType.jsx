@@ -391,27 +391,29 @@ const descTypes = {
     <div>
       <ul className="characteristic-points">
         <li className="characteristic-point">
-          ISTJ adalah sosok yang penuh tanggung jawab dan realistis. Mereka
-          mengambil pendekatam logis untuk mencapai sebuah tujuan. Mereka mampu
-          mengabaikan gangguan untuk fokus pada tugas yang dihadapi dan sering
-          digambarkan sebagai orang yang dapat diandalkan dan dapat dipercaya.
+          Orang-orang dengan tipe kepribadian ini sangat tidak menyukai
+          rutinitas dan lebih suka berfokus pada masa depan. Meskipun mereka
+          hebat dalam menghasilkan ide-ide baru, mereka terkadang menunda
+          tugas-tugas penting hingga menit terakhir. Memimpikan ide tetapi tidak
+          menyelesaikannya sampai selesai adalah masalah klasik.
         </li>
         <li className="characteristic-point">
-          Mereka adalah perencana sejati, ISTJ suka merencanakan sesuatu dengan
-          matang sebelum melakukannya. Jika terjadi kekacauan di tengah jalan,
-          mereka tidak akan beristirahat sampai solusi untuk masalah itu
-          ditemukan dan semuanya berjalan lurus.
+          ENFP memiliki keterampilan orang yang unggul. Selain memiliki
+          antusiasme yang berlimpah, mereka juga benar-benar peduli pada orang
+          lain. ENFP pandai memahami apa yang orang lain rasakan. Dengan
+          semangat, karisma, dan kreativitas mereka, mereka juga bisa menjadi
+          pemimpin yang hebat.
         </li>
         <li className="characteristic-point">
-          Mereka sangat menekankan tradisi dan hukum. Mereka lebih suka
-          mengikuti aturan dan prosedur yang sudah ada sebelumnya. Dalam
-          beberapa kasus, ISTJ dianggap sebagai pribadi yang kaku dan keras
-          dalam mempertahankan struktur.
+          ENFP dapat dengan mudah terganggu atau terdistraksi, terutama ketika
+          mereka mengerjakan sesuatu yang tampaknya membosankan atau tidak
+          menginspirasi.
         </li>
         <li className="characteristic-point">
-          Merancang dan mengembangkan grafis dan memelihara situs web. Desainer
-          digital mengembangkan, membuat, dan menguji tata letak situs web atau
-          antarmuka, fungsi, dan navigasi untuk kegunaannya.
+          ENFP fleksibel dan suka membiarkan opsi mereka tetap terbuka. Mereka
+          bisa spontan dan sangat mudah beradaptasi dengan perubahan. Mereka
+          juga tidak menyukai rutinitas dan mungkin memiliki masalah dengan
+          disorganisasi dan penundaan.
         </li>
       </ul>
     </div>

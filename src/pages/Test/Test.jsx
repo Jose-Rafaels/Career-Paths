@@ -6,7 +6,7 @@ import questions from "../../data/Questions/Questions";
 const Test = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState("");
 
   const handleAnswerSelect = (questionId, answerId) => {
     setSelectedAnswers({ ...selectedAnswers, [questionId]: answerId });
@@ -29,17 +29,17 @@ const Test = () => {
       const answer = question.options.find((o) => o.id === answerId);
       if (answer.type) {
         for (const t of answer.type) {
-          score[t]++;
+          score[t] += 1;
         }
       }
     }
 
     // menentukan hasil MBTI berdasarkan skor yang dihitung
     let type = "";
-    type += score.I > score.E ? "I" : "E";
-    type += score.S > score.N ? "S" : "N";
-    type += score.T > score.F ? "T" : "F";
-    type += score.J > score.P ? "J" : "P";
+    type += score.I >= score.E ? "I" : "E";
+    type += score.S >= score.N ? "S" : "N";
+    type += score.T >= score.F ? "T" : "F";
+    type += score.J >= score.P ? "J" : "P";
 
     setResult(type);
   };
