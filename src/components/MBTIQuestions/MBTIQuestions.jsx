@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import "./Styles.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import Title from "../Layout/Title";
+import BG from "../../assets/Images/bg.png";
 
 const MBTIQuestion = ({ question, onAnswerSelect, onNextQuestion }) => {
   useEffect(() => {
@@ -24,7 +25,10 @@ const MBTIQuestion = ({ question, onAnswerSelect, onNextQuestion }) => {
     <Title title="Test">
       <>
         <div className="test">
-          <p className="title">Jawab Sesuai Dengan Diri Anda!</p>
+          <div className="bg">
+            <img src={BG} alt="bg" width={"1444"} height={"700"} />
+          </div>
+          <p className="test-title">Jawab Sesuai Dengan Diri Anda!</p>
           <p className="intro-subtitle">
             Silahkan pilih salah satu yang sesuai dengan diri Anda dari setiap
             pertanyaan.

@@ -5,7 +5,7 @@ import "./Styles.css";
 import Navbar from "../../components/Navbar Section/NavbarSection";
 import Footer from "../../components/Footer Section/FooterSection";
 import webDev from "../../assets/Images/webdev.png";
-import BG from "../../assets/Images/bg-test.png";
+import BG from "../../assets/Images/bg.png";
 import Title from "../../components/Layout/Title";
 import descriptions from "../../data/Personality Types Desc/PersonalityTypes";
 import descTypes from "../../data/Descriptions/DescType";
