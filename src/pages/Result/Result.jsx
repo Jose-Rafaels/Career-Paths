@@ -6,10 +6,11 @@ import Navbar from "../../components/Navbar Section/NavbarSection";
 import Footer from "../../components/Footer Section/FooterSection";
 import webDev from "../../assets/Images/webdev.png";
 import BG from "../../assets/Images/bg.png";
+import Final from "../../assets/Images/final-ic.png";
 import Title from "../../components/Layout/Title";
 import descriptions from "../../data/Personality Types Desc/PersonalityTypes";
 import descTypes from "../../data/Descriptions/DescType";
-import matkul from "../../data/Mata Kuliah/Matkul";
+// import matkul from "../../data/Mata Kuliah/Matkul";
 
 const ResultPage = ({ result }) => {
   useEffect(() => {
@@ -25,11 +26,20 @@ const ResultPage = ({ result }) => {
             <img src={BG} alt="bg" width={"1444"} height={"1100"} />
           </div>
           <div className="resultSection">
-            <p className="hi-user">Halo John Doe</p>
-            <p className="intro-user-result">
-              Berdasarkan tes yang sudah kamu lakukan, tipe kepribadian kamu
-              adalah
-            </p>
+            <div className="intro-user-result">
+              <img
+                className="final-icon"
+                src={Final}
+                alt="final-ic"
+                width={"374"}
+                height={"257"}
+              />
+              <p className="hi-user">Halo John Doe</p>
+              <p className="type-result">
+                Berdasarkan tes yang sudah kamu lakukan, tipe kepribadian kamu
+                adalah
+              </p>
+            </div>
             <p className="user-result">
               {result} {descriptions[result]}
             </p>
@@ -37,27 +47,6 @@ const ResultPage = ({ result }) => {
               Karakteristik {result} adalah :
             </p>
             <div>{descTypes[result]}</div>
-          </div>
-          <div className="matkulSection">
-            <p className="title">Berikut mata kuliah yang harus kamu ambil</p>
-
-            <div className="matkul-category1" data-aos="fade-up">
-              {matkul[result]}
-            </div>
-
-            <div className="matkul-category2" data-aos="fade-up">
-              <div className="matkul-category-card">
-                <p className="matkul-title">
-                  Database Administrators <br /> and Architects
-                </p>
-              </div>
-              <div className="matkul-category-card">
-                <p className="matkul-title">
-                  Computer & Information <br />
-                  Research Scientists
-                </p>
-              </div>
-            </div>
           </div>
 
           <div className="jobSection">
@@ -110,6 +99,43 @@ const ResultPage = ({ result }) => {
                 HTML CSS, Javascript Framework, Rest Apis, Sql Server, UI/UX,
                 PHP Laravel, Node.
               </p>
+            </div>
+          </div>
+
+          <div className="matkulSection">
+            <p className="title">
+              Berikut mata kuliah yang harus kamu ambil untuk mencapai pekerjaan
+              impian kamu
+            </p>
+
+            <div className="matkul-category1" data-aos="fade-up">
+              <div className="matkul-category-card">
+                <p className="matkul-title">Pemrograman Web Lanjut</p>
+              </div>
+
+              <div className="matkul-category-card">
+                <p className="matkul-title">Pemrograman Mobile Lanjut</p>
+              </div>
+              <div className="matkul-category-card">
+                <p className="matkul-title">Manajemen Proyek Perangkat Lunak</p>
+              </div>
+              <div className="matkul-category-card">
+                <p className="matkul-title">Basis Data Lanjut</p>
+              </div>
+            </div>
+
+            <div className="matkul-category2" data-aos="fade-up">
+              <div className="matkul-category-card">
+                <p className="matkul-title">
+                  Database Administrators <br /> and Architects
+                </p>
+              </div>
+              <div className="matkul-category-card">
+                <p className="matkul-title">
+                  Computer & Information <br />
+                  Research Scientists
+                </p>
+              </div>
             </div>
           </div>
         </div>

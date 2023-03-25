@@ -322,7 +322,7 @@ const questions = [
   },
   {
     id: 37,
-    text: "37. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "37. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Privasi", type: ["I"] },
       { id: 2, text: "b. Sosialisasi", type: ["E"] },
@@ -330,7 +330,7 @@ const questions = [
   },
   {
     id: 38,
-    text: "38. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "38. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Masa Depan", type: ["N"] },
       { id: 2, text: "b. Saat Ini", type: ["S"] },
@@ -338,7 +338,7 @@ const questions = [
   },
   {
     id: 39,
-    text: "39. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "39. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Tercerahkan", type: ["T"] },
       { id: 2, text: "b. Terhibur", type: ["F"] },
@@ -346,7 +346,7 @@ const questions = [
   },
   {
     id: 40,
-    text: "40. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "40. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Efektif", type: ["J"] },
       { id: 2, text: "b. Eksploratif", type: ["P"] },
@@ -354,7 +354,7 @@ const questions = [
   },
   {
     id: 41,
-    text: "41. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "41. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Kontemplatif", type: ["I"] },
       { id: 2, text: "b. Kesenangan", type: ["E"] },
@@ -362,7 +362,7 @@ const questions = [
   },
   {
     id: 42,
-    text: "42. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "42. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Visi", type: ["N"] },
       { id: 2, text: "b. Aksi", type: ["S"] },
@@ -370,7 +370,7 @@ const questions = [
   },
   {
     id: 43,
-    text: "43. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "43. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Sains", type: ["T"] },
       { id: 2, text: "b. Seni", type: ["F"] },
@@ -378,7 +378,7 @@ const questions = [
   },
   {
     id: 44,
-    text: "44. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "44. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Prestatif", type: ["J"] },
       { id: 2, text: "b. Adaptif", type: ["P"] },
@@ -386,7 +386,7 @@ const questions = [
   },
   {
     id: 45,
-    text: "45. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "45. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Ketenangan", type: ["I"] },
       { id: 2, text: "b. Kesenangan", type: ["E"] },
@@ -394,7 +394,7 @@ const questions = [
   },
   {
     id: 46,
-    text: "46. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "46. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Ide", type: ["N"] },
       { id: 2, text: "b. Fakta", type: ["S"] },
@@ -402,7 +402,7 @@ const questions = [
   },
   {
     id: 47,
-    text: "47. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "47. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Peraturan", type: ["T"] },
       { id: 2, text: "b. Perasaan", type: ["F"] },
@@ -410,7 +410,7 @@ const questions = [
   },
   {
     id: 48,
-    text: "48. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "48. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Kepemimpinan", type: ["J"] },
       { id: 2, text: "b. Kebebasan Ekspresi", type: ["P"] },
@@ -418,7 +418,7 @@ const questions = [
   },
   {
     id: 49,
-    text: "49. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "49. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Konsentrasi", type: ["I"] },
       { id: 2, text: "b. Kerjasama", type: ["E"] },
@@ -426,7 +426,7 @@ const questions = [
   },
   {
     id: 50,
-    text: "50. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "50. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Kualitas", type: ["N"] },
       { id: 2, text: "b. Kuantitas", type: ["S"] },
@@ -434,15 +434,15 @@ const questions = [
   },
   {
     id: 51,
-    text: "51. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "51. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
-      { id: 1, text: "a. Keteraturan", type: ["T"] },
-      { id: 2, text: "b. Kenyamanan", type: ["F"] },
+      { id: 1, text: "a. Perencanaan", type: ["T"] },
+      { id: 2, text: "b. Spontanitas", type: ["F"] },
     ],
   },
   {
     id: 52,
-    text: "52. Silahkan pilih salah satu opsi yang sesuai dengan diri Anda",
+    text: "52. Pilihlah kata yang (a atau b) paling mencerminkan diri Anda",
     options: [
       { id: 1, text: "a. Perencanaan", type: ["J"] },
       { id: 2, text: "b. Spontanitas", type: ["P"] },
