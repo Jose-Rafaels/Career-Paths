@@ -10,7 +10,7 @@ import Final from "../../assets/Images/final-ic.png";
 import Title from "../../components/Layout/Title";
 import descriptions from "../../data/Personality Types Desc/PersonalityTypes";
 import descTypes from "../../data/Descriptions/DescType";
-// import matkul from "../../data/Mata Kuliah/Matkul";
+import matkul from "../../data/Mata Kuliah/Matkul";
 
 const ResultPage = ({ result }) => {
   useEffect(() => {
@@ -109,19 +109,7 @@ const ResultPage = ({ result }) => {
             </p>
 
             <div className="matkul-category1" data-aos="fade-up">
-              <div className="matkul-category-card">
-                <p className="matkul-title">Pemrograman Web Lanjut</p>
-              </div>
-
-              <div className="matkul-category-card">
-                <p className="matkul-title">Pemrograman Mobile Lanjut</p>
-              </div>
-              <div className="matkul-category-card">
-                <p className="matkul-title">Manajemen Proyek Perangkat Lunak</p>
-              </div>
-              <div className="matkul-category-card">
-                <p className="matkul-title">Basis Data Lanjut</p>
-              </div>
+              {matkul[result]}
             </div>
 
             <div className="matkul-category2" data-aos="fade-up">
