@@ -49,56 +49,59 @@ const ResultPage = ({ result }) => {
             <div>{descTypes[result]}</div>
           </div>
 
-          <div className="jobSection">
+          <div className="jobSection" data-aos="fade-up">
             <p className="title">
-              Berikut jenis pekerjaan yang cocok dengan minat dan bakat kamu
+              Berikut jenis pekerjaan yang cocok dengan tipe kepribadian{" "}
+              {result}
             </p>
-            <div className="title-job-box" data-aos="fade-up">
-              <img className="jobs-ic" src={webDev} alt="webDev" />
-              <p className="title-jobs">Web Developer & Digital Designers</p>
-            </div>
-            <div className="desc-job-box" data-aos="fade-up">
-              <p className="description">
-                Web developers membuat dan memelihara situs web. Desainer
-                digital mengembangkan, membuat, dan menguji tata letak situs web
-                atau antarmuka, fungsi, dan navigasi untuk kegunaannya.
-                <br />
-                <br />
-                <span style={{ color: "#000000", fontWeight: "bold" }}>
-                  Tugas & Tanggung Jawab :
-                </span>
-              </p>
-              <div>
-                <ul className="description-points">
-                  <li className="description-point">
-                    Bertemu dengan klien atau manajemen untuk mendiskusikan
-                    kebutuhan, desain, dan fungsionalitas situs web atau
-                    antarmuka.
-                  </li>
-                  <li className="description-point">
-                    Membuat dan menguji aplikasi, antarmuka, dan menu navigasi
-                    untuk situs web.
-                  </li>
-                  <li className="description-point">
-                    Bekerja dengan desainer grafis dan desainer lain untuk
-                    menentukan tata letak situs web.
-                  </li>
-                  <li className="description-point">
-                    Merancang dan mengembangkan grafis dan memelihara situs web.
-                    Desainer digital mengembangkan, membuat, dan menguji tata
-                    letak situs web atau antarmuka, fungsi, dan navigasi untuk
-                    kegunaannya.
-                  </li>
-                </ul>
+            <div className="jobs-box">
+              <div className="title-job-box">
+                <img className="jobs-ic" src={webDev} alt="webDev" />
+                <p className="title-jobs">Web Developer & Digital Designers</p>
               </div>
-              <p className="description">
-                <span style={{ color: "#000000", fontWeight: "bold" }}>
-                  Keterampilan yang dibutuhkan :
-                </span>
-                <br />
-                HTML CSS, Javascript Framework, Rest Apis, Sql Server, UI/UX,
-                PHP Laravel, Node.
-              </p>
+              <div className="desc-job-box">
+                <p className="description">
+                  Web developers membuat dan memelihara situs web. Desainer
+                  digital mengembangkan, membuat, dan menguji tata letak situs
+                  web atau antarmuka, fungsi, dan navigasi untuk kegunaannya.
+                  <br />
+                  <br />
+                  <span style={{ color: "#000000", fontWeight: "bold" }}>
+                    Tugas & Tanggung Jawab :
+                  </span>
+                </p>
+                <div>
+                  <ul className="description-points">
+                    <li className="description-point">
+                      Bertemu dengan klien atau manajemen untuk mendiskusikan
+                      kebutuhan, desain, dan fungsionalitas situs web atau
+                      antarmuka.
+                    </li>
+                    <li className="description-point">
+                      Membuat dan menguji aplikasi, antarmuka, dan menu navigasi
+                      untuk situs web.
+                    </li>
+                    <li className="description-point">
+                      Bekerja dengan desainer grafis dan desainer lain untuk
+                      menentukan tata letak situs web.
+                    </li>
+                    <li className="description-point">
+                      Merancang dan mengembangkan grafis dan memelihara situs
+                      web. Desainer digital mengembangkan, membuat, dan menguji
+                      tata letak situs web atau antarmuka, fungsi, dan navigasi
+                      untuk kegunaannya.
+                    </li>
+                  </ul>
+                </div>
+                <p className="description">
+                  <span style={{ color: "#000000", fontWeight: "bold" }}>
+                    Keterampilan yang dibutuhkan :
+                  </span>
+                  <br />
+                  HTML CSS, Javascript Framework, Rest Apis, Sql Server, UI/UX,
+                  PHP Laravel, Node.
+                </p>
+              </div>
             </div>
           </div>
 

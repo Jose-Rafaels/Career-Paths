@@ -34,7 +34,7 @@ const MBTIQuestion = ({ question, onAnswerSelect, onNextQuestion }) => {
             pertanyaan.
           </p>
 
-          <div className="box-progress" data-aos="fade-up">
+          <div className="box-progress">
             <div>
               <p className="progress-test">
                 Progress : {currentQuestion} soal, dari {52} soal
@@ -45,7 +45,7 @@ const MBTIQuestion = ({ question, onAnswerSelect, onNextQuestion }) => {
             </div>
           </div>
 
-          <div className="box-question" data-aos="fade-up">
+          <div className="box-question">
             <p className="soal">{question.text}</p>
             <div>
               {question.options.map((option) => (
