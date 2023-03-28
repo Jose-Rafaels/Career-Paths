@@ -23,9 +23,6 @@ const Footer = () => {
               <Nav.Link as={Link} to="/">
                 Login
               </Nav.Link>
-              <Nav.Link as={Link} to="/">
-                Lupa Password
-              </Nav.Link>
             </ul>
           </div>
 
@@ -35,9 +32,7 @@ const Footer = () => {
               <Nav.Link as={Link} to="/">
                 Tentang Kami
               </Nav.Link>
-              <Nav.Link as={Link} to="/">
-                Help Center
-              </Nav.Link>
+
               <Nav.Link as={Link} to="/">
                 Media
               </Nav.Link>
@@ -53,8 +48,8 @@ const Footer = () => {
               <Nav.Link type="link" href="tel:0234567890">
                 02345-567-890
               </Nav.Link>
-              <Nav.Link type="link" href="mailto:support@gmail.com">
-                support@gmail.com
+              <Nav.Link type="link" href="mailto:sistemrekomendasi@gmail.com">
+                sistemrekomendasi@gmail.com
               </Nav.Link>
             </ul>
           </div>

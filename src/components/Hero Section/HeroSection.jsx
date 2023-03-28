@@ -24,7 +24,7 @@ const Intro = () => {
             demi mencapai pekerjaan impian kamu.
           </p>
         </div>
-        <div className="buttton">
+        <div className="button">
           <button className="btn-primary">
             <Link
               to="/intro-test"
@@ -33,9 +33,9 @@ const Intro = () => {
               Get Started
             </Link>
           </button>
-          <button className="btn-details" as="a" href="#description">
-            Learn More
-          </button>
+          <nav>
+            <a href="#description">Learn More</a>
+          </nav>
         </div>
       </div>
       <div className="i-right">

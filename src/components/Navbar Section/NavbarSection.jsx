@@ -1,6 +1,7 @@
 import React from "react";
 import "./Styles.css";
 import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 const Navbar = () => {
   return (
@@ -21,9 +22,9 @@ const Navbar = () => {
         <Link to="Tentang Kami" style={{ textDecoration: "none" }}>
           <li>Tentang Kami</li>
         </Link>
-        <Link to="Contact" offset={-60} style={{ textDecoration: "none" }}>
+        <Nav.Link type="link" href="mailto:sistemrekomendasi@gmail.com">
           <li>Contact</li>
-        </Link>
+        </Nav.Link>
       </ul>
       <div className="n-right">
         <div className="buttton">

@@ -30,8 +30,8 @@ const MBTIQuestion = ({ question, onAnswerSelect, onNextQuestion }) => {
           </div>
           <p className="test-title">Jawab Sesuai Dengan Diri Anda!</p>
           <p className="intro-subtitle">
-            Silahkan pilih salah satu yang sesuai dengan diri Anda dari setiap
-            pertanyaan.
+            Pilihlah kalimat (a atau b) untuk meneruskan setiap pernyataan yang
+            paling sesuai dengan diri Anda.
           </p>
 
           <div className="box-progress">
