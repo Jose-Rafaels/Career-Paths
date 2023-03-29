@@ -17,10 +17,10 @@ const Footer = () => {
           <div className="col">
             <h5 style={{ color: "#000000" }}>Account</h5>
             <ul className="list-unstyled">
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/register">
                 Registrasi
               </Nav.Link>
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/login">
                 Login
               </Nav.Link>
             </ul>
@@ -33,7 +33,7 @@ const Footer = () => {
                 Tentang Kami
               </Nav.Link>
 
-              <Nav.Link as={Link} to="/">
+              <Nav.Link href="https://www.instagram.com/informationretrievallab_itpln/">
                 Media
               </Nav.Link>
             </ul>

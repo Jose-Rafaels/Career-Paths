@@ -15,10 +15,6 @@ const Navbar = () => {
         <Link to="/" style={{ textDecoration: "none" }}>
           <li>Home</li>
         </Link>
-
-        <Link to="Layanan" style={{ textDecoration: "none" }}>
-          <li>Layanan</li>
-        </Link>
         <Link to="Tentang Kami" style={{ textDecoration: "none" }}>
           <li>Tentang Kami</li>
         </Link>
