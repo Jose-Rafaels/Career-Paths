@@ -1,36 +1,28 @@
 package database
 
 import (
+	"career-paths/config"
 	"fmt"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
-type Config struct {
-	DB_USERNAME string
-	DB_PASSWORD string
-	DB_NAME     string
-	DB_PORT     string
-	DB_HOST     string
-	JWT_KEY     string
-	BASE_URL    string
-}
-
-func InitDB(conf Config) *gorm.DB {
-	conf = EnvDatabase()
-
+func InitDB(conf *config.AppConfig) *gorm.DB {
+	host := conf.Mysql.Host
+	port := conf.Mysql.Port
+	name := conf.Mysql.Name
+	user := conf.Mysql.User
+	pass := conf.Mysql.Pass
 	connectionString := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local",
-		conf.DB_USERNAME,
-		conf.DB_PASSWORD,
-		conf.DB_HOST,
-		conf.DB_PORT,
-		conf.DB_NAME,
+		user,
+		pass,
+		host,
+		port,
+		name,
 	)
 
-	DB, err := gorm.Open(mysql.Open(connectionString), &gorm.Config{
-		// DisableForeignKeyConstraintWhenMigrating: true,
-	})
+	DB, err := gorm.Open(mysql.Open(connectionString), &gorm.Config{})
 
 	if err != nil {
 		fmt.Println("This is the error : ", err)
