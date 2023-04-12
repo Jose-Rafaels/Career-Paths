@@ -38,6 +38,7 @@ func (repo *userRepository) RegisterUserRepository(data *dto.Register) error {
 		LastName:        data.LastName,
 		Password:        data.Password,
 		ConfirmPassword: data.ConfirmPassword,
+		Email:           data.Email,
 		RoleID:          data.RoleID,
 		IsActivated:     false,
 		CreatedAt:       time.Now().Unix(),

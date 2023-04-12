@@ -28,8 +28,9 @@ func (s *service) RegisterUserService(data *dto.Register) *utils.Response {
 		return utils.HandleError(err)
 	}
 
-	hash := utils.HashPassword(data.Password)
-	data.Password = hash
+	hashPassword, confirmHashPassword := utils.HashPassword(data.Password, data.ConfirmPassword)
+	data.Password = hashPassword
+	data.ConfirmPassword = confirmHashPassword
 
 	err = s.userRepository.RegisterUserRepository(data)
 	if err != nil {

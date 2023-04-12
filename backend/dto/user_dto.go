@@ -2,11 +2,11 @@ package dto
 
 type Register struct {
 	ID              string `json:"id"`
-	FirstName       string `json:"first_name" validate:"required, max=50"`
-	LastName        string `json:"last_name" validate:"required, max=50"`
-	Email           string `json:"email" validate:"required, email"`
-	Password        string `json:"password" validate:"required, min=6, max=20"`
-	ConfirmPassword string `json:"confirm_password" validate:"required, min=6, max=20"`
+	FirstName       string `json:"first_name" validate:"required,max=50"`
+	LastName        string `json:"last_name" validate:"required,max=50"`
+	Email           string `json:"email" validate:"required,email"`
+	Password        string `json:"password" validate:"required,min=6,max=20"`
+	ConfirmPassword string `json:"confirm_password" validate:"required,min=6,max=20"`
 	RoleID          string `json:"role_id" validate:"required"`
 	Active          bool   `json:"active"`
 

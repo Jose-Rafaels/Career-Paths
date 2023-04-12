@@ -9,7 +9,6 @@ import (
 func HandleError(err error) *Response {
 	var message string
 	obj, ok := err.(validator.ValidationErrors)
-
 	if ok {
 		for _, v := range obj {
 			switch v.Tag() {
@@ -24,6 +23,5 @@ func HandleError(err error) *Response {
 			}
 		}
 	}
-
 	return FailedResponse(message, 400)
 }

@@ -2,6 +2,8 @@ package database
 
 import (
 	"career-paths/config"
+	"career-paths/entities"
+	"career-paths/entities/seeds"
 	"fmt"
 
 	"gorm.io/driver/mysql"
@@ -28,8 +30,12 @@ func InitDB(conf *config.AppConfig) *gorm.DB {
 		fmt.Println("This is the error : ", err)
 	}
 
-	e := DB.AutoMigrate()
+	e := DB.AutoMigrate(
+		&entities.Role{},
+		&entities.User{},
+	)
 
+	seeds.NewSeeders(DB)
 	if e != nil {
 		fmt.Println("This is the error : ", e)
 	}
