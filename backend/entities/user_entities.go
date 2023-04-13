@@ -11,8 +11,8 @@ type User struct {
 	ConfirmPassword string `json:"confirm_password"`
 	IsActivated     bool   `json:"is_activated"`
 
-	RoleID string `json:"role_id" gorm:"size:512;null"`
-	Role   Role   `gorm:"ForeignKey:RoleID;references:ID;null;constraint:OnUpdate:CASCADE,OnDelete:SET NULL;" json:"-"`
+	RoleID string `json:"role_id" gorm:"size:512"`
+	Role   Role   `json:"-"`
 
 	CreatedAt int64                 `json:"created_at"`
 	UpdatedAt int64                 `json:"updated_at"`

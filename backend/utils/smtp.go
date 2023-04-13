@@ -26,10 +26,10 @@ func loginsAuth(username, password string) smtp.Auth {
 func SendEmail(email string) error {
 	conf := config.NewAppConfig()
 	host := conf.Smtp.Host
-	port := conf.Smtp.Port
+	port := 587
 	password := conf.Smtp.Pass
 	username := conf.Smtp.User
-	from := username
+	from := "noreply@lapor-mas.id"
 	url := conf.Smtp.Url
 
 	token, expires, err := GenerateVerificationToken()
@@ -37,7 +37,7 @@ func SendEmail(email string) error {
 		fmt.Println("This is the errors : ", err)
 	}
 	addr := fmt.Sprintf("%v:%v", host, port)
-	verificationLink := fmt.Sprintf("%s/verify/%s?%s?%d", url, email, token, expires)
+	verificationLink := fmt.Sprintf("%s/verify/%s?%s?%s", url, email, token, expires)
 	subject := "Careers Path - Verify Email"
 	body := fmt.Sprintf("Hi, please click this link to verify your email: %s", verificationLink)
 
