@@ -37,7 +37,7 @@ func SendEmail(email string) error {
 		fmt.Println("This is the errors : ", err)
 	}
 	addr := fmt.Sprintf("%v:%v", host, port)
-	verificationLink := fmt.Sprintf("%s/verify/%s?%s?%s", url, email, token, expires)
+	verificationLink := fmt.Sprintf("%s/verify/%s?token=%s&expires=%s", url, email, token, expires)
 	subject := "Careers Path - Verify Email"
 	body := fmt.Sprintf("Hi, please click this link to verify your email: %s", verificationLink)
 
