@@ -15,7 +15,7 @@ func Server() *echo.Echo {
 	conf := config.NewAppConfig()
 
 	// routes
-	routes.RoutesUser(app, conf)
+	routes.RootRoutes(app, conf)
 
 	// new things settings
 	app.Use(middleware.CORS())

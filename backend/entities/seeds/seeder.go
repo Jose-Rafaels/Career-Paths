@@ -29,5 +29,6 @@ func seedAll(db *gorm.DB) []Seed {
 	return []Seed{
 		// Add New Seeder in Here
 		roleSeeder(db),
+		adminSeeder(db),
 	}
 }

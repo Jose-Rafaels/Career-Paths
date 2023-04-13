@@ -33,6 +33,8 @@ func InitDB(conf *config.AppConfig) *gorm.DB {
 	e := DB.AutoMigrate(
 		&entities.Role{},
 		&entities.User{},
+		&entities.Admin{},
+		&entities.Test{},
 	)
 
 	seeds.NewSeeders(DB)
