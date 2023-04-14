@@ -39,26 +39,26 @@ func (h *userHandler) LoginUser(c echo.Context) error {
 		})
 	}
 
-	cookiesAccessToken := http.Cookie{
-		Name:     "access_token",
-		Value:    res.AccessToken,
-		MaxAge:   int(res.ExpiredRefreshToken),
-		HttpOnly: true,
-		Secure:   true,
-		Domain:   "localhost",
-	}
+	cookiesAccessToken := &http.Cookie{}
+	cookiesAccessToken.Name = "access_token"
+	cookiesAccessToken.Value = res.AccessToken
+	cookiesAccessToken.MaxAge = int(res.ExpiredToken)
+	cookiesAccessToken.HttpOnly = true
+	cookiesAccessToken.Secure = true
+	cookiesAccessToken.Domain = "localhost"
+	cookiesAccessToken.SameSite = http.SameSiteLaxMode
 
-	cookiesRefreshToken := http.Cookie{
-		Name:     "refresh_token",
-		Value:    res.RefreshToken,
-		MaxAge:   int(res.ExpiredRefreshToken),
-		HttpOnly: true,
-		Secure:   true,
-		Domain:   "localhost",
-	}
+	cookiesRefreshToken := &http.Cookie{}
+	cookiesRefreshToken.Name = "refresh_token"
+	cookiesRefreshToken.Value = res.RefreshToken
+	cookiesRefreshToken.MaxAge = int(res.ExpiredRefreshToken)
+	cookiesRefreshToken.HttpOnly = true
+	cookiesRefreshToken.Secure = true
+	cookiesRefreshToken.Domain = "localhost"
+	cookiesRefreshToken.SameSite = http.SameSiteLaxMode
 
-	c.SetCookie(&cookiesAccessToken)
-	c.SetCookie(&cookiesRefreshToken)
+	c.SetCookie(cookiesAccessToken)
+	c.SetCookie(cookiesRefreshToken)
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
 		"code":    http.StatusOK,
