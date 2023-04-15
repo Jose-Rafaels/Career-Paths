@@ -20,7 +20,7 @@ const Intro = () => {
       <>
         <Navbar />
         <div className="intro" data-aos="zoom-in">
-          <p className="title">Tata Cara Menjawab Pertanyaan</p>
+          <p className="intro-title">Tata Cara Menjawab Pertanyaan</p>
           <p className="intro-subtitle">
             Tes ini digunakan untuk mengetahui tipe kepribadian Anda.
             <br />

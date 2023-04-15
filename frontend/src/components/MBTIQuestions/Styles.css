@@ -19,7 +19,7 @@
   padding: 2rem 14rem 0rem;
 }
 
-.intro-subtitle {
+.test-subtitle {
   padding: 0px 10rem;
   justify-content: center;
   font-weight: 500;
@@ -73,7 +73,7 @@
 
 .progress {
   height: 1rem !important;
-  margin: 0rem 4rem;
+  margin: 0rem 1.5rem !important;
 }
 
 .progress-bar {
@@ -112,4 +112,130 @@
   line-height: 22px;
   text-align: center;
   color: #000000;
+}
+
+@media (max-width: 481px) {
+  .test {
+    width: 100%;
+    height: 53rem;
+  }
+
+  .bg {
+    width: 100%;
+    height: 530px;
+  }
+
+  .intro {
+    height: 892px;
+  }
+
+  .test-title {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 22rem;
+    font-weight: 600;
+    font-size: 1.8rem !important;
+    line-height: 44px;
+    text-align: center;
+    padding: 0rem !important;
+  }
+
+  .test-subtitle {
+    margin-top: 12rem;
+    justify-content: center;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 0rem !important;
+  }
+
+  .box-progress {
+    position: absolute;
+    width: 340px;
+    height: 120px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 287px;
+    background: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  .progress-test {
+    justify-content: center;
+    height: 50px;
+    padding: 1.5rem;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: #000000;
+    background: #ffffff;
+  }
+
+  .box-question {
+    position: absolute;
+    width: 340px;
+    height: 120px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 366px;
+    background: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 4rem 0rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .progress {
+    height: 1rem !important;
+    margin: 0rem 4rem;
+  }
+
+  .progress-bar {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .soal {
+    position: absolute;
+    height: 22px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+    margin: 2rem 1rem;
+  }
+
+  .opsi-jawaban {
+    margin-top: 8rem;
+  }
+
+  .option {
+    margin-top: 1rem;
+    display: table-column;
+    margin-right: 0rem !important;
+    width: 340px;
+    height: 101px;
+    background: #e6e6fa;
+    border-radius: 11px;
+  }
+
+  .opsi {
+    padding: 0rem 2rem;
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+  }
 }

@@ -11,8 +11,6 @@ import PwdIc from "../../assets/Images/password-ic.svg";
 import Eye from "../../assets/Images/eye-ic.svg";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import Fb from "../../assets/Images/fb-ic.png";
-import Google from "../../assets/Images/google-ic.png";
 import { Link } from "react-router-dom";
 import Title from "../../components/Layout/Title";
 
@@ -31,7 +29,7 @@ const RegisterPage = () => {
           <div className="register-box">
             <h3 className="loginreg-title">Selamat Datang</h3>
             <p className="loginreg-sub-title">
-              Silahkan daftar menggunakan email aktif Anda
+              Silahkan daftar menggunakan email kampus Anda
             </p>
 
             <InputGroup className="name-register-form">
@@ -90,14 +88,6 @@ const RegisterPage = () => {
             </InputGroup>
 
             <button className="btn-daftar">Daftar Sekarang</button>
-            <p className="socmed-register">
-              Atau daftar menggunakan sosial media?
-            </p>
-
-            <div className="socmed">
-              <img src={Fb} alt={Fb} width={66} height={66} />
-              <img src={Google} alt={Google} width={66} height={66} />
-            </div>
 
             <p className="create-account">
               Sudah Punya Akun?{" "}

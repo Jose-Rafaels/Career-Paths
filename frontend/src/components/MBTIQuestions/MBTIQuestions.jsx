@@ -26,10 +26,16 @@ const MBTIQuestion = ({ question, onAnswerSelect, onNextQuestion }) => {
       <>
         <div className="test">
           <div className="bg">
-            <img src={BG} alt="bg" width={"1444"} height={"700"} />
+            <img
+              className="bg"
+              src={BG}
+              alt="bg"
+              width={"1444"}
+              height={"700"}
+            />
           </div>
           <p className="test-title">Jawab Sesuai Dengan Diri Anda!</p>
-          <p className="intro-subtitle">
+          <p className="test-subtitle">
             Pilihlah kalimat (a atau b) untuk meneruskan setiap pernyataan yang
             paling sesuai dengan diri Anda.
           </p>
@@ -47,7 +53,7 @@ const MBTIQuestion = ({ question, onAnswerSelect, onNextQuestion }) => {
 
           <div className="box-question">
             <p className="soal">{question.text}</p>
-            <div>
+            <div className="opsi-jawaban">
               {question.options.map((option) => (
                 <button
                   className="option"

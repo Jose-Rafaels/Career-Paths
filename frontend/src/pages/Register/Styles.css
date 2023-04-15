@@ -18,7 +18,7 @@
   position: relative;
   margin-left: 5rem;
   width: 500px;
-  height: 700px;
+  height: 542px;
   background: #ffffff;
   box-shadow: 5px 5px 20px rgb(0 0 0 / 25%);
   border-radius: 10px;
@@ -155,36 +155,15 @@
   font-size: 20px;
 }
 
-.socmed-register {
-  margin-top: -6rem;
-  justify-content: center;
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
-  color: #000000;
-}
-
-.socmed {
-  width: 150px;
-  height: 66px;
-  margin: 0rem 11rem;
-}
-
 .create-account {
-  justify-content: center;
-  margin: 2rem;
+  position: absolute;
+  top: 30rem;
+  margin: 0rem !important;
   font-weight: 500;
   font-size: 16px;
   text-align: center;
+  left: 50%;
+  width: 279px;
+  transform: translate(-50%, -50%);
   color: #000000;
-}
-
-.login-footer {
-  top: 885px !important;
-
-  width: 100%;
-  left: 0px;
-
-  font-family: "DM Sans", sans-serif;
-  background-color: rgba(230, 230, 250, 0.37);
 }

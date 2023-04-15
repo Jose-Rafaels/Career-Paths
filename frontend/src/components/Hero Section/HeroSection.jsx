@@ -33,7 +33,7 @@ const Intro = () => {
               Get Started
             </Link>
           </button>
-          <nav>
+          <nav className="btn-details">
             <a href="#description">Learn More</a>
           </nav>
         </div>
@@ -41,7 +41,13 @@ const Intro = () => {
       <div className="i-right">
         <div className="i-box">
           <div>
-            <img src={hero} alt="hero" height={510} width={560} />
+            <img
+              className="hero-logo"
+              src={hero}
+              alt="hero"
+              height={510}
+              width={560}
+            />
           </div>
         </div>
       </div>

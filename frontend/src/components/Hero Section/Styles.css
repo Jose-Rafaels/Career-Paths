@@ -25,7 +25,6 @@
   background-color: var(--blue);
   border: 2px solid var(--blue);
   padding: 6px 0;
-  transition: all 0.3s ease 0s;
   width: 173px;
   font-size: 16px;
   font-weight: bold;
@@ -36,26 +35,18 @@
   display: flex;
 }
 
-nav {
+.btn-details {
   border-radius: 6px;
   background-color: var(--white);
   border: 2px solid var(--bright-cyan);
   padding: 10px 0;
-  transition: all 0.3s ease 0s;
   width: 173px;
   font-size: 16px;
   height: 48px;
   color: var(--bright-cyan);
 }
 
-nav:hover {
-  cursor: pointer;
-  box-shadow: 0px 4px 10px 0px rgba(40, 40, 124, 0.7);
-  transition: all 0.2s ease 0s;
-  transform: scale(1.05);
-}
-
-nav a {
+.btn-details a {
   width: 173px;
   font-size: 16px;
   height: 48px;
@@ -69,19 +60,77 @@ nav a {
   margin-left: 1rem;
 }
 
+/*untuk layar device berukuran kecil*/
 @media (max-width: 481px) {
   .hero {
-    display: block;
-    margin: 8rem 1.4rem 1rem;
     padding: 0;
+    height: 32rem;
   }
 
-  .i-name {
+  .i-left {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 10rem;
+  }
+
+  .name {
     text-align: center;
+    font-size: 1.8rem;
+    width: 23rem;
   }
 
   .i-info {
+    text-align: center;
+    margin: 1rem 1.5rem;
+  }
+
+  .hero-logo {
+    height: 210px;
+    width: 260px;
+  }
+
+  .btn-primary {
+    border-radius: 6px;
+    background-color: var(--blue);
+    border: 2px solid var(--blue);
+    padding: 6px 0;
+    width: 123px;
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: bold;
+    height: 42px;
+  }
+
+  .btn-details {
+    border-radius: 6px;
+    background-color: var(--white);
+    border: 2px solid var(--bright-cyan);
+    padding: 10px 0;
+    width: 123px;
+    height: 44px;
+    color: var(--bright-cyan);
+  }
+
+  .btn-details a {
+    width: 123px;
+  }
+
+  .i-right {
+    position: absolute;
+    top: 5rem;
+    margin-left: 0rem !important;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+/*untuk layar device berukuran sedang*/
+@media screen and (min-width: 550px) {
+  .red {
+    width: 33%;
+  }
+
+  .orange {
+    width: 67%;
   }
 }

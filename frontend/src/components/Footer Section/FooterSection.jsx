@@ -12,10 +12,15 @@ const Footer = () => {
             <Navbar.Brand href="/">
               <div className="logo-footer">Career Paths</div>
             </Navbar.Brand>
+            <ul className="list-unstyled">
+              <p style={{ color: "#000000" }}>
+                Website rekomendasi karier pekerjaan IT berdasarkan tes MBTI
+              </p>
+            </ul>
           </div>
 
           <div className="col">
-            <h5 style={{ color: "#000000" }}>Account</h5>
+            <h5 style={{ color: "#000000", fontWeight: "bold" }}>Account</h5>
             <ul className="list-unstyled">
               <Nav.Link as={Link} to="/register">
                 Registrasi
@@ -27,7 +32,7 @@ const Footer = () => {
           </div>
 
           <div className="col">
-            <h5 style={{ color: "#000000" }}>Company</h5>
+            <h5 style={{ color: "#000000", fontWeight: "bold" }}>Company</h5>
             <ul className="list-unstyled">
               <Nav.Link as={Link} to="/">
                 Tentang Kami
@@ -40,7 +45,9 @@ const Footer = () => {
           </div>
 
           <div className="col">
-            <h5 style={{ color: "#000000" }}>Get Connected</h5>
+            <h5 style={{ color: "#000000", fontWeight: "bold" }}>
+              Get Connected
+            </h5>
             <ul className="list-unstyled">
               <Nav.Link href="https://www.google.co.id/maps/place/Institut+Teknologi+PLN/@-6.1682458,106.724257,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f788f60e492d:0x8b5ed89a85136510!8m2!3d-6.1682511!4d106.7264457">
                 Jakarta Barat

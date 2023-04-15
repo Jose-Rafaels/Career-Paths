@@ -22,7 +22,7 @@ const JobSection = () => {
   const [show, setShow] = useState(false);
   return (
     <div className="job-section">
-      <p className="title">
+      <p className="title-job-section">
         Computer and Information <br />
         Technology Occupations
       </p>
@@ -69,7 +69,7 @@ const JobSection = () => {
           </p>
           <p className="job-description">
             Membuat aplikasi komputer yang memungkinkan pengguna melakukan tugas
-            tertentu dan sistem yang mendasari berjalanny...
+            tertentu dan sistem yang ...
           </p>
           <button className="btn-more" onClick={() => setShow(true)}>
             Selengkapnya
@@ -151,7 +151,7 @@ const JobSection = () => {
           </p>
           <p className="job-description">
             Merancang penggunaan inovatif untuk teknologi baru dan yang sudah
-            ada, mempelajari dan memecahkan masalah kompleks...
+            ada, mempelajari dan memecahkan masalah ...
           </p>
           <button className="btn-more" onClick={() => setShow(true)}>
             Selengkapnya
@@ -186,7 +186,7 @@ const JobSection = () => {
           </p>
           <p className="job-description">
             Bertanggung jawab atas pengoperasian jaringan sehari-hari. Mengatur,
-            memasang, dan mendukung sistem komputer...
+            memasang, dan mendukung sistem ...
           </p>
           <button className="btn-more" onClick={() => setShow(true)}>
             Selengkapnya

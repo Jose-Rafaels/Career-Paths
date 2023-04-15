@@ -7,7 +7,7 @@ const DescSection = () => {
   return (
     <section id="description">
       <div className="desc-section">
-        <p className="title">
+        <p className="title-desc-section">
           Myers-Briggs Type Indicator
           <br />
           Untuk Tes Kepribadian
@@ -101,14 +101,6 @@ const DescSection = () => {
                   – Cara seseorang merespon dunia sekitar.
                 </li>
               </ul>
-            </div>
-            <div>
-              <p className="website-descriptions">
-                Tes psikologi gratis ini akan membantu kamu untuk lebih mengenal
-                diri sendiri. Kamu dapat lebih memahami kekuatan dan kelemahan
-                yang ada dalam diri. Selain itu kamu dapat mengetahui tipe
-                pasangan yang ideal dan tipe pekerjaan yang cocok.
-              </p>
             </div>
           </div>
         </div>

@@ -1,11 +1,11 @@
 .desc-section {
-  padding-top: 10rem;
+  padding-top: 5rem;
   background-color: var(--white);
   width: 100%;
   height: 840px;
 }
 
-.title {
+.title-desc-section {
   justify-content: center;
   color: var(--black);
   font-style: normal;
@@ -13,7 +13,6 @@
   font-size: 36px;
   line-height: 44px;
   text-align: center;
-  padding: 0rem 14rem;
 }
 
 .desc {
@@ -21,15 +20,14 @@
 }
 
 .sec-logo {
-  margin-top: 10rem;
+  margin-top: 6rem;
   margin-left: 7rem;
 }
 
 .website-description {
   padding-right: 8rem;
   margin-left: 4rem;
-  left: 80px;
-  margin-top: 6rem;
+  margin-top: 3rem;
   font-weight: 550;
   font-size: 18px;
   line-height: 22px;
@@ -61,4 +59,65 @@
   color: #000000;
   list-style-type: disc;
   padding-right: 2rem;
+}
+
+@media (max-width: 481px) {
+  .desc-section {
+    padding-top: 10rem;
+    background-color: var(--white);
+    width: 100%;
+    height: 88rem;
+  }
+
+  .title-desc-section {
+    position: absolute;
+    top: 125rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 22rem;
+    font-weight: 600;
+    font-size: 1.8rem !important;
+    line-height: 44px;
+    text-align: center;
+    padding: 0rem !important;
+  }
+
+  .desc {
+    display: grid;
+  }
+
+  .sec-logo {
+    position: absolute;
+    top: 130rem;
+    left: 50%;
+    transform: translate(-50%);
+    margin-left: 0rem !important;
+  }
+
+  .sec-ic {
+    height: 163px;
+    width: 209px;
+  }
+
+  .website-description {
+    margin: 16rem 2rem 1rem;
+    padding-right: 0rem !important;
+  }
+
+  .website-descriptions {
+    margin: 2rem 2rem 1rem;
+    padding-right: 0rem !important;
+  }
+
+  .desc-point {
+    margin: 0.5rem;
+    font-weight: 550;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    text-indent: 2px;
+    color: #000000;
+    list-style-type: disc;
+    padding-right: 1rem;
+  }
 }
