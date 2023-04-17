@@ -10,6 +10,7 @@ Career Paths Merupakan website rekomendasi karir di bidang IT yang menggunakan f
 - MySQL/PostgreSQL (Database)
 - Gmail (SMTP)
 - GORM (Query Database)
+- JWT (Token Auth)
 
 
 # How to install in Local Device
@@ -28,7 +29,13 @@ Create Database career_paths
 
 3. Copy .env.example to .env and insert the data with your configuration in your local device
 
-4. Running the backend with this command
+4. If you get error in go.mod, you can solve the error with this command 
+
+```go
+go mod tidy
+```
+
+5. Running the backend with this command
 
 ``` go
 go run main.go

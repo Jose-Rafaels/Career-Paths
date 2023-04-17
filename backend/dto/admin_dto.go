@@ -6,14 +6,8 @@ type LoginAdmin struct {
 }
 
 type LoginAdminResponse struct {
-	ID       string `json:"id"`
-	Email    string `json:"email"`
-	Password string `json:"password"`
-	RoleID   string `json:"role_id"`
-	Role     Role   `json:"-"`
-}
-
-type Role struct {
-	ID   string `json:"id"`
-	Name string `json:"name"`
+	AccessToken         string `json:"access_token"`
+	ExpiredToken        int64  `json:"expired_token"`
+	RefreshToken        string `json:"refresh_token"`
+	ExpiredRefreshToken int64  `json:"expired_refresh_token"`
 }
