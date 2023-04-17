@@ -8,7 +8,6 @@ import (
 
 func GenerateVerificationToken() (string, time.Time, error) {
 	expirateTime := time.Now().Add(5 * time.Minute)
-	// expiratesTime := expirateTime.Unix()
 	token := make([]byte, 16)
 	_, err := rand.Read(token)
 	if err != nil {

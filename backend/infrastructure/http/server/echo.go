@@ -11,6 +11,7 @@ import (
 )
 
 func Server() *echo.Echo {
+	// Root Config
 	app := echo.New()
 	conf := config.NewAppConfig()
 
@@ -27,6 +28,7 @@ func Server() *echo.Echo {
 		return c.JSON(http.StatusOK, map[string]interface{}{
 			"Body":    "Selamat Datang di api Backend Career-Paths Version 1.0",
 			"Creator": "Saut Kristian Wiratama Manurung",
+			"Message": "If you wanna Contribution in this code, you can fork this repository and you can make Pull Request to this repository",
 			"Status":  true,
 		})
 	})
