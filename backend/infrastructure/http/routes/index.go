@@ -9,4 +9,5 @@ import (
 func RootRoutes(echo *echo.Echo, conf *config.AppConfig) {
 	RoutesUser(echo, conf)
 	RoutesAdmin(echo, conf)
+	RoutesTest(echo, conf)
 }

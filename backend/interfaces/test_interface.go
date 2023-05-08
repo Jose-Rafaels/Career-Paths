@@ -11,12 +11,12 @@ import (
 type TestRepository interface {
 	CreateTestRepository(test *dto.CreateQuestion) error
 	GetTestRepository(id string) (*entities.Test, error)
-	GetAllTestRepository() ([]entities.Test, error)
+	GetAllTestRepository() ([]dto.FindAllQuestionResponse, error)
 }
 
 type TestService interface {
-	CreateTestService(data *dto.Question) *utils.Response
-	GetTestService(id string) (*dto.FindQuestionResponse, *utils.Response)
+	CreateTestService(data *dto.CreateQuestion) *utils.Response
+	GetTestService(id string) (*entities.Test, *utils.Response)
 	GetAllTestService() ([]dto.FindAllQuestionResponse, *utils.Response)
 }
 
