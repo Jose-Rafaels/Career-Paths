@@ -42,8 +42,8 @@ func (repo *testRepository) CreateTestRepository(test *dto.CreateQuestion) error
 }
 
 // GetAllTestRepository implements interfaces.TestRepository
-func (repo *testRepository) GetAllTestRepository() ([]entities.Test, error) {
-	var test []entities.Test
+func (repo *testRepository) GetAllTestRepository() ([]dto.FindAllQuestionResponse, error) {
+	var test []dto.FindAllQuestionResponse
 	err := repo.DB.Model(&entities.Test{}).Find(&test).Error
 	if err != nil {
 		return nil, err

@@ -29,7 +29,7 @@ func SendEmail(email string) error {
 	port := 587
 	password := conf.Smtp.Pass
 	username := conf.Smtp.User
-	from := "noreply@lapor-mas.id"
+	from := username
 	url := conf.Smtp.Url
 
 	token, expires, err := GenerateVerificationToken()

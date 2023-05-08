@@ -3,7 +3,7 @@ package entities
 import "gorm.io/plugin/soft_delete"
 
 type User struct {
-	ID              string `json:"id"`
+	ID              string `json:"id" gorm:"size:512"`
 	FirstName       string `json:"first_name"`
 	LastName        string `json:"last_name"`
 	Email           string `json:"email" gorm:"unique"`
@@ -11,8 +11,8 @@ type User struct {
 	ConfirmPassword string `json:"confirm_password"`
 	IsActivated     bool   `json:"is_activated"`
 
-	RoleID string `json:"role_id" gorm:"size:512"`
-	Role   Role   `json:"-"`
+	RoleID string `json:"role_id"`
+	Role   Role   `json:"-" gorm:"foreignKey:RoleID;references:ID"`
 
 	CreatedAt int64                 `json:"created_at"`
 	UpdatedAt int64                 `json:"updated_at"`

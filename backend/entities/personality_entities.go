@@ -1,7 +1,7 @@
 package entities
 
 type Personality struct {
-	ID           string `json:"id"`
+	ID           string `json:"id" gorm:"size:512"`
 	Type_person  string `json:"type_personality"`
 	Information1 string `json:"information_1"`
 	Information2 string `json:"information_2"`
