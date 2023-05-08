@@ -27,7 +27,7 @@ git clone https://github.com/DwiSam/Career-Paths.git
 Create Database career_paths
 ```
 
-3. Copy .env.example to .env and insert the data with your configuration in your local device
+3. Copy .env.example to be a file .env and insert the data with your configuration in your local device
 
 4. If you get error in go.mod, you can solve the error with this command 
 
