@@ -3,7 +3,7 @@ package entities
 import "gorm.io/plugin/soft_delete"
 
 type Test struct {
-	ID        string                `json:"id"`
+	ID        string                `json:"id" gorm:"size:512"`
 	Question  string                `json:"question"`
 	Answare1  string                `json:"answare_a"`
 	Answare2  string                `json:"answare_b"`

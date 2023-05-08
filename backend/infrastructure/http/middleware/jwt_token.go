@@ -3,6 +3,7 @@ package middleware
 import (
 	"career-paths/config"
 
+	"github.com/golang-jwt/jwt/v4"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
@@ -23,4 +24,12 @@ func JWTTokenMiddlewareFromRefreshToken() echo.MiddlewareFunc {
 		SigningMethod: "HS256",
 		TokenLookup:   "cookie:refresh_token",
 	})
+}
+
+func DecodeToken(token string) (jwt.MapClaims, error) {
+	claims := jwt.MapClaims{}
+	_, err := jwt.ParseWithClaims(token, claims, func(token *jwt.Token) (interface{}, error) {
+		return []byte(""), nil
+	})
+	return claims, err
 }
