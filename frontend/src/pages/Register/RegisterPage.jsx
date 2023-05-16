@@ -1,4 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
@@ -9,15 +12,67 @@ import UsernameIc from "../../assets/Images/username-ic.svg";
 import EmailIc from "../../assets/Images/mail-ic.svg";
 import PwdIc from "../../assets/Images/password-ic.svg";
 import Eye from "../../assets/Images/eye-ic.svg";
+import EyeC from "../../assets/Images/eyeC.svg";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import { Link } from "react-router-dom";
 import Title from "../../components/Layout/Title";
 
 const RegisterPage = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  const Navigate = useNavigate();
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirm_password, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [showCPassword, setShowCPassword] = useState(false);
+  const [passwordChar, setPasswordChar] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (password !== confirm_password) {
+      setPasswordError(true);
+      return;
+    } else if (password.length < 8) {
+      setPasswordChar(true);
+      return;
+    } else {
+      try {
+        let res = await axios.post(
+          `http://localhost:8080/v1/user/register`,
+          {
+            first_name: first_name,
+            last_name: last_name,
+            email: email,
+            password: password,
+            confirm_password: confirm_password,
+            role_id: "41a14a52-a290-4db5-a4d2-2f738ca25fd1",
+          },
+          {
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        console.log(res);
+        if (res.data.error) {
+          alert(res.data.error);
+        } else if (res.status === 201) {
+          alert("Yeay! kamu berhasil daftar. silahkan login...");
+          Navigate("/login");
+        }
+      } catch (error) {
+        alert("Data yang kamu masukkan salah/Email Sudah terdaftar");
+      }
+    }
+  };
+
   return (
     <Title title="Register">
       <>
@@ -32,64 +87,127 @@ const RegisterPage = () => {
               Silahkan daftar menggunakan email kampus Anda
             </p>
 
-            <InputGroup className="name-register-form">
-              <InputGroup className="form-ic">
-                <img className="form-icon" src={UsernameIc} alt={UsernameIc} />
-                <Form.Control
-                  className="register-input"
-                  type="email"
-                  placeholder="Nama Depan"
-                />
+            <Form onSubmit={handleSubmit}>
+              <InputGroup className="name-register-form">
+                <InputGroup className="form-ic">
+                  <img
+                    className="form-icon"
+                    src={UsernameIc}
+                    alt={UsernameIc}
+                  />
+                  <Form.Control
+                    className="register-input"
+                    placeholder="Nama Depan"
+                    type="text"
+                    id="first_name"
+                    value={first_name}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    required
+                  />
+                </InputGroup>
               </InputGroup>
-            </InputGroup>
-            <InputGroup className="name2-register-form">
-              <InputGroup className="form-ic">
-                <img className="form-icon" src={UsernameIc} alt={UsernameIc} />
-                <Form.Control
-                  className="register-input"
-                  type="email"
-                  placeholder="Nama Belakang"
-                />
+              <InputGroup className="name2-register-form">
+                <InputGroup className="form-ic">
+                  <img
+                    className="form-icon"
+                    src={UsernameIc}
+                    alt={UsernameIc}
+                  />
+                  <Form.Control
+                    className="register-input"
+                    placeholder="Nama Belakang"
+                    type="text"
+                    id="last_name"
+                    value={last_name}
+                    onChange={(e) => setLastName(e.target.value)}
+                    required
+                  />
+                </InputGroup>
               </InputGroup>
-            </InputGroup>
 
-            <InputGroup className="email-register-form">
-              <InputGroup className="form-ic">
-                <img className="form-icon" src={EmailIc} alt={EmailIc} />
-                <Form.Control
-                  className="register-input"
-                  type="email"
-                  placeholder="Email"
-                />
+              <InputGroup className="email-register-form">
+                <InputGroup className="form-ic">
+                  <img className="form-icon" src={EmailIc} alt={EmailIc} />
+                  <Form.Control
+                    className="register-input"
+                    placeholder="Email"
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </InputGroup>
               </InputGroup>
-            </InputGroup>
 
-            <InputGroup className="password-register-form">
-              <InputGroup className="form-ic">
-                <img className="form-icon" src={PwdIc} alt={PwdIc} />
-                <Form.Control
-                  className="register-input"
-                  type="password"
-                  placeholder="Password"
-                />
-                <img className="show-pwd" src={Eye} alt={Eye} />
+              <InputGroup className="password-register-form">
+                <InputGroup className="form-ic">
+                  <img className="form-icon" src={PwdIc} alt={PwdIc} />
+                  <Form.Control
+                    className="register-input"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Password"
+                    required
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <button
+                    className="show-pwd-ic"
+                    onClick={() =>
+                      setShowPassword((showPassword) => !showPassword)
+                    }
+                  >
+                    {showPassword ? (
+                      <img className="show-pwd" src={Eye} alt={Eye} />
+                    ) : (
+                      <img className="show-pwd" src={EyeC} alt={EyeC} />
+                    )}
+                  </button>
+                </InputGroup>
               </InputGroup>
-            </InputGroup>
-            <InputGroup className="password-confirm-register-form">
-              <InputGroup className="form-ic">
-                <img className="form-icon" src={PwdIc} alt={PwdIc} />
-                <Form.Control
-                  className="register-input"
-                  type="password"
-                  placeholder="Konfirmasi"
-                />
-                <img className="show-pwd" src={Eye} alt={Eye} />
+              <InputGroup className="password-confirm-register-form">
+                <InputGroup className="form-ic">
+                  <img className="form-icon" src={PwdIc} alt={PwdIc} />
+                  <Form.Control
+                    className="register-input"
+                    type={showCPassword ? "text" : "password"}
+                    placeholder="Konfirmasi"
+                    required
+                    id="confirm_password"
+                    value={confirm_password}
+                    onChange={(e) => {
+                      setConfirmPassword(e.target.value);
+                    }}
+                  />
+                  <button
+                    className="show-pwd-ic"
+                    onClick={() =>
+                      setShowCPassword((showCPassword) => !showCPassword)
+                    }
+                  >
+                    {showCPassword ? (
+                      <img className="show-pwd" src={Eye} alt={Eye} />
+                    ) : (
+                      <img className="show-pwd" src={EyeC} alt={EyeC} />
+                    )}
+                  </button>
+                </InputGroup>
               </InputGroup>
-            </InputGroup>
+              {passwordChar && (
+                <label className="min-password">
+                  Kata sandi minimal 8 karakter!
+                </label>
+              )}
+              {passwordError && (
+                <label className="min-password">Kata sandi tidak cocok!</label>
+              )}
 
-            <button className="btn-daftar">Daftar Sekarang</button>
-
-            <p className="create-account">
+              <button className="btn-daftar" type="submit">
+                Daftar Sekarang
+              </button>
+            </Form>
+            <p className="login-account">
               Sudah Punya Akun?{" "}
               <span style={{ fontWeight: "bold", color: "#000000" }}>
                 <Link to="/login" style={{ textDecoration: "none" }}>

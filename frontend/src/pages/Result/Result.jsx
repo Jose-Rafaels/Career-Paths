@@ -6,11 +6,11 @@ import Navbar from "../../components/Navbar Section/NavbarSection";
 import Footer from "../../components/Footer Section/FooterSection";
 import webDev from "../../assets/Images/webdev.png";
 import BG from "../../assets/Images/bg.png";
-import Final from "../../assets/Images/final-ic.png";
+// import Final from "../../assets/Images/final-ic.png";
 import Title from "../../components/Layout/Title";
 import descriptions from "../../data/Personality Types Desc/PersonalityTypes";
 import descTypes from "../../data/Descriptions/DescType";
-import matkul from "../../data/Mata Kuliah/Matkul";
+// import matkul from "../../data/Mata Kuliah/Matkul";
 
 const ResultPage = ({ result }) => {
   useEffect(() => {
@@ -23,17 +23,10 @@ const ResultPage = ({ result }) => {
         <Navbar />
         <div className="resultPage">
           <div className="bg">
-            <img src={BG} alt="bg" width={"1444"} height={"1100"} />
+            <img className="bg" src={BG} alt="bg" height={"1100"} />
           </div>
           <div className="resultSection">
             <div className="intro-user-result">
-              <img
-                className="final-icon"
-                src={Final}
-                alt="final-ic"
-                width={"374"}
-                height={"257"}
-              />
               <p className="hi-user">Halo John Doe</p>
               <p className="type-result">
                 Berdasarkan tes yang sudah kamu lakukan, tipe kepribadian kamu
@@ -50,7 +43,7 @@ const ResultPage = ({ result }) => {
           </div>
 
           <div className="jobSection" data-aos="fade-up">
-            <p className="title">
+            <p className="title-jobSection">
               Berikut jenis pekerjaan yang cocok dengan tipe kepribadian{" "}
               {result}
             </p>
@@ -101,12 +94,19 @@ const ResultPage = ({ result }) => {
                   HTML CSS, Javascript Framework, Rest Apis, Sql Server, UI/UX,
                   PHP Laravel, Node.
                 </p>
+                <p className="description">
+                  <span style={{ color: "#000000", fontWeight: "bold" }}>
+                    Mata kuliah yang harus kamu ambil :
+                  </span>
+                  <br />
+                  Pemrograman Web Lanjut, Manajemen Proyek Perangkat Lunak.
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="matkulSection">
-            <p className="title">
+          {/* <div className="matkulSection">
+            <p className="title-matkulSection">
               Berikut mata kuliah yang harus kamu ambil untuk mencapai pekerjaan
               impian kamu
             </p>
@@ -128,7 +128,7 @@ const ResultPage = ({ result }) => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <Footer />
       </>
