@@ -30,5 +30,6 @@ func seedAll(db *gorm.DB) []Seed {
 		// Add New Seeder in Here
 		roleSeeder(db),
 		adminSeeder(db),
+		personalitySeeder(db),
 	}
 }
