@@ -50,6 +50,7 @@ const LoginPage = () => {
         if (response.status === 200) {
           console.log("SUCCESSS");
           navigate("/intro-test");
+          window.location.reload();
           return response.json();
         } else if (response.status === 401) {
           console.log("SOMETHING WENT WRONG");
@@ -104,7 +105,8 @@ const LoginPage = () => {
                     required
                     ref={passwordInputRef}
                   />
-                  <button
+                  <span
+                    role="button"
                     className="show-pwd-ic"
                     onClick={() =>
                       setShowPassword((showPassword) => !showPassword)
@@ -115,7 +117,7 @@ const LoginPage = () => {
                     ) : (
                       <img className="show-pwd" src={EyeC} alt={EyeC} />
                     )}
-                  </button>
+                  </span>
                 </InputGroup>
               </InputGroup>
 

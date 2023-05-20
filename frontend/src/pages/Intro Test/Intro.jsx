@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar Section/NavbarSection";
 import Footer from "../../components/Footer Section/FooterSection";
 import intro from "../../assets/Images/intro-ic.png";
@@ -15,6 +15,9 @@ const Intro = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  let navigate = useNavigate();
+
   return (
     <Title title="Test Opening">
       <>
@@ -60,15 +63,29 @@ const Intro = () => {
                 </p>
               </div>
             </div>
-            <button className="button-start">
-              {" "}
-              <Link
-                to="/test-page"
-                style={{ textDecoration: "none", color: "#ffffff" }}
-              >
-                Mulai Tes Sekarang
-              </Link>
-            </button>
+            <>
+              {localStorage.getItem("token") ? (
+                <>
+                  <button
+                    className="button-start"
+                    onClick={() => navigate("/test-page")}
+                    style={{ textDecoration: "none", color: "#ffffff" }}
+                  >
+                    Mulai Tes Sekarang
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button
+                    className="button-start-login"
+                    onClick={() => navigate("/login")}
+                    style={{ textDecoration: "none", color: "#ffffff" }}
+                  >
+                    LOGIN
+                  </button>
+                </>
+              )}
+            </>
           </div>
         </div>
         <Footer />

@@ -104,6 +104,18 @@
   font-size: 18px;
 }
 
+.button-start-login {
+  position: absolute;
+  width: 180px;
+  height: 48px;
+  top: 785px;
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
 @media (max-width: 481px) {
   .intro {
     height: 892px;

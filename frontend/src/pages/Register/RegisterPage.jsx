@@ -51,7 +51,6 @@ const RegisterPage = () => {
             email: email,
             password: password,
             confirm_password: confirm_password,
-            role_id: "41a14a52-a290-4db5-a4d2-2f738ca25fd1",
           },
           {
             headers: {
@@ -152,7 +151,8 @@ const RegisterPage = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <button
+                  <span
+                    role="button"
                     className="show-pwd-ic"
                     onClick={() =>
                       setShowPassword((showPassword) => !showPassword)
@@ -163,7 +163,7 @@ const RegisterPage = () => {
                     ) : (
                       <img className="show-pwd" src={EyeC} alt={EyeC} />
                     )}
-                  </button>
+                  </span>
                 </InputGroup>
               </InputGroup>
               <InputGroup className="password-confirm-register-form">
@@ -180,7 +180,8 @@ const RegisterPage = () => {
                       setConfirmPassword(e.target.value);
                     }}
                   />
-                  <button
+                  <span
+                    role="button"
                     className="show-pwd-ic"
                     onClick={() =>
                       setShowCPassword((showCPassword) => !showCPassword)
@@ -191,7 +192,7 @@ const RegisterPage = () => {
                     ) : (
                       <img className="show-pwd" src={EyeC} alt={EyeC} />
                     )}
-                  </button>
+                  </span>
                 </InputGroup>
               </InputGroup>
               {passwordChar && (
