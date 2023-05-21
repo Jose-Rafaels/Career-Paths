@@ -3,7 +3,11 @@ package entities
 type WorkPersonality struct {
 	ID                         string `json:"id" gorm:"size:512"`
 	TypePerson                 string `json:"type_person"`
-	Profession                 string `json:"profession"`
+	Profession1                string `json:"profession_1"`
+	Profession2                string `json:"profession_2"`
+	Profession3                string `json:"profession_3"`
+	Profession4                string `json:"profession_4"`
+	Profession5                string `json:"profession_5"`
 	Description                string `json:"description"`
 	DutiesandResponsibilities1 string `json:"duties_and_responsibilities_1"`
 	DutiesandResponsibilities2 string `json:"duties_and_responsibilities_2"`

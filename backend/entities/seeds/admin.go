@@ -38,6 +38,9 @@ func adminSeeder(db *gorm.DB) Seed {
 			Email:     "adminuser2@gmail.com",
 			Password:  passwordReal,
 			RoleID:    AdminRoleID,
+			CreatedAt: 0,
+			UpdatedAt: 0,
+			DeletedAt: 0,
 		},
 	}
 
