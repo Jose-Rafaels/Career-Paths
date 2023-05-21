@@ -19,7 +19,7 @@ const Intro = () => {
   let navigate = useNavigate();
 
   return (
-    <Title title="Test Opening">
+    <Title title="Intro Test">
       <>
         <Navbar />
         <div className="intro" data-aos="zoom-in">

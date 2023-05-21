@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MBTIQuestion from "../../components/MBTIQuestions/MBTIQuestions";
 import Result from "../Result/Result";
 import questions from "../../data/Questions/Questions";
+import axios from "axios";
 
 const Test = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -20,7 +21,7 @@ const Test = () => {
     }
   };
 
-  const calculateMBTI = () => {
+  const calculateMBTI = async () => {
     const score = { I: 0, E: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 
     // menghitung skor berdasarkan jawaban yang telah dipilih
@@ -42,6 +43,29 @@ const Test = () => {
     type += score.J >= score.P ? "J" : "P";
 
     setResult(type);
+  };
+
+  useEffect(() => {
+    if (result) {
+      sendAnswer(selectedAnswers, result);
+    }
+  }, [result]);
+
+  const sendAnswer = async (answers, result) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/v1/test/create",
+        {
+          answers,
+          result,
+        }
+      );
+      // Tangani respons dari server
+      console.log(response.data); // Outputkan data respons dari server
+    } catch (error) {
+      console.log(error);
+      // Tangani kesalahan saat mengirim jawaban ke server
+    }
   };
 
   return (

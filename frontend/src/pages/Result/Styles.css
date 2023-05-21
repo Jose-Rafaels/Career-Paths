@@ -1,6 +1,6 @@
 .resultPage {
   width: 100%;
-  height: 96rem;
+  height: 102rem;
 }
 
 .bg {
@@ -10,7 +10,7 @@
 .resultSection {
   position: absolute;
   width: 1150px;
-  height: 480px;
+  height: 580px;
   left: 50%;
   transform: translate(-50%);
   top: 124px;
@@ -104,7 +104,7 @@
 .jobSection {
   position: relative;
   height: 31px;
-  top: 700px;
+  top: 722px;
 }
 
 .jobs-box {
