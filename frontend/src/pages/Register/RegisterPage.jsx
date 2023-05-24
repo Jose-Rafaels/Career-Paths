@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Toast from "react-bootstrap/Toast";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
@@ -13,6 +16,7 @@ import EmailIc from "../../assets/Images/mail-ic.svg";
 import PwdIc from "../../assets/Images/password-ic.svg";
 import Eye from "../../assets/Images/eye-ic.svg";
 import EyeC from "../../assets/Images/eyeC.svg";
+import Ic from "../../assets/Images/logo.svg";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Title from "../../components/Layout/Title";
@@ -32,13 +36,17 @@ const RegisterPage = () => {
   const [showCPassword, setShowCPassword] = useState(false);
   const [passwordChar, setPasswordChar] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const [show, setShow] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirm_password) {
       setPasswordError(true);
+      setPasswordChar(false);
       return;
     } else if (password.length < 8) {
+      setPasswordError(false);
       setPasswordChar(true);
       return;
     } else {
@@ -63,11 +71,12 @@ const RegisterPage = () => {
         if (res.data.error) {
           alert(res.data.error);
         } else if (res.status === 201) {
-          alert("Yeay! kamu berhasil daftar. silahkan login...");
+          setShow(true);
+
           Navigate("/login");
         }
       } catch (error) {
-        alert("Data yang kamu masukkan salah/Email Sudah terdaftar");
+        setShowToast(true);
       }
     }
   };
@@ -76,6 +85,102 @@ const RegisterPage = () => {
     <Title title="Register">
       <>
         <Navbar />
+        <Row>
+          <Col md={6} className="mb-2">
+            <Toast
+              onClose={() => setShow(false)}
+              show={show}
+              style={{
+                position: "fixed",
+                top: 0,
+                right: 0,
+                zIndex: 9999,
+                minWidth: "200px",
+                background: "#36c8f6",
+              }}
+            >
+              <Toast.Header>
+                <img
+                  src={Ic}
+                  className="rounded me-2"
+                  alt=""
+                  height={20}
+                  width={20}
+                />
+                <strong
+                  className="me-auto"
+                  style={{
+                    color: "#0000ff",
+                  }}
+                >
+                  Career Paths
+                </strong>
+                <small
+                  style={{
+                    color: "#36c8f6",
+                  }}
+                >
+                  Just now
+                </small>
+              </Toast.Header>
+              <Toast.Body
+                style={{
+                  color: "#000000",
+                }}
+              >
+                Yeay! kamu berhasil daftar. Silahkan login
+              </Toast.Body>
+            </Toast>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6} className="mb-2">
+            <Toast
+              onClose={() => setShowToast(false)}
+              show={showToast}
+              style={{
+                position: "fixed",
+                top: 0,
+                right: 0,
+                zIndex: 9999,
+                minWidth: "200px",
+                background: "#36c8f6",
+              }}
+            >
+              <Toast.Header>
+                <img
+                  src={Ic}
+                  className="rounded me-2"
+                  alt=""
+                  height={20}
+                  width={20}
+                />
+                <strong
+                  className="me-auto"
+                  style={{
+                    color: "#0000ff",
+                  }}
+                >
+                  Career Paths
+                </strong>
+                <small
+                  style={{
+                    color: "#36c8f6",
+                  }}
+                >
+                  Just now
+                </small>
+              </Toast.Header>
+              <Toast.Body
+                style={{
+                  color: "#000000",
+                }}
+              >
+                Data yang kamu masukkan salah/Email Sudah terdaftar
+              </Toast.Body>
+            </Toast>
+          </Col>
+        </Row>
         <div className="register" data-aos="fade-down">
           <div className="register-ic">
             <img className="register-logo" src={RegsiterIc} alt={RegsiterIc} />

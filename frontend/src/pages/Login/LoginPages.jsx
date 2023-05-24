@@ -152,7 +152,7 @@ const LoginPage = () => {
           </div>
         </div>
 
-        <Footer className="login-footer" />
+        <Footer />
       </>
     </Title>
   );
