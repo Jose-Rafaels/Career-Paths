@@ -72,7 +72,6 @@ const RegisterPage = () => {
           alert(res.data.error);
         } else if (res.status === 201) {
           setShow(true);
-
           Navigate("/login");
         }
       } catch (error) {
@@ -140,8 +139,8 @@ const RegisterPage = () => {
               show={showToast}
               style={{
                 position: "fixed",
-                top: 0,
-                right: 0,
+                top: "5px",
+                right: "5px",
                 zIndex: 9999,
                 minWidth: "200px",
                 background: "#36c8f6",
@@ -174,6 +173,7 @@ const RegisterPage = () => {
               <Toast.Body
                 style={{
                   color: "#000000",
+                  textAlign: "center",
                 }}
               >
                 Data yang kamu masukkan salah/Email Sudah terdaftar

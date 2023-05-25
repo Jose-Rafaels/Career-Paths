@@ -71,7 +71,7 @@ const LoginPage = () => {
     <Title title="Login">
       <>
         <Navbar />
-
+        zz
         <div className="login" data-aos="fade-down">
           <div className="login-ic">
             <img className="login-logo" src={LoginIc} alt={LoginIc} />
@@ -151,7 +151,6 @@ const LoginPage = () => {
             </p>
           </div>
         </div>
-
         <Footer />
       </>
     </Title>

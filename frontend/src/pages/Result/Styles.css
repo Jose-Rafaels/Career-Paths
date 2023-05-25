@@ -164,7 +164,7 @@
 @media (max-width: 481px) {
   .resultPage {
     width: 100%;
-    height: 140rem;
+    height: 155rem;
   }
 
   .bg {
@@ -175,7 +175,7 @@
   .resultSection {
     position: absolute;
     width: 340px;
-    height: 700px;
+    height: 1012px;
     left: 50%;
     transform: translate(-50%);
     top: 124px;
@@ -261,7 +261,7 @@
   .jobSection {
     position: relative;
     height: 31px;
-    top: 843px;
+    top: 1108px;
   }
 
   .title-jobSection {
