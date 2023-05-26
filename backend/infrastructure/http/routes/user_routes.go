@@ -24,5 +24,5 @@ func RoutesUser(echo *echo.Echo, conf *config.AppConfig) {
 
 	user.POST("/register", userController.RegisterUser)
 	user.POST("/login", userController.LoginUser)
-	user.PUT("/verify/:email", userController.VerifyEmail)
+	user.GET("/verify/:email", userController.VerifyEmail)
 }
