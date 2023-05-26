@@ -10,7 +10,7 @@ type Admin struct {
 	Password  string `json:"password"`
 
 	RoleID string `json:"role_id"`
-	Role   Role   `json:"-" gorm:"foreignKey:RoleID;references:ID"`
+	Role   Role   `json:"-" gorm:"foreignKey:RoleID;references:ID;null;constraint:onUpdate:Cascade,OnDelete:SET NULL"`
 
 	CreatedAt int64                 `json:"created_at"`
 	UpdatedAt int64                 `json:"updated_at"`
