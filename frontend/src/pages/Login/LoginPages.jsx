@@ -16,15 +16,32 @@ import { Link } from "react-router-dom";
 import Title from "../../components/Layout/Title";
 
 const LoginPage = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  AOS.init({ duration: 1000 });
 
   const navigate = useNavigate();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
+  const [rememberMe, setRememberMe] = useState(false);
+  const [rememberedEmail, setRememberedEmail] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+
+  useEffect(() => {
+    const rememberedEmail = localStorage.getItem("rememberedEmail");
+    if (rememberedEmail) {
+      setRememberedEmail(rememberedEmail);
+      setRememberMe(true);
+    }
+  }, []);
+
+  const handleRememberMe = () => {
+    setRememberMe(!rememberMe);
+    if (!rememberMe) {
+      localStorage.setItem("rememberedEmail", emailInputRef.current.value);
+    } else {
+      localStorage.removeItem("rememberedEmail");
+    }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -71,7 +88,7 @@ const LoginPage = () => {
     <Title title="Login">
       <>
         <Navbar />
-        zz
+
         <div className="login" data-aos="fade-down">
           <div className="login-ic">
             <img className="login-logo" src={LoginIc} alt={LoginIc} />
@@ -91,6 +108,7 @@ const LoginPage = () => {
                     placeholder="Email"
                     required
                     ref={emailInputRef}
+                    defaultValue={rememberedEmail}
                   />
                 </InputGroup>
               </InputGroup>
@@ -127,6 +145,8 @@ const LoginPage = () => {
                   type="checkbox"
                   value=""
                   id="flexCheckChecked"
+                  checked={rememberMe}
+                  onChange={handleRememberMe}
                 />
                 <label className="form-check-label" htmlFor="flexCheckChecked">
                   Ingat saya
