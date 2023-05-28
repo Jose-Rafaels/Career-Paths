@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
@@ -7,9 +7,7 @@ import Title from "../Layout/Title";
 import BG from "../../assets/Images/bg.png";
 
 const MBTIQuestion = ({ question, onAnswerSelect, onNextQuestion }) => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  AOS.init({ duration: 1000 });
 
   const [currentQuestion, setCurrentQuestion] = useState(1);
 

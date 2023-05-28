@@ -1,5 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+import Spinner from "react-bootstrap/Spinner";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
@@ -10,9 +13,6 @@ import EmailIc from "../../assets/Images/mail-ic.svg";
 import PwdIc from "../../assets/Images/password-ic.svg";
 import Eye from "../../assets/Images/eye-ic.svg";
 import EyeC from "../../assets/Images/eyeC.svg";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-import { Link } from "react-router-dom";
 import Title from "../../components/Layout/Title";
 
 const LoginPage = () => {
@@ -21,10 +21,11 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
-  const [rememberMe, setRememberMe] = useState(false);
   const [rememberedEmail, setRememberedEmail] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const rememberedEmail = localStorage.getItem("rememberedEmail");
@@ -49,6 +50,8 @@ const LoginPage = () => {
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
     let auth = localStorage.getItem("token");
+
+    setLoading(true);
 
     fetch(`http://localhost:8080/v1/user/login`, {
       method: "POST",
@@ -81,6 +84,9 @@ const LoginPage = () => {
       .catch((err) => {
         setPasswordError(true);
         return;
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
@@ -157,8 +163,21 @@ const LoginPage = () => {
                 <label className="wrong">Data yang anda masukkan salah!</label>
               )}
 
-              <button className="btn-masuk" type="submit">
-                Masuk
+              <button className="btn-masuk" type="submit" disabled={loading}>
+                {loading ? (
+                  <>
+                    <Spinner
+                      as="span"
+                      animation="grow"
+                      size="sm"
+                      role="status"
+                      aria-hidden="true"
+                    />
+                    Loading...
+                  </>
+                ) : (
+                  "Masuk"
+                )}
               </button>
             </Form>
             <p className="create-account">

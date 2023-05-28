@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Toast from "react-bootstrap/Toast";
+import Spinner from "react-bootstrap/Spinner";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
@@ -16,15 +19,12 @@ import PwdIc from "../../assets/Images/password-ic.svg";
 import Eye from "../../assets/Images/eye-ic.svg";
 import EyeC from "../../assets/Images/eyeC.svg";
 import Ic from "../../assets/Images/logo.svg";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
 import Title from "../../components/Layout/Title";
 
 const RegisterPage = () => {
   AOS.init({ duration: 1000 });
 
   const Navigate = useNavigate();
-  const [redirectToLogin, setRedirectToLogin] = useState(false);
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -36,9 +36,12 @@ const RegisterPage = () => {
   const [passwordError, setPasswordError] = useState(false);
   const [show, setShow] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [redirectToLogin, setRedirectToLogin] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     if (password !== confirm_password) {
       setPasswordError(true);
       setPasswordChar(false);
@@ -79,6 +82,7 @@ const RegisterPage = () => {
     if (redirectToLogin) {
       Navigate("/login");
     }
+    setIsLoading(false);
   };
 
   return (
@@ -263,8 +267,21 @@ const RegisterPage = () => {
                 <label className="min-password">Kata sandi tidak cocok!</label>
               )}
 
-              <button className="btn-daftar" type="submit">
-                Daftar Sekarang
+              <button className="btn-daftar" type="submit" disabled={isLoading}>
+                {isLoading ? (
+                  <>
+                    <Spinner
+                      as="span"
+                      animation="grow"
+                      size="sm"
+                      role="status"
+                      aria-hidden="true"
+                    />{" "}
+                    Loading...
+                  </>
+                ) : (
+                  "Daftar Sekarang"
+                )}
               </button>
 
               {show && (

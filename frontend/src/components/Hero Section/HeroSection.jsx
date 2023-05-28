@@ -1,14 +1,11 @@
-import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
 import hero from "../../assets/Images/Hero.png";
-import { useNavigate } from "react-router-dom";
 
 const Intro = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  AOS.init({ duration: 1000 });
 
   let navigate = useNavigate();
   const handleGetStarted = () => {

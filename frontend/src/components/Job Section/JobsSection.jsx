@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import Modal from "react-bootstrap/Modal";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
-import Modal from "react-bootstrap/Modal";
 import webdev from "../../assets/Images/webdev.png";
 import compsyst from "../../assets/Images/compsyst.png";
 import sofdev from "../../assets/Images/softdev.png";
@@ -15,9 +15,7 @@ import compnet from "../../assets/Images/compnet.png";
 import netcomp from "../../assets/Images/netcomp.png";
 
 const JobSection = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  AOS.init({ duration: 1000 });
 
   const [show, setShow] = useState(false);
   return (

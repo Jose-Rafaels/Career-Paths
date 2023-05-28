@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar Section/NavbarSection";
 import Footer from "../../components/Footer Section/FooterSection";
 import intro from "../../assets/Images/intro-ic.png";
@@ -12,9 +11,7 @@ import True from "../../assets/Images/true-ic.png";
 import Title from "../../components/Layout/Title";
 
 const Intro = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  AOS.init({ duration: 1000 });
 
   let navigate = useNavigate();
 
