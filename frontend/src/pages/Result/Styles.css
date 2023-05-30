@@ -210,9 +210,11 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    top: 270px;
+    width: 195px;
+    top: 257px;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 20px;
+    text-align: center;
     line-height: 31px;
     color: #000000;
   }
