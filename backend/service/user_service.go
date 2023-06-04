@@ -102,9 +102,9 @@ func (s *service) VerifyEmail(email string, token string, expires string) *utils
 		return utils.FailedResponse(err.Error(), 400)
 	}
 
-	expirationTime := time.Now().Add(-5 * time.Minute)
+	expirationTime := time.Now().Add(-5 * time.Minute).Unix()
 	// expirationsTime := expirationTime.Unix()
-	if tokenExpiration.Before(expirationTime) {
+	if tokenExpiration-expirationTime == 1 {
 		return utils.FailedResponse("token is expired", 400)
 	}
 
