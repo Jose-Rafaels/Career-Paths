@@ -3,7 +3,7 @@ package entities
 import "gorm.io/plugin/soft_delete"
 
 type Admin struct {
-	ID        string `json:"id" gorm:"size:512"`
+	ID        string `json:"id" gorm:"size:512;primarykey"`
 	FirstName string `json:"first_name"`
 	LastName  string `json:"last_name"`
 	Email     string `json:"email" gorm:"unique"`
