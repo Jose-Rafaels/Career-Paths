@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Styles.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
 
 const Footer = () => {
+  const location = useLocation();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsAuthenticated(!!token);
+
+    if (!isAuthenticated && location.pathname === "/login") {
+      localStorage.removeItem("token");
+    }
+    if (!isAuthenticated && location.pathname === "/register") {
+      localStorage.removeItem("token");
+    }
+  }, [location, isAuthenticated]);
+
   return (
     <div className="main-footer">
       <div className="container">
@@ -34,7 +49,7 @@ const Footer = () => {
           <div className="col">
             <h5 style={{ color: "#000000", fontWeight: "bold" }}>Company</h5>
             <ul className="list-unstyled">
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/about-us">
                 Tentang Kami
               </Nav.Link>
 
