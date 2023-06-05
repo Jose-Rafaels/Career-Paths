@@ -29,7 +29,7 @@ const NavbarSection = () => {
               <Nav.Link as={Link} to="/" style={{ color: "black" }}>
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="Tentang Kami" style={{ color: "black" }}>
+              <Nav.Link as={Link} to="/about-us" style={{ color: "black" }}>
                 Tentang Kami
               </Nav.Link>
               <Nav.Link
