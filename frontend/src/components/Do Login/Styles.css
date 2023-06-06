@@ -1,0 +1,97 @@
+.dologin-page {
+  margin: 0 5.5rem 8rem;
+  padding-top: 3rem;
+  height: 480px;
+}
+
+.dologin-title {
+  justify-content: center;
+  color: var(--black);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  padding: 0rem 14rem;
+}
+
+.intro-dologin-subtitle {
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+  padding: 0rem 14rem;
+}
+
+.dologin-ic {
+  height: 300px;
+  margin-top: 3rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.button-dologin {
+  position: absolute;
+  width: 183.11px;
+  height: 48px;
+  left: 50%;
+  transform: translate(-50%);
+  top: 530px;
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.button-dologin:hover {
+  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(40, 40, 124, 0.7);
+}
+
+@media (max-width: 481px) {
+  .dologin-page {
+    height: 480px;
+  }
+
+  .dologin-title {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 22rem;
+    font-weight: 600;
+    font-size: 1.8rem !important;
+    line-height: 44px;
+    text-align: center;
+    padding: 0rem !important;
+  }
+
+  .intro-dologin-subtitle {
+    margin-top: 5rem;
+    justify-content: center;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    line-height: 22px;
+    transform: translate(-50%);
+    padding: 0rem !important;
+  }
+
+  .dologin-ic {
+    height: 200px;
+    margin-top: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .button-dologin {
+    position: absolute;
+    width: 170px;
+    top: 510px;
+  }
+}

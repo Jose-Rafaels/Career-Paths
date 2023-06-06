@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import MBTIQuestion from "../../components/MBTIQuestions/MBTIQuestions";
 import Result from "../Result/Result";
+import questions from "../../data/Questions/Questions";
+import DoLogin from "../../components/Do Login/DoLogin";
 
 const Test = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [questions, setQuestions] = useState([]);
   const [result, setResult] = useState("");
 
   const handleAnswerSelect = (questionId, answerId) => {
@@ -20,7 +22,7 @@ const Test = () => {
     }
   };
 
-  const calculateMBTI = () => {
+  const calculateMBTI = async () => {
     const score = { I: 0, E: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 
     // menghitung skor berdasarkan jawaban yang telah dipilih
@@ -44,90 +46,53 @@ const Test = () => {
     setResult(type);
   };
 
-  const createTest = async () => {
-    const data = {
-      id: "your_test_id",
-      question: "your_question",
-      type_a: "your_type_a",
-      type_b: "your_type_b",
-      answare_a: "your_answare_a",
-      answare_b: "your_answare_b",
-      created_at: Date.now(),
-    };
-
-    try {
-      const response = await fetch("http://localhost:8080/v1/test/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        // Berhasil membuat tes
-        const result = await response.json();
-        console.log("Result:", result);
-      } else {
-        // Gagal membuat tes
-        const error = await response.json();
-        console.error("Error:", error);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  };
-
-  const getQuestions = async () => {
-    try {
-      const response = await fetch("http://localhost:8080/v1/test/all");
-
-      if (response.ok) {
-        const result = await response.json();
-        setQuestions(result); // Menyimpan data pertanyaan dari API ke state
-      } else {
-        const error = await response.json();
-        console.error("Error:", error);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  };
-
   useEffect(() => {
-    getQuestions();
-  }, []);
+    if (result) {
+      sendAnswer(selectedAnswers, result);
+    }
+  }, [result, selectedAnswers]);
 
-  // const getTestById = async (testId) => {
-  //   try {
-  //     const response = await fetch(`http://localhost:8080/v1/test/${testId}`);
-
-  //     if (response.ok) {
-  //       // Berhasil mendapatkan data tes berdasarkan ID
-  //       const result = await response.json();
-  //       console.log("Result:", result);
-  //     } else {
-  //       // Gagal mendapatkan data tes berdasarkan ID
-  //       const error = await response.json();
-  //       console.error("Error:", error);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error:", error);
-  //   }
-  // };
+  const sendAnswer = async (answers, result) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/v1/test/create",
+        {
+          answers,
+          result,
+        }
+      );
+      // Tangani respons dari server
+      console.log(response.data); // Outputkan data respons dari server
+    } catch (error) {
+      console.log(error);
+      // Tangani kesalahan saat mengirim jawaban ke server
+    }
+  };
 
   return (
-    <div>
-      {result ? (
-        <Result result={result} />
+    <>
+      {localStorage.getItem("token") ? (
+        <>
+          <div>
+            {result ? (
+              <Result result={result} />
+            ) : (
+              <MBTIQuestion
+                question={questions[currentQuestionIndex]}
+                onAnswerSelect={handleAnswerSelect}
+                onNextQuestion={handleNextQuestion}
+              />
+            )}
+          </div>
+        </>
       ) : (
-        <MBTIQuestion
-          question={questions[currentQuestionIndex]}
-          onAnswerSelect={handleAnswerSelect}
-          onNextQuestion={handleNextQuestion}
-        />
+        <>
+          <>
+            <DoLogin />
+          </>
+        </>
       )}
-    </div>
+    </>
   );
 };
 

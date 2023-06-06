@@ -60,29 +60,14 @@ const Intro = () => {
                 </p>
               </div>
             </div>
-            <>
-              {localStorage.getItem("token") ? (
-                <>
-                  <button
-                    className="button-start"
-                    onClick={() => navigate("/test-page")}
-                    style={{ textDecoration: "none", color: "#ffffff" }}
-                  >
-                    Mulai Tes Sekarang
-                  </button>
-                </>
-              ) : (
-                <>
-                  <button
-                    className="button-start-login"
-                    onClick={() => navigate("/login")}
-                    style={{ textDecoration: "none", color: "#ffffff" }}
-                  >
-                    LOGIN
-                  </button>
-                </>
-              )}
-            </>
+
+            <button
+              className="button-start"
+              onClick={() => navigate("/test-page")}
+              style={{ textDecoration: "none", color: "#ffffff" }}
+            >
+              Mulai Tes Sekarang
+            </button>
           </div>
         </div>
         <Footer />
