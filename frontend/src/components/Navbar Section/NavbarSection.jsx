@@ -34,7 +34,7 @@ const NavbarSection = () => {
               </Nav.Link>
               <Nav.Link
                 type="link"
-                href="mailto:sistemrekomendasi@gmail.com"
+                href="mailto:careerpaths.itpln@gmail.com"
                 style={{ color: "black" }}
               >
                 Contact

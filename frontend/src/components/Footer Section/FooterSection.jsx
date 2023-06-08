@@ -67,11 +67,11 @@ const Footer = () => {
               <Nav.Link href="https://www.google.co.id/maps/place/Institut+Teknologi+PLN/@-6.1682458,106.724257,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f788f60e492d:0x8b5ed89a85136510!8m2!3d-6.1682511!4d106.7264457">
                 Jakarta Barat
               </Nav.Link>
-              <Nav.Link type="link" href="tel:0234567890">
-                02345-567-890
+              <Nav.Link type="link" href="tel:085156036987">
+                0851-5603-6987
               </Nav.Link>
-              <Nav.Link type="link" href="mailto:sistemrekomendasi@gmail.com">
-                sistemrekomendasi@gmail.com
+              <Nav.Link type="link" href="mailto:careerpaths.itpln@gmail.com">
+                careerpaths.itpln@gmail.com
               </Nav.Link>
             </ul>
           </div>
