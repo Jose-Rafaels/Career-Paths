@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Col from "react-bootstrap/Col";
@@ -24,7 +24,6 @@ import Title from "../../components/Layout/Title";
 const RegisterPage = () => {
   AOS.init({ duration: 1000 });
 
-  const Navigate = useNavigate();
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -36,7 +35,6 @@ const RegisterPage = () => {
   const [passwordError, setPasswordError] = useState(false);
   const [show, setShow] = useState(false);
   const [showToast, setShowToast] = useState(false);
-  const [redirectToLogin, setRedirectToLogin] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -73,15 +71,12 @@ const RegisterPage = () => {
           alert(res.data.error);
         } else if (res.status === 201) {
           setShow(true);
-          setRedirectToLogin(true);
         }
       } catch (error) {
         setShowToast(true);
       }
     }
-    if (redirectToLogin) {
-      Navigate("/login");
-    }
+
     setIsLoading(false);
   };
 
@@ -89,6 +84,59 @@ const RegisterPage = () => {
     <Title title="Register">
       <>
         <Navbar />
+
+        {show && (
+          <Row>
+            <Col md={6} className="mb-2">
+              <Toast
+                onClose={() => setShow(false)}
+                show={show}
+                style={{
+                  position: "fixed",
+                  top: "5px",
+                  right: "5px",
+                  zIndex: 9999,
+                  minWidth: "200px",
+                  background: "#36c8f6",
+                }}
+              >
+                <Toast.Header>
+                  <img
+                    src={Ic}
+                    className="rounded me-2"
+                    alt=""
+                    height={20}
+                    width={20}
+                  />
+                  <strong
+                    className="me-auto"
+                    style={{
+                      color: "#0000ff",
+                    }}
+                  >
+                    Career Paths
+                  </strong>
+                  <small
+                    style={{
+                      color: "#36c8f6",
+                    }}
+                  >
+                    Just now
+                  </small>
+                </Toast.Header>
+                <Toast.Body
+                  style={{
+                    color: "#000000",
+                    textAlign: "center",
+                  }}
+                >
+                  Yeay! kamu berhasil daftar. Silahkan login terlebih dahulu.{" "}
+                  <Link to="/login">Login Sekarang</Link>
+                </Toast.Body>
+              </Toast>
+            </Col>
+          </Row>
+        )}
 
         <Row>
           <Col md={6} className="mb-2">
@@ -283,59 +331,6 @@ const RegisterPage = () => {
                   "Daftar Sekarang"
                 )}
               </button>
-
-              {show && (
-                <Row>
-                  <Col md={6} className="mb-2">
-                    <Toast
-                      onClose={() => setShow(false)}
-                      show={show}
-                      style={{
-                        position: "fixed",
-                        top: "5px",
-                        right: "5px",
-                        zIndex: 9999,
-                        minWidth: "200px",
-                        background: "#36c8f6",
-                      }}
-                    >
-                      <Toast.Header>
-                        <img
-                          src={Ic}
-                          className="rounded me-2"
-                          alt=""
-                          height={20}
-                          width={20}
-                        />
-                        <strong
-                          className="me-auto"
-                          style={{
-                            color: "#0000ff",
-                          }}
-                        >
-                          Career Paths
-                        </strong>
-                        <small
-                          style={{
-                            color: "#36c8f6",
-                          }}
-                        >
-                          Just now
-                        </small>
-                      </Toast.Header>
-                      <Toast.Body
-                        style={{
-                          color: "#000000",
-                          textAlign: "center",
-                        }}
-                      >
-                        Yeay! kamu berhasil daftar. Silahkan login terlebih
-                        dahulu
-                      </Toast.Body>
-                    </Toast>
-                  </Col>
-                </Row>
-              )}
             </Form>
             <p className="login-account">
               Sudah Punya Akun?{" "}
