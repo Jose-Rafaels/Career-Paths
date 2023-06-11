@@ -1,7 +1,7 @@
 package entities
 
 type WorkPersonality struct {
-	ID                         string `json:"id" gorm:"size:512"`
+	ID                         string `json:"id" gorm:"size:512;primaryKey"`
 	TypePerson                 string `json:"type_person"`
 	Profession1                string `json:"profession_1"`
 	Profession2                string `json:"profession_2"`

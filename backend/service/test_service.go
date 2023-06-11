@@ -1,7 +1,9 @@
 package service
 
 import (
+	"career-paths/entities"
 	"career-paths/interfaces"
+	"career-paths/utils"
 
 	"github.com/go-playground/validator/v10"
 )
@@ -16,4 +18,11 @@ func NewTestService(testRepository interfaces.TestRepository, validate *validato
 		testRepository: testRepository,
 		validate:       validate,
 	}
+}
+
+// GetAllTestService implements interfaces.TestService
+func (s *testService) GetAllTestService() ([]entities.Test, *utils.Response) {
+	test, _ := s.testRepository.GetAllTestRepository()
+
+	return test, nil
 }
