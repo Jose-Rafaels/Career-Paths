@@ -37,6 +37,7 @@ func InitDB(conf *config.AppConfig) *gorm.DB {
 		&entities.Test{},
 		&entities.Personality{},
 		&entities.WorkPersonality{},
+		&entities.TestUser{},
 	)
 
 	seeds.NewSeeders(DB)
