@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import MBTIQuestion from "../../components/MBTIQuestions/MBTIQuestions";
 import Result from "../Result/Result";
@@ -44,34 +44,22 @@ const Test = () => {
     type += score.J >= score.P ? "J" : "P";
 
     setResult(type);
-  };
+    const data = {
+      name_id: localStorage.getItem("userId"),
+      test_result: type,
+    };
 
-  useEffect(() => {
-    if (result) {
-      sendAnswer(selectedAnswers, result);
-    }
-  }, [result, selectedAnswers]);
-
-  const sendAnswer = async (answers, result) => {
     try {
-      const response = await axios.post(
-        "http://localhost:8080/v1/test/create",
-        {
-          answers,
-          result,
-        }
-      );
-      // Tangani respons dari server
-      console.log(response.data); // Outputkan data respons dari server
+      await axios.post("http://localhost:8080/v1/test-user/create", data);
+      console.log("Data berhasil disimpan di server!");
     } catch (error) {
-      console.log(error);
-      // Tangani kesalahan saat mengirim jawaban ke server
+      console.error("Terjadi kesalahan saat menyimpan data di server:", error);
     }
   };
 
   return (
     <>
-      {localStorage.getItem("token") ? (
+      {localStorage.getItem("userId") ? (
         <>
           <div>
             {result ? (
