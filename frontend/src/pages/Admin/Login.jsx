@@ -66,17 +66,14 @@ const LoginAdmin = () => {
     })
       .then((response) => {
         if (response.status === 200) {
-          console.log("SUCCESSS");
           navigate("/admin-dashboard");
           window.location.reload();
           return response.json();
         } else if (response.status === 401) {
-          console.log("SOMETHING WENT WRONG");
           this.setState({ requestFailed: true });
         }
       })
       .then((data) => {
-        console.log(data.token);
         localStorage.setItem("token", data.token);
       })
       .catch((err) => {

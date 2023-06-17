@@ -66,7 +66,7 @@ const RegisterPage = () => {
             },
           }
         );
-        console.log(res);
+
         if (res.data.error) {
           alert(res.data.error);
         } else if (res.status === 201) {
