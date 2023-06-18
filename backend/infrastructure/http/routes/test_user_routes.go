@@ -15,11 +15,12 @@ func RoutesTestUser(echo *echo.Echo, conf *config.AppConfig) {
 	db := database.InitDB(conf)
 	validate := validator.New()
 
-	testUserRepo := repository.NewTestUserRepositorY(db)
+	testUserRepo := repository.NewTestUserRepository(db)
 	testUserService := service.NewTestUserService(testUserRepo, validate)
 	testUserController := handler.NewTestUserController(testUserService)
 
 	testUser := echo.Group("/v1/test-user")
 	testUser.POST("/create", testUserController.CreateTestUser)
 	testUser.GET("/:id", testUserController.GetTestUserPerID)
+	testUser.GET("/all-result", testUserController.GetAllTestUsers)
 }

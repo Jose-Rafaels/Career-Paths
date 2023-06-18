@@ -10,14 +10,17 @@ import (
 type TestUserRepository interface {
 	CreateTestUserRepository(test *entities.TestUser) error
 	GetTestUserPerIDRepository(id string) (*entities.TestUser, error)
+	GetAllTestUsersRepository() ([]*entities.TestUser, error)
 }
 
 type TestUserService interface {
 	CreateTestUserService(test *entities.TestUser) *utils.Response
 	GetTestUserPerIDService(id string) (*entities.TestUser, *utils.Response)
+	GetAllTestUsersService() ([]*entities.TestUser, *utils.Response)
 }
 
 type TestUserHandler interface {
 	CreateTestUser(c echo.Context) error
 	GetTestUserPerID(c echo.Context) error
+	GetAllTestUsers(c echo.Context) error
 }

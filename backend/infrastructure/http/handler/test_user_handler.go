@@ -10,7 +10,7 @@ import (
 )
 
 type testUserHandler struct {
-	s interfaces.TestUserService
+    s interfaces.TestUserService
 }
 
 func NewTestUserController(testUserService interfaces.TestUserService) interfaces.TestUserHandler {
@@ -23,6 +23,7 @@ func NewTestUserController(testUserService interfaces.TestUserService) interface
 func (h *testUserHandler) CreateTestUser(c echo.Context) error {
 	testUser := &entities.TestUser{
 		ID: uuid.New().String(),
+		
 	}
 	if err := c.Bind(&testUser); err != nil {
 		return c.JSON(http.StatusBadRequest, map[string]interface{}{
@@ -51,12 +52,12 @@ func (h *testUserHandler) CreateTestUser(c echo.Context) error {
 func (h *testUserHandler) GetTestUserPerID(c echo.Context) error {
 	id := c.Param("id")
 
-	testUser, err := h.s.GetTestUserPerIDService(id)
+	testUser, fail := h.s.GetTestUserPerIDService(id)
 
-	if err != nil {
-		return c.JSON(http.StatusBadRequest, map[string]interface{}{
-			"code":    err.Code,
-			"message": err.Message,
+	if fail != nil {
+		return c.JSON(fail.Code, map[string]interface{}{
+			"code":    fail.Code,
+			"message": fail.Message,
 		})
 	}
 
@@ -66,3 +67,33 @@ func (h *testUserHandler) GetTestUserPerID(c echo.Context) error {
 		"result":  testUser,
 	})
 }
+
+// GetAllTestUsers implements interfaces.TestUserHandler
+func (h *testUserHandler) GetAllTestUsers(c echo.Context) error {
+    testUsers, fail := h.s.GetAllTestUsersService()
+    if fail != nil {
+        return c.JSON(fail.Code, map[string]interface{}{
+            "code":    fail.Code,
+            "message": fail.Message,
+        })
+    }
+
+    response := make([]map[string]interface{}, len(testUsers))
+    for i, testUser := range testUsers {
+        response[i] = map[string]interface{}{
+            "id":          testUser.ID,
+            "name_id":     testUser.NameID,
+            "test_result": testUser.TestResult,
+            "first_name":  testUser.FirstName,
+            "last_name":   testUser.LastName,
+            "email":       testUser.Email,
+        }
+    }
+
+    return c.JSON(http.StatusOK, map[string]interface{}{
+        "code":    http.StatusOK,
+        "message": "Successfully get all test users",
+        "result":  response,
+    })
+}
+

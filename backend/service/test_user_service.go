@@ -4,7 +4,6 @@ import (
 	"career-paths/entities"
 	"career-paths/interfaces"
 	"career-paths/utils"
-
 	"github.com/go-playground/validator/v10"
 	"github.com/google/uuid"
 )
@@ -24,14 +23,14 @@ func NewTestUserService(testUserRepository interfaces.TestUserRepository, valida
 // CreateTestUserService implements interfaces.TestUserService
 func (s *testUserService) CreateTestUserService(test *entities.TestUser) *utils.Response {
 	testUser := &entities.TestUser{
-		ID:                uuid.New().String(),
-		NameID:            test.NameID,
-		WorkPersonalityID: test.WorkPersonalityID,
+		ID:     uuid.New().String(),
+		NameID: test.NameID,
+		TestResult: test.TestResult,
 	}
 
 	err := s.testUserRepository.CreateTestUserRepository(testUser)
 	if err != nil {
-		return utils.FailedResponse("Failed to Create Test User", 404)
+		return utils.FailedResponse(err.Error(), 500)
 	}
 
 	return nil
@@ -39,10 +38,27 @@ func (s *testUserService) CreateTestUserService(test *entities.TestUser) *utils.
 
 // GetTestUserPerIDService implements interfaces.TestUserService
 func (s *testUserService) GetTestUserPerIDService(id string) (*entities.TestUser, *utils.Response) {
-	test, err := s.testUserRepository.GetTestUserPerIDRepository(id)
+	testUser, err := s.testUserRepository.GetTestUserPerIDRepository(id)
 	if err != nil {
-		return nil, utils.FailedResponse("Test User Not Found", 404)
+		return nil, utils.FailedResponse(err.Error(), 404)
 	}
 
-	return test, nil
+	return testUser, nil
+}
+
+// GetAllTestUsersService implements interfaces.TestUserService
+func (s *testUserService) GetAllTestUsersService() ([]*entities.TestUser, *utils.Response) {
+    testUsers, err := s.testUserRepository.GetAllTestUsersRepository()
+    if err != nil {
+        return nil, utils.FailedResponse(err.Error(), 500)
+    }
+
+    for _, testUser := range testUsers {
+        if testUser.User.ID == testUser.NameID {
+            testUser.FirstName = testUser.User.FirstName
+            testUser.LastName = testUser.User.LastName
+        }
+    }
+
+    return testUsers, nil
 }
