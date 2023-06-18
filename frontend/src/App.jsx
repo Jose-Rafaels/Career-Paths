@@ -12,6 +12,7 @@ import ErrorPage from "../src/pages/Error/Error";
 import AboutUs from "./pages/About Us/AboutUs";
 import Admin from "./pages/Admin/Login";
 import Dashboard from "./pages/Admin/Dashboard";
+import Descriptions from "./pages/Admin/Descriptions";
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/admin-login" element={<Admin />} />
           <Route path="/admin-dashboard" element={<Dashboard />} />
+          <Route
+            path="/personality/:personalityType"
+            element={<Descriptions />}
+          />
         </Routes>
       </Router>
     </div>

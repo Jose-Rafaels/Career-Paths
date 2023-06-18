@@ -10,6 +10,13 @@
   background-color: #e8f0fe;
 }
 
+.baris:hover {
+  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(40, 40, 124, 0.7);
+  transition: all 0.2s ease 0s;
+  transform: scale(1.01);
+}
+
 .login-admin {
   margin: 0 5.5rem 8rem;
   padding-top: 3rem;
@@ -36,11 +43,38 @@
   border-radius: 10px;
 }
 
+.typeResult {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 670px;
+  margin-top: 4rem;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}
+
 @media (max-width: 481px) {
   .dashboard {
     margin: 2rem 2rem;
     padding-top: 5rem;
     height: 892px;
+  }
+
+  .type-result {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 260px;
+    width: 100%;
+    margin-top: 4rem;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
   }
 
   .table-admin {
@@ -74,5 +108,19 @@
     left: 50%;
     top: 97px;
     transform: translate(-50%);
+  }
+
+  .typeResult {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 46px;
+    width: 325px;
+    margin-top: 4rem;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
   }
 }

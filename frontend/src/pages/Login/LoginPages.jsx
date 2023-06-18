@@ -14,6 +14,7 @@ import PwdIc from "../../assets/Images/password-ic.svg";
 import Eye from "../../assets/Images/eye-ic.svg";
 import EyeC from "../../assets/Images/eyeC.svg";
 import Title from "../../components/Layout/Title";
+import jwt_decode from "jwt-decode";
 
 const LoginPage = () => {
   AOS.init({ duration: 1000 });
@@ -21,6 +22,7 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
+
   const [rememberedEmail, setRememberedEmail] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -34,6 +36,16 @@ const LoginPage = () => {
       setRememberMe(true);
     }
   }, []);
+
+  const decodeToken = (token) => {
+    try {
+      const decodedToken = jwt_decode(token);
+      return decodedToken.id;
+    } catch (error) {
+      console.error("Error decoding JWT token:", error);
+      return null;
+    }
+  };
 
   const handleRememberMe = () => {
     setRememberMe(!rememberMe);
@@ -49,7 +61,7 @@ const LoginPage = () => {
 
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
-    let auth = localStorage.getItem("token");
+    const auth = localStorage.getItem("token");
 
     setLoading(true);
 
@@ -63,27 +75,30 @@ const LoginPage = () => {
       headers: {
         Accept: "/",
         "Content-Type": "application/json",
-        Token: auth,
+        Authorization: `Bearer ${auth}`,
       },
     })
       .then((response) => {
         if (response.status === 200) {
-          console.log("SUCCESSS");
-          navigate("/intro-test");
-          window.location.reload();
           return response.json();
         } else if (response.status === 401) {
-          console.log("SOMETHING WENT WRONG");
-          this.setState({ requestFailed: true });
+          throw new Error("Unauthorized");
+        } else {
+          throw new Error("Unexpected error");
         }
       })
       .then((data) => {
-        console.log(data.token);
-        localStorage.setItem("token", data.token);
+        const access_token = data.result.access_token;
+        localStorage.setItem("token", access_token);
+        const decodedId = decodeToken(access_token);
+        if (decodedId) {
+          localStorage.setItem("userId", decodedId);
+        }
+        navigate("/intro-test");
       })
+
       .catch((err) => {
         setPasswordError(true);
-        return;
       })
       .finally(() => {
         setLoading(false);
