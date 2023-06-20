@@ -760,7 +760,6 @@ const JobsDesc = {
             </div>
           </div>
         </Carousel.Item>
-
         <Carousel.Item>
           <div className="jobs-box">
             <div className="title-job-box">
@@ -937,6 +936,12 @@ const JobsDesc = {
             </div>
           </div>
         </Carousel.Item>
+      </Carousel>
+    </>
+  ),
+  ESFP: (
+    <>
+      <Carousel>
         <Carousel.Item>
           <div className="jobs-box">
             <div className="title-job-box">
@@ -978,54 +983,6 @@ const JobsDesc = {
             </div>
           </div>
         </Carousel.Item>
-      </Carousel>
-    </>
-  ),
-  ESFP: (
-    <>
-      <Carousel className="jobCarousel" variant="dark">
-        <Carousel.Item>
-          <div className="jobs-box">
-            <div className="title-job-box">
-              <img className="jobs-ic" src={webdev} alt="webdev" />
-              <p className="title-jobs">{jobData[0].title}</p>
-            </div>
-            <div className="desc-job-box">
-              <p className="description">
-                {jobData[0].description}
-                <br />
-                <br />
-                <span style={{ color: "#000000", fontWeight: "bold" }}>
-                  Tugas & Tanggung Jawab :
-                </span>
-              </p>
-              <div>
-                <ul className="description-points">
-                  {jobData[0].tasks.map((task, index) => (
-                    <li key={index} className="description-point">
-                      {task}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <p className="description">
-                <span style={{ color: "#000000", fontWeight: "bold" }}>
-                  Keterampilan yang dibutuhkan :
-                </span>
-                <br />
-                {jobData[0].skills}
-              </p>
-              <p className="description">
-                <span style={{ color: "#000000", fontWeight: "bold" }}>
-                  Mata kuliah yang harus kamu ambil :
-                </span>
-                <br />
-                {jobData[0].matkul}
-              </p>
-            </div>
-          </div>
-        </Carousel.Item>
-
         <Carousel.Item>
           <div className="jobs-box">
             <div className="title-job-box">

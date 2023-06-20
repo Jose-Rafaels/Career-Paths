@@ -16,7 +16,7 @@ const jobData = [
   {
     title: "Computer System Analysts",
     description:
-      "Mempelajari sistem prosedur komputer organisasi dan merancang peningkatannya. membantu organisasi beroperasi dengan lebih efisien dan membuat diagram untuk membantu programmer dan arsitek membangun sistem komputer.",
+      "Mempelajari sistem prosedur komputer organisasi dan merancang peningkatannya. Membantu organisasi beroperasi dengan lebih efisien dan membuat diagram untuk membantu programmer dan arsitek membangun sistem komputer.",
     tasks: [
       "Menganalisis biaya dan manfaat sistem TI dan peningkatan untuk membantu manajer memutuskan mana yang akan dipasang.",
       "Merancang cara untuk menambahkan fungsionalitas ke sistem komputer yang sudah ada.",
@@ -48,10 +48,10 @@ const jobData = [
   {
     title: "Information Security Analysts",
     description:
-      "Merencanakan dan melaksanakan langkah-langkah keamanan untuk melindungi jaringan, sistem komputer organisasi dan memasang perangkat lunak seperti firewall untuk melindungi jaringan komputer.",
+      "Merencanakan dan melaksanakan langkah-langkah keamanan untuk melindungi jaringan, sistem organisasi komputer dan memasang perangkat lunak seperti firewall untuk melindungi jaringan komputer.",
     tasks: [
       "Memeriksa kerentanan pada sistem komputer dan jaringan.",
-      "Meneliti tren keamanan teknologi informasi (TI) terbaru.",
+      "Meneliti trend keamanan teknologi informasi (TI) terbaru.",
       "Menyiapkan laporan yang mendokumentasikan metrik umum, percobaan serangan, dan pelanggaran keamanan.",
       "Mengembangkan standar keamanan dan praktik terbaik untuk organisasi mereka.",
       "Membantu pengguna komputer saat mereka perlu menginstal atau mempelajari produk dan prosedur keamanan baru.",
@@ -63,7 +63,7 @@ const jobData = [
   {
     title: "Computer Programmers",
     description:
-      "Computer programmer menulis, memodifikasi, dan menguji kode dan skrip yang memungkinkan perangkat lunak dan aplikasi komputer berfungsi dengan baik. Jika produk tidak bekerja dengan benar, programmer memeriksa kode atau skrip untuk mencari kesalahan dan memodifikasinya.",
+      "Membuat, memodifikasi, dan menguji kode dan skrip yang memungkinkan perangkat lunak dan aplikasi komputer berfungsi dengan baik. Jika produk tidak bekerja dengan benar, programmer memeriksa kode atau skrip untuk mencari kesalahan dan memodifikasinya.",
     tasks: [
       "Membuat program dalam berbagai bahasa komputer, seperti C++, Java dan lainnya.",
       "Memperbarui dan mengembangkan program yang sudah ada.",
@@ -72,12 +72,12 @@ const jobData = [
     ],
     skills:
       "Object Oriented Programming, HTML, CSS, Rest Apis, Software Development, Java, Javascript, Python, Mobile Developer, UI/UX Design, Fullstack Developer",
-    matkul: "Pemorgraman Mobile Lanjut",
+    matkul: "Pemrograman Mobile Lanjut",
   },
   {
     title: "Computer Support Specialists",
     description:
-      "Membantu pengguna komputer, organisasi, memelihara jaringan komputer atau memberikan bantuan teknis secara langsung kepada pengguna komputer serta menganalisis, memecahkan masalah, dan memelihara jaringan komputer.",
+      "Membantu pengguna komputer, organisasi, memelihara jaringan komputer atau memberikan bantuan teknis secara langsung kepada pengguna komputer. Serta menganalisis, memecahkan masalah, dan memelihara jaringan komputer.",
     tasks: [
       "Menguji dan mengevaluasi sistem jaringan yang ada.",
       "Menganalisis masalah komputer pelanggan untuk mendiagnosis dan menentukan penyebabnya.",
@@ -91,7 +91,7 @@ const jobData = [
   {
     title: "Database Administrators and Architects",
     description:
-      "Membuat atau mengatur sistem untuk menyimpan dan mengamankan berbagai data, seperti informasi keuangan dan catatan pengiriman pelanggan. Memastikan bahwa data tersebut tersedia bagi pengguna yang berwenang.",
+      "Membuat atau mengatur sistem untuk menyimpan dan mengamankan berbagai data. Seperti informasi keuangan dan catatan pengiriman pelanggan. Memastikan bahwa data tersebut tersedia bagi pengguna yang berwenang.",
     tasks: [
       "Mengidentifikasi kebutuhan pengguna untuk membuat dan mengelola database.",
       "Merancang dan membangun basis data baru.",
@@ -106,7 +106,7 @@ const jobData = [
   {
     title: "Computer And Information Reserch Scientists",
     description:
-      "Merancang penggunaan inovatif untuk teknologi baru dan yang sudah ada, mempelajari dan memecahkan masalah kompleks dalam komputasi untuk bisnis, sains, kedokteran, dan bidang lainnya.",
+      "Merancang penggunaan inovatif untuk teknologi baru dan yang sudah ada. Mempelajari dan memecahkan masalah kompleks dalam komputasi untuk bisnis, sains, kedokteran, dan bidang lainnya.",
     tasks: [
       "Mengeksplorasi masalah dalam komputasi dan mengembangkan teori dan model untuk mengatasi masalah.",
       "Berkolaborasi dengan para ilmuwan dan engineers untuk memecahkan masalah komputasi yang kompleks.",
@@ -116,13 +116,12 @@ const jobData = [
     ],
     skills:
       "Data Science, Data Scientist, Machine Learning, Data Analysis, Data management, Data Visualization",
-    matkul:
-      "Data Mining dan Warehousing, Pengantar Data Science, Embedded System, Soft Computing, Programmable Logic Controller, Big Data Energi Ketenagalistrikan, Dataset Develompent, Mikrocontroller",
+    matkul: "Embedded System",
   },
   {
     title: "Computer Network Architects",
     description:
-      "Merancang dan membangun jaringan komunikasi data, termasuk jaringan area lokal (LAN), jaringan area luas (WAN), dan Intranet harus memiliki pengetahuan yang luas tentang rencana bisnis organisasi untuk merancang jaringan yang dapat membantu organisasi mencapai tujuannya.",
+      "Merancang dan membangun jaringan komunikasi data, termasuk jaringan area lokal (LAN), jaringan area luas (WAN), dan Intranet. Harus memiliki pengetahuan yang luas tentang rencana bisnis organisasi untuk merancang jaringan yang dapat membantu organisasi mencapai tujuannya.",
     tasks: [
       "Membuat rencana dan tata letak untuk jaringan komunikasi data.",
       "Mempresentasikan rencana kepada manajemen dan menjelaskan mengapa rencana tersebut merupakan kepentingan terbaik organisasi untuk dilaksanakan.",
