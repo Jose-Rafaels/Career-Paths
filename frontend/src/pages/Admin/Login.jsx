@@ -67,7 +67,7 @@ const LoginAdmin = () => {
       .then((response) => {
         if (response.status === 200) {
           navigate("/admin-dashboard");
-          window.location.reload();
+
           return response.json();
         } else if (response.status === 401) {
           this.setState({ requestFailed: true });

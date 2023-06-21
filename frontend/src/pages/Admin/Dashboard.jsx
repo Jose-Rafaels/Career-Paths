@@ -49,32 +49,38 @@ function Dashboard() {
                   Berikut adalah hasil tes beberapa mahasiswa yang sudah
                   menyelesaikan tes MBTI
                 </p>
-                <Table striped bordered className="table-admin">
-                  <thead>
-                    <tr>
-                      <th>No.</th>
-                      <th>Email</th>
-                      <th>Name</th>
-                      <th>Test Result</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {testUsers.map((user, index) => (
-                      <tr
-                        className="baris"
-                        key={`${user.id}_${index}`}
-                        onClick={() => handleClick(user.test_result)}
-                      >
-                        <td>{index + 1}</td>
-                        <td>{user.email}</td>
-                        <td>
-                          {user.first_name} {user.last_name}
-                        </td>
-                        <td>{user.test_result}</td>
+                {testUsers.length === 0 ? (
+                  <p className="intro-subtitle" style={{ fontWeight: "bold" }}>
+                    Data tidak tersedia
+                  </p>
+                ) : (
+                  <Table striped bordered className="table-admin">
+                    <thead>
+                      <tr>
+                        <th>No.</th>
+                        <th>Email</th>
+                        <th>Name</th>
+                        <th>Test Result</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </Table>
+                    </thead>
+                    <tbody>
+                      {testUsers.map((user, index) => (
+                        <tr
+                          className="baris"
+                          key={`${user.id}_${index}`}
+                          onClick={() => handleClick(user.test_result)}
+                        >
+                          <td>{index + 1}</td>
+                          <td>{user.email}</td>
+                          <td>
+                            {user.first_name} {user.last_name}
+                          </td>
+                          <td>{user.test_result}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </Table>
+                )}
               </div>
             </>
           </Title>

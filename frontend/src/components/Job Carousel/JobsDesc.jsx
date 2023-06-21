@@ -760,6 +760,7 @@ const JobsDesc = {
             </div>
           </div>
         </Carousel.Item>
+
         <Carousel.Item>
           <div className="jobs-box">
             <div className="title-job-box">
@@ -941,7 +942,7 @@ const JobsDesc = {
   ),
   ESFP: (
     <>
-      <Carousel>
+      <Carousel className="jobCarousel" variant="dark">
         <Carousel.Item>
           <div className="jobs-box">
             <div className="title-job-box">
