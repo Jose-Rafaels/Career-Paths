@@ -43,11 +43,9 @@ const RegisterPage = () => {
     if (password !== confirm_password) {
       setPasswordError(true);
       setPasswordChar(false);
-      return;
     } else if (password.length < 8) {
       setPasswordError(false);
       setPasswordChar(true);
-      return;
     } else {
       try {
         let res = await axios.post(
@@ -78,6 +76,26 @@ const RegisterPage = () => {
     }
 
     setIsLoading(false);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    if (passwordError) {
+      setPasswordError(false);
+    }
+    if (passwordChar) {
+      setPasswordChar(false);
+    }
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+    if (passwordError) {
+      setPasswordError(false);
+    }
+    if (passwordChar) {
+      setPasswordChar(false);
+    }
   };
 
   return (
@@ -260,7 +278,7 @@ const RegisterPage = () => {
                     required
                     id="password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={handlePasswordChange}
                   />
                   <span
                     role="button"
@@ -287,9 +305,7 @@ const RegisterPage = () => {
                     required
                     id="confirm_password"
                     value={confirm_password}
-                    onChange={(e) => {
-                      setConfirmPassword(e.target.value);
-                    }}
+                    onChange={handleConfirmPasswordChange}
                   />
                   <span
                     role="button"

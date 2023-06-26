@@ -24,6 +24,7 @@ const LoginPage = () => {
   const passwordInputRef = useRef();
 
   const [rememberedEmail, setRememberedEmail] = useState("");
+  const [rememberedPassword, setRememberedPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
@@ -31,8 +32,10 @@ const LoginPage = () => {
 
   useEffect(() => {
     const rememberedEmail = localStorage.getItem("rememberedEmail");
-    if (rememberedEmail) {
+    const rememberedPassword = localStorage.getItem("rememberedPassword");
+    if (rememberedEmail && rememberedPassword) {
       setRememberedEmail(rememberedEmail);
+      setRememberedPassword(rememberedPassword);
       setRememberMe(true);
     }
   }, []);
@@ -51,8 +54,13 @@ const LoginPage = () => {
     setRememberMe(!rememberMe);
     if (!rememberMe) {
       localStorage.setItem("rememberedEmail", emailInputRef.current.value);
+      localStorage.setItem(
+        "rememberedPassword",
+        passwordInputRef.current.value
+      );
     } else {
       localStorage.removeItem("rememberedEmail");
+      localStorage.removeItem("rememberedPassword");
     }
   };
 
@@ -143,7 +151,9 @@ const LoginPage = () => {
                     placeholder="Password"
                     required
                     ref={passwordInputRef}
+                    defaultValue={rememberedPassword}
                   />
+
                   <span
                     role="button"
                     className="show-pwd-ic"
