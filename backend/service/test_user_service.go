@@ -4,6 +4,7 @@ import (
 	"career-paths/entities"
 	"career-paths/interfaces"
 	"career-paths/utils"
+
 	"github.com/go-playground/validator/v10"
 	"github.com/google/uuid"
 )
