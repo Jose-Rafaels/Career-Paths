@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
+import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import "./Styles.css";
 import Error from "../Error/Error";
@@ -7,10 +8,11 @@ import Title from "../../components/Layout/Title";
 
 function Dashboard() {
   const [testUsers, setTestUsers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
   const fetchTestUsers = () => {
-    fetch("http://localhost:8080/v1/test-user/all-result", {
+    fetch("https://api-careerpaths.my.id/v1/test-user/all-result", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -37,6 +39,27 @@ function Dashboard() {
     navigate(`/personality/${personalityType}`);
   };
 
+  const searchUsers = (searchTerm) => {
+    return testUsers.filter((user) => {
+      const fullName = `${user.first_name} ${user.last_name}`.toLowerCase();
+      return fullName.includes(searchTerm.toLowerCase());
+    });
+  };
+
+  const sortedTestUsers = testUsers.sort((a, b) => {
+    const nameA = a.first_name.toLowerCase();
+    const nameB = b.first_name.toLowerCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
+
+  const filteredUsers = searchUsers(searchTerm);
+
   return (
     <>
       {localStorage.getItem("token") ? (
@@ -49,6 +72,14 @@ function Dashboard() {
                   Berikut adalah hasil tes beberapa mahasiswa yang sudah
                   menyelesaikan tes MBTI
                 </p>
+                <Form.Control
+                  className=" search mb-3 mt-4"
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder="Search name here..."
+                />
+
                 {testUsers.length === 0 ? (
                   <p className="intro-subtitle" style={{ fontWeight: "bold" }}>
                     Data tidak tersedia
@@ -64,7 +95,7 @@ function Dashboard() {
                       </tr>
                     </thead>
                     <tbody>
-                      {testUsers.map((user, index) => (
+                      {filteredUsers.map((user, index) => (
                         <tr
                           className="baris"
                           key={`${user.id}_${index}`}

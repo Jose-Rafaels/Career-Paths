@@ -73,7 +73,7 @@ const LoginPage = () => {
 
     setLoading(true);
 
-    fetch(`http://localhost:8080/v1/user/login`, {
+    fetch(`https://api-careerpaths.my.id/v1/user/login`, {
       method: "POST",
       body: JSON.stringify({
         email: enteredEmail,
@@ -90,9 +90,8 @@ const LoginPage = () => {
         if (response.status === 200) {
           return response.json();
         } else if (response.status === 401) {
-          throw new Error("Unauthorized");
-        } else {
-          throw new Error("Unexpected error");
+          console.log("Something Went Wrong");
+          this.setState({ requestFailed: true });
         }
       })
       .then((data) => {
@@ -104,7 +103,6 @@ const LoginPage = () => {
         }
         navigate("/intro-test");
       })
-
       .catch((err) => {
         setPasswordError(true);
       })

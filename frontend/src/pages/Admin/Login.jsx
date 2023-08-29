@@ -59,7 +59,7 @@ const LoginAdmin = () => {
 
     setLoading(true);
 
-    fetch(`http://localhost:8080/v1/admin/login`, {
+    fetch(`https://api-careerpaths.my.id/v1/admin/login`, {
       method: "POST",
       body: JSON.stringify({
         email: enteredEmail,

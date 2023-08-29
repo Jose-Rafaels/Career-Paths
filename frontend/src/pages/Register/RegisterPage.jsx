@@ -34,7 +34,7 @@ const RegisterPage = () => {
   const [passwordChar, setPasswordChar] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [show, setShow] = useState(false);
-  const [showToast, setShowToast] = useState(false);
+
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -49,7 +49,7 @@ const RegisterPage = () => {
     } else {
       try {
         let res = await axios.post(
-          `http://localhost:8080/v1/user/register`,
+          `https://api-careerpaths.my.id/v1/user/register`,
           {
             first_name: first_name,
             last_name: last_name,
@@ -71,7 +71,7 @@ const RegisterPage = () => {
           setShow(true);
         }
       } catch (error) {
-        setShowToast(true);
+        setShow(true);
       }
     }
 
@@ -132,7 +132,7 @@ const RegisterPage = () => {
                       color: "#0000ff",
                     }}
                   >
-                    Career Paths
+                    Career Path
                   </strong>
                   <small
                     style={{
@@ -156,55 +156,6 @@ const RegisterPage = () => {
           </Row>
         )}
 
-        <Row>
-          <Col md={6} className="mb-2">
-            <Toast
-              onClose={() => setShowToast(false)}
-              show={showToast}
-              style={{
-                position: "fixed",
-                top: "5px",
-                right: "5px",
-                zIndex: 9999,
-                minWidth: "200px",
-                background: "#36c8f6",
-              }}
-            >
-              <Toast.Header>
-                <img
-                  src={Ic}
-                  className="rounded me-2"
-                  alt=""
-                  height={20}
-                  width={20}
-                />
-                <strong
-                  className="me-auto"
-                  style={{
-                    color: "#0000ff",
-                  }}
-                >
-                  Career Paths
-                </strong>
-                <small
-                  style={{
-                    color: "#36c8f6",
-                  }}
-                >
-                  Just now
-                </small>
-              </Toast.Header>
-              <Toast.Body
-                style={{
-                  color: "#000000",
-                  textAlign: "center",
-                }}
-              >
-                Data yang kamu masukkan salah/Email Sudah terdaftar
-              </Toast.Body>
-            </Toast>
-          </Col>
-        </Row>
         <div className="register" data-aos="fade-down">
           <div className="register-ic">
             <img className="register-logo" src={RegsiterIc} alt={RegsiterIc} />
