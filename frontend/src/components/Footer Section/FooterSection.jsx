@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="row">
           <div className="col">
             <Navbar.Brand href="/">
-              <div className="logo-footer">Career Paths</div>
+              <div className="logo-footer">Career Path</div>
             </Navbar.Brand>
             <ul className="list-unstyled">
               <p className="footer-desc" style={{ color: "#000000" }}>
@@ -82,7 +82,7 @@ const Footer = () => {
       <div className="row">
         <p className="col text-center copyrights">
           &copy;{new Date().getFullYear()} Copyright • All rights reserved •
-          Career Paths • Jakarta
+          Career Path • Jakarta
         </p>
       </div>
     </div>

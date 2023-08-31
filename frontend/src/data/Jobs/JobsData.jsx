@@ -27,7 +27,7 @@ const jobData = [
     ],
     skills:
       "Business Analysis, Data Analysis, Project Management, System Analysis, Analytical Skills, Data Visualization, Agile Project Management",
-    matkul: "Sistem Informasi Geografis Energi Ketenagalistrikan",
+    matkul: "Robotic Computer Vision",
   },
   {
     title: "Software Developer, Quality Assurance Analysts, and Testers",
@@ -72,7 +72,8 @@ const jobData = [
     ],
     skills:
       "Object Oriented Programming, HTML, CSS, Rest Apis, Software Development, Java, Javascript, Python, Mobile Developer, UI/UX Design, Fullstack Developer",
-    matkul: "Pemrograman Mobile Lanjut",
+    matkul:
+      "Pemrograman Mobile Lanjut, Pemrograman Web Lanjut, Manajemen Perangkat Lunak",
   },
   {
     title: "Computer Support Specialists",
@@ -100,8 +101,7 @@ const jobData = [
     ],
     skills:
       "Database Administrator, SQL Server, Database Design, Backup Recovery, Backup Restore, Database System, Database Management.",
-    matkul:
-      "Optimasi Basis Data, Basis Data Lanjut, Sistem Informasi Geografis Energi Ketenagalistrikan",
+    matkul: "Optimasi Basis Data, Basis Data Lanjut",
   },
   {
     title: "Computer And Information Reserch Scientists",
@@ -116,7 +116,8 @@ const jobData = [
     ],
     skills:
       "Data Science, Data Scientist, Machine Learning, Data Analysis, Data management, Data Visualization",
-    matkul: "Embedded System",
+    matkul:
+      "Pengantar Data Science, Dataset Development, Data Mining dan Warehouse",
   },
   {
     title: "Computer Network Architects",

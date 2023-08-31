@@ -1,7 +1,6 @@
 .dashboard {
   margin: 0 5.5rem 4rem;
-  padding-top: 5rem;
-  height: 500px;
+  padding-top: 2.8rem;
 }
 
 .table-admin th,
@@ -77,8 +76,13 @@
     color: #000000;
   }
 
+  .search {
+    margin-top: 9rem !important;
+    margin-bottom: 0rem !important;
+  }
+
   .table-admin {
-    margin-top: 11rem;
+    margin-top: 3rem;
   }
 
   .login-admin {

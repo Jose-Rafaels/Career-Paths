@@ -33,14 +33,14 @@ const AboutUs = () => {
               <h2 className="title-text">
                 About{" "}
                 <span style={{ color: "#0000ff", fontWeight: "bold" }}>
-                  Career Paths
+                  Career Path
                 </span>
               </h2>
               <p className="text-caption">
-                Career Paths adalah platform yang dirancang untuk membantu Anda
+                Career Path adalah platform yang dirancang untuk membantu Anda
                 menemukan jenis kepribadian Anda melalui tes MBTI (Myers-Briggs
                 Type Indicator). Anda akan diberikan rekomendasi pekerjaan yang
-                sesuai dengan kepribadian Anda. Keunggulan Career Paths :
+                sesuai dengan kepribadian Anda. Keunggulan Career Path :
               </p>
               <ul className="p-0 m-0">
                 <li className="list-unstyled" style={{ marginBottom: "2rem" }}>

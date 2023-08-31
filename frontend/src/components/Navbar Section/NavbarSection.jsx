@@ -22,7 +22,7 @@ const NavbarSection = () => {
         <Container>
           <Navbar.Brand className="n-left">
             <Link to="/" style={{ textDecoration: "none", fontWeight: "bold" }}>
-              Career Paths
+              Career Path
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
